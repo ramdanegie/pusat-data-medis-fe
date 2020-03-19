@@ -216,6 +216,9 @@ define(['initialize', 'Configuration'], function (initialize, configuration) {
                 cacheHelper.set('cacheNomorEMR', arrStr);
                 cacheHelper.set('cacheNOREC_EMR', arrStr);
             }
+            $rootScope.showRiwayat = function () {
+                $scope.showRiwayatEMR = false
+            }
             $scope.asupKaForm = function (noemr, reportdisplay, emrfk, norec) {
                 // var json = JSON.parse(selec)
                 cacheHelper.set('cacheNomorEMR', undefined);

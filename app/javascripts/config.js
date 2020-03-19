@@ -81,7 +81,8 @@ define(['routing', 'Helper'], function(routing, helper) {
 
         // catch all route
         // send users to the form page 
-        $urlRouterProvider.otherwise('/home');
+        // $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/RekamMedis/AsesmenMedis');
         // if (window.hasRouting === undefined) {
         //     if (window.location.hash === '' || window.location.hash === '#/home') return; //
         //     var temp = window.location.hash;

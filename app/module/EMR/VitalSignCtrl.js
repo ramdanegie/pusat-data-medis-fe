@@ -288,7 +288,7 @@ define(['initialize'], function (initialize) {
             $scope.kembali = function(){
                 cacheHelper.set('cacheNomorEMR',undefined);
                 // $state.go('RekamMedis.AsesmenMedis');
-                window.history.back()
+                $rootScope.showRiwayat()
             }
             $scope.kembaliIsi = function () {
                 $scope.myVar = 1
@@ -340,9 +340,9 @@ define(['initialize'], function (initialize) {
                 $scope.myVar = 1
                 $scope.showRiwayatEMR = false
             }
-            $rootScope.showRiwayat = function () {
-                $scope.showRiwayatEMR = false
-            }
+            // $rootScope.showRiwayat = function () {
+            //     $scope.showRiwayatEMR = false
+            // }
             $rootScope.loadRiwayat = function () {
                 // debugger
                 init()
