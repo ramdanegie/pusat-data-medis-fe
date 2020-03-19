@@ -15,9 +15,10 @@ define([], function () {
             urlRouteManagemen: 'http://transmedic.co.id:3333/app/data/GetRoutingManagemen',
             urlRouteSDM: 'http://transmedic.co.id:3333/app/data/GetRoutingSDM',
 
-            baseUrlLogin: "http://transmedic.co.id:8300/service/medifirst2000/auth/sign-in",
-            baseUrlLogout: "http://transmedic.co.id:8300/service/medifirst2000/auth/sign-out",
-            baseApiBackend: 'http://transmedic.co.id:8300/service/medifirst2000/',
+         
+            baseUrlLogin: "http://transmedic.co.id:8300/service/transdata/get-signature",
+            baseUrlLogout: "http://transmedic.co.id:8300/service/transdata/get-signature",
+            baseApiBackend: 'http://transmedic.co.id:8300/service/transdata/',
             baseProfileMenu: 1, 
 
             rabbitMQHost: 'amqp://rsab:rsab@localhost'
@@ -60,9 +61,9 @@ define([], function () {
             urlRouteManagemen: 'http://172.20.1.13:3333/app/data/GetRoutingManagemen',
             urlRouteSDM: 'http://172.20.1.13:3333/app/data/GetRoutingSDM',
 
-            baseUrlLogin: "http://172.20.1.13:8300/service/medifirst2000/auth/sign-in",
-            baseUrlLogout: "http://172.20.1.13:8300/service/medifirst2000/auth/sign-out",
-            baseApiBackend: 'http://172.20.1.13:8300/service/medifirst2000/',
+           baseUrlLogin: "http://172.20.1.13:8300/service/transdata/get-signature",
+            baseUrlLogout: "http://172.20.1.13:8300/service/transdata/get-signature",
+            baseApiBackend: 'http://172.20.1.13:8300/service/transdata/',
             baseProfileMenu: 1, 
 
             rabbitMQHost: 'amqp://rsab:rsab@localhost'
