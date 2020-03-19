@@ -1,0 +1,740 @@
+<div class="grid_12">
+    <div class=' grid_12 panel panel-default'>
+        <div class='panel-heading'  c-translate>Pengkajian Keperawatan</div>
+        <div class="breadcrum">
+
+            <div class="grid_2" ng-hide="israwatinap">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuDashboardPAP == 'RekamMedis.MenuPengkajian.SkriningUmum'}"
+                    data-ng-click="navigasiPap('RekamMedis.MenuPengkajian.SkriningUmum')">Skrining Umum</a>
+            </div>
+
+            <div class="grid_2">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuDashboardPAP == 'RekamMedis.MenuPengkajian.SkriningKhusus'}"
+                    data-ng-click="navigasiPap('RekamMedis.MenuPengkajian.SkriningKhusus')">Skrining Kekhususan</a>
+            </div>
+
+            <div class="grid_2" ng-hide="israwatinap">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuDashboardPAP == 'RekamMedis.MenuPengkajian.SkriningKeperawatan'}"
+                    data-ng-click="navigasiPap('RekamMedis.MenuPengkajian.SkriningKeperawatan')">Masalah
+                    Keperawatan</a>
+            </div>
+
+            <!-- <div class="grid_2" ng-hide="israwatinap || isRawatJalan && isNeonatal || isAnak || isRawatJalan && isDewasa ">
+                    <a class="n1" ng-class="{'active': activeMenuDashboardPAP == 'RekamMedis.MenuPengkajian.DiagnosisKebidanan'}"
+                        data-ng-click="navigasiPap('RekamMedis.MenuPengkajian.DiagnosisKebidanan')">Diagnosis Kebidanan</a>
+                </div> -->
+            <!-- <div class="grid_2" ng-hide="israwatinap || isRawatJalan && isNeonatal || isAnak || isRawatJalan && isDewasa ">
+                    <a class="n1"  ng-class="{'active': activeMenuDashboardPAP == 'dashboardpasien.MasalahKeperawatan'}"data-ng-click="navigasiPap('dashboardpasien.MasalahKeperawatan')">Diagnosis Kebidanan</a>
+                </div> -->
+
+            <!-- <div class="grid_2"
+                ng-hide="israwatinap || isRawatJalan && isNeonatal || isRawatJalan && isAnak || isRawatJalan && isDewasa">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuDashboardPAP == 'RekamMedis.MenuPengkajian.PerencanaanPulang'}"
+                    data-ng-click="navigasiPap('RekamMedis.MenuPengkajian.PerencanaanPulang')">Perencanaan Pulang</a>
+            </div> -->
+        </div>
+        <div class="panel-place">
+            <a ng-hide='hideButtonAdd' class="
+             " ng-click="cetakLaporan()"
+                style="margin-left: 0;width: 100px;height: 1.2em;font-size: 20px;position: absolute;top: 5px;right: -50px;">
+                <div class="cd-timeline-img cd-picture add animated">
+                    <img src="stylesheets/cetak.png" alt="Picture">
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="grid_12">
+    <div kendo-window="popUpRiwayatRegistrasi" k-title="'Data Riwayat Registrasi'" k-width="1000" k-visible="false">
+        <div class="panel panel-default container_12" style="padding: 0px 10px;">
+            <div class="grid_11">
+                <div class="grid_2" style="margin-top:5px">
+                    <label c-label real>No RM </label>
+                    <input c-text-box type="input" filter="'char'" class="k-textbox" ng-model="itemD.noRM"
+                        ng-keypress="($event.which == 13)? SearchEnterDetail():itemD.noRM" disabled />
+                </div>
+                <div class="grid_6" style="margin-top:5px">
+                    <label c-label real>Nama Pasien </label>
+                    <input c-text-box type="input" filter="'char'" class="k-textbox" ng-model="itemD.namaPasien"
+                        ng-keypress="($event.which == 13)? SearchEnterDetail():itemD.namaPasien" disabled />
+                </div>
+                <!-- <div class="grid_3" style="margin-top:5px">
+                        <label c-label real>Tgl Lahir </label>
+                        <input style="width: 100%" kendo-date-picker placeholer="dd-mm-yyyy" k-ng-model="itemD.tglLahir" k-format="'dd-MM-yyyy'" ng-keypress="($event.which == 13)? SearchEnterDetail():itemD.tglLahir" disabled/>
+                    </div> -->
+                <div class="grid_2" style="margin-top:5px">
+                    <label c-label real>No Registrasi </label>
+                    <input c-text-box type="input" filter="'char'" class="k-textbox" ng-model="itemD.noRegistrasi"
+                        ng-keypress="($event.which == 13)? SearchEnterDetail():itemD.noRegistrasi" />
+                </div>
+                <div class="grid_2" style="margin-top:5px">
+                    <label c-label real>Jumlah Rawat Inap</label>
+                    <input c-text-box type="input" filter="'char'" class="k-textbox" ng-model="itemD.JumlahRawat"
+                        disabled />
+                </div>
+            </div>
+            <div class="grid_1" style="margin-top:10px">
+                <label c-label c-label-text=""></label>
+                <em style="margin-top:6px;" ng-click='SearchEnterDetail()' id="iconButton" data-role="button"
+                    class="k-button k-button-icon" role="button" aria-disabled="false" tabindex="0"><span
+                        class="k-sprite k-icon k-i-refresh">Refresh</span></em>
+            </div>
+            <div class="grid_12">
+                <div class="grid_12 headerBox">
+                    <p>Riwayat Registrasi</p>
+                </div>
+                <div class="clear"></div>
+                <!-- grid table -->
+                <div class="grid_12 borderBox">
+                    <kendo-grid id="kGrid" data-source="dataRiwayatRegistrasi" options="columnRiwayatRegistrasi"
+                        k-pageable="'true'" k-sortable="'true'" k-resizable="'true'" k-selectable="'row'"
+                        k-ng-model="dataPasienSelected" ng-click="klikGrid(dataPasienSelected)">
+                    </kendo-grid>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="grid_12">
+                <div class="k-edit-buttons  k-state-default pull-right" style="margin-top:10px">
+                    <button class="k-button  k-button-icontext" ng-click="printEmr()"><span
+                            class="k-icon k-save"></span>Cetak</button>
+                    <button class="k-button  k-button-icontext" ng-click="TutupPopUp()"><span
+                            class="k-icon k-cancel"></span>Tutup</button>
+                </div>
+            </div>
+            <div class="grid_12" style="margin-top:60px">
+                <div ng-include='"../app/module/Shared/TemplateLoading"'></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ui-view></div>
+<div id="diaglog" kendo-window="winCetakEmrPengkajianMedis" k-title="''" k-width="500" k-height="245" k-visible="false"
+    k-on-open="win2visible = true" k-on-close="win2visible = false">
+    <div class="panel panel-default container_12">
+        <div class="grid_2">
+        </div>
+        <div class="grid_8">
+            <table width="100%">
+                <tr>
+                    <td width="25" align="center"><img class="normalTidakNormal"
+                            src="images/logo_rs/logokotamataram_small.png"></td>
+                    <td width="50" align="center"><label c-label real>
+                            <h1 style="color: black;text-align: center;font-size: 12px;font-family: tahoma;">PEMERINTAH
+                                KOTA MATARAM</h1><label c-label real>
+                                <h1 style="color: black;text-align: center;font-size: 12px;font-family: tahoma;">RUMAH
+                                    SAKIT UMUM DAERAH KOTA MATARAM</h1>
+                            </label>
+                        </label><label c-label real
+                            style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Jl. Bung Karno
+                            No. 3 Pagutan - Mataram Telp. (0370) 640774 Fax. (0370) 646928</label><label c-label real
+                            style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">website:
+                            www.rsudmataram.com Email: rsud_mataram@mataramkota.go.id</label></td>
+                    <td width="25" align="center"><img class="normalTidakNormal"
+                            src="images/logo_rs/logorsudmataram_small.png"></td>
+                </tr>
+            </table>
+            <hr size="3">
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td width="40" align="center" rowspan="2">
+                            <p style="color: black;text-align: center;font-size: 12px;font-family: tahoma;">
+                                <strong>Pengkajian Pasien</strong></p>
+                            <p style="color: black;text-align: center;font-size: 12px;font-family: tahoma;">
+                                <strong>(Dilengkapi dalam waktu 2 jam masuk klinik/ruangan)</strong></p>
+                            <p style="text-align: center;">&nbsp;</p>
+                        </td>
+                        <td width="40" align="center" rowspan="2">
+                        </td>
+                        <td width="20" align="center" rowspan="2">
+                            <table width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">No
+                                                Rekam Medis&nbsp; &nbsp; &nbsp; {{labelNoRm}}</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Noregistrasi&nbsp;
+                                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                                &nbsp;{{labelNoRegistrasi}}</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Nama
+                                                Pasien&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                                {{labelNamaPasien}}</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 130px;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Tanggal
+                                                Lahir&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{labelTglLahir}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 130px;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Ruangan&nbsp;
+                                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                                {{labelRuangan}}</label></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td width="38"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Tanggal
+                                Masuk :&nbsp;{{labelTglMasuk}}</label></td>
+                        <td width="28" align="center">&nbsp;</td>
+                        <td width="34"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Dokter&nbsp;&nbsp;&nbsp;{{labelNamaDokter}}</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>1. Skrining Umum</p>
+            <table style="width: 100%;">
+                <tbody>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">&nbsp;&nbsp;A.
+                                Keluhan Utama</label></td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18"><label c-label real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">&nbsp;
+                                &nbsp; &nbsp; &nbsp;{{labelKeluhanUtama}}</label></td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">&nbsp;&nbsp;B.
+                                Tanda Vital</label></td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 49px;">
+                        <td style="width: 189%; height: 49px;" colspan="18">
+                            <table style="width: 50%;">
+                                <tbody>
+                                    <tr>
+                                        <td width="50"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">&nbsp;&nbsp;&nbsp;&nbsp;Suhu</label>
+                                        </td>
+                                        <td width="50"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{labelSuhu}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="50"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">&nbsp;&nbsp;&nbsp;&nbsp;Nadi</label>
+                                        </td>
+                                        <td width="50"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{labelNadi}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="50"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">&nbsp;&nbsp;&nbsp;&nbsp;Pernapasan</label>
+                                        </td>
+                                        <td width="50"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{labelNafas}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="50"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">&nbsp;&nbsp;&nbsp;&nbsp;Tekanan
+                                                Darah</label></td>
+                                        <td width="50"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{labelTD}}</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">&nbsp;&nbsp;C.
+                                Alergi</label></td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 49px;">
+                        <td style="width: 189%; height: 49px;" colspan="18">
+                            <table style="width: 50%;">
+                                <tbody>
+                                    <tr>
+                                        <td width="50"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">&nbsp;&nbsp;&nbsp;&nbsp;{{labelStatAlergi}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="50"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">&nbsp;&nbsp;&nbsp;&nbsp;{{labelKetAlergi}}</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">&nbsp;&nbsp;D.
+                                Resiko Jatuh</label></td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18"><label c-label real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.
+                                Resiko jatuh untuk rawat jalan atau rawat inap (anak atau dewasa)</label></td>
+                    </tr>
+                    <tr style="height: 49px;">
+                        <td style="width: 189%; height: 18px;" colspan="18"><label c-label real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{labelResikoJatuh}}</label>
+                        </td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label
+                                real style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">2.
+                                Rawat Jalan</label></td>
+                    </tr>
+                    <tr style="height: 49px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{labelRJRajalSatu}}</label>
+                        </td>
+                    </tr>
+                    <tr style="height: 49px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{labelRJRajalDua}}</label>
+                        </td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Apakah
+                                    salah satu jawaban &ldquo;Ya&rdquo; , maka lakukan intervensi pencegahan</label></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">pasien
+                                    jatuh di bawah ini :</label></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">1) Bila
+                                    pasien menggunakan kursi roda, pastikan kursi roda terkunci</label></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
+                                    c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">pada
+                                    saat berhenti</label></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">2)
+                                    Beritahu pendamping untuk tidak meninggalkan pasien</label></p>
+                            <!--  -->
+                        </td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label
+                                real style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">3.
+                                Dewasa dan pasien yang dirawat di ruang non intensif</label></td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">
+                            <table width="100%" border="1">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: center;">&nbsp;<label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">No</label>
+                                        </td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Tingkat
+                                                Resiko</label></td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">&nbsp;Kriteria</label>
+                                        </td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">&nbsp;Skor</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">&nbsp;<label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">1</label>
+                                        </td>
+                                        <td style="text-align: left;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Riwayat
+                                                jatuh dalam 3 bulan terakhir&nbsp;</label></td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRjSatuT}}</label>
+                                        </td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRjDuaT}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">&nbsp;<label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">2</label>
+                                        </td>
+                                        <td style="text-align: left;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Diagnosa
+                                                Sekunder &gt; 1</label></td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRjTigaT}}</label>
+                                        </td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRjEmpatT}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">&nbsp;<label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">3</label>
+                                        </td>
+                                        <td style="text-align: left;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Alat
+                                                Bantu Jalan</label></td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRLimaT}}</label>
+                                        </td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelREnamT}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">&nbsp;<label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">4</label>
+                                        </td>
+                                        <td style="text-align: left;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Akses
+                                                IV</label></td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRTujuhT}}</label>
+                                        </td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRDelapanT}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">&nbsp;<label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">5</label>
+                                        </td>
+                                        <td style="text-align: left;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Cara
+                                                Berjalan/Berpindah</label></td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRSembilanT}}</label>
+                                        </td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRSepuluhT}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center;">&nbsp;<label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">6</label>
+                                        </td>
+                                        <td style="text-align: left;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Status
+                                                Mental</label></td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRSebelasT}}</label>
+                                        </td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRDuabelasT}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr border="0">
+                                        <td style="text-align: center;"></td>
+                                        <td style="text-align: left;"></td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Total
+                                                Skor</label></td>
+                                        <td style="text-align: center;"><label c-label real
+                                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{LabelRJTotalSkor}}</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    <tr style="height: 49px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Catatan :
+                                Total nilai 0 - 24 : Tidak Tidak Berisiko; >51: Risiko Tinggi</label></td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;<label c-label real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">E. Status
+                                Fungsional</label></td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label
+                                real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblAlatBantu}}</label>
+                        </td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label
+                                real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblProthesa}}</label>
+                        </td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label
+                                real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblCacatTubuh}}</label>
+                        </td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label
+                                real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblAHari}}</label>
+                        </td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;<label c-label real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">F. Status
+                                Edukasi</label></td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label
+                                real
+                                style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Hambatan
+                                Pembelajaran :</label></td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduHb1}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduHb2}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduHb3}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduHb4}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduHb5}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduHb6}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduHb7}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduHb8}}</label>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;</td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label
+                                real style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">Edukasi
+                                yang Diperlukan :</label></td>
+                    </tr>
+                    <tr style="height: 18px;">
+                        <td style="width: 189%; height: 18px;" colspan="18">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD1}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD2}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD3}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD4}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD5}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD6}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD7}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD8}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD9}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD10}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD11}}</label>
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label c-label real
+                                    style="color: black;text-align: center;font-size: 9px;font-family: tahoma;">{{lblEduD12}}</label>
+                            </p>
+                        </td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="grid_2"></div>
+    </div>
+</div>
+<style type="text/css">
+    .active {
+        /* background-color: white !important; */
+        background-color: #ece4e4e8 !important;
+        color: #00AABB !important;
+        display: block;
+        padding: 10px 0 20px;
+        font-weight: 600;
+    }
+
+    style-center {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .style-right {
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+    }
+
+    .style-left {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .k-panelbar .k-tabstrip>.k-content,
+    .k-tabstrip>.k-content {
+        display: table-row !important;
+    }
+
+    .k-tabstrip>.k-content {
+        display: table-row !important;
+    }
+
+    .custom-button {
+        margin: 0 0 10px;
+        background: none;
+        color: black;
+        border-radius: 0.8em;
+        border: 1px solid;
+        background-color: white;
+    }
+
+    .k-edit,
+    .k-i-download {
+        background-position: -313px -221px;
+    }
+
+    a.k-button.k-button-icontext {
+        min-width: 84px;
+        background-color: #e0360b;
+        border: none;
+        margin: .1em;
+    }
+
+    k-button.k-button-icontext.k-grid-Cetak {
+        min-width: 84px;
+        background-color: #e0360b;
+        border: none;
+        margin: .1em;
+    }
+
+    .duplicateDate {
+        background-color: red;
+        border: 2px solid red !important;
+    }
+
+    .k-window-content .k-content {
+        overflow: none
+    }
+
+    legend {
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .effect-shadow {
+        -webkit-box-shadow: 2px 2px 5px #b6b6b6;
+        -moz-box-shadow: 2px 2px 5px #b6b6b6;
+        box-shadow: 2px 2px 5px #b6b6b6;
+    }
+
+    hr {
+        border: 1px solid black;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        display: inline-block;
+        width: 100%;
+    }
+
+    h1 {
+        color: black;
+        display: block;
+        font-size: 14px;
+        margin-block-start: 0px;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+
+    h2 {
+        color: black;
+        display: block;
+        font-size: 14px;
+        margin-block-start: 0px;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+</style>

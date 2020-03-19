@@ -1,0 +1,423 @@
+<!-- <div ng-include='"../app/module/pasien/RegistrasiPelayananNew/HeaderRekamMedis"'></div> -->
+
+<div class="panel panel-default">
+    <div class="panel-heading" style="font-size: 18px;" c-translate>SOAP</div>
+    <div class="panel-place">
+        <a ng-hide='hideButtonAdd' class="
+     " ng-click="cetakLaporan()"
+            style="margin-left: 0;width: 100px;height: 1.2em;font-size: 20px;position: absolute;top: 5px;right: -50px;">
+            <div class="cd-timeline-img cd-picture add animated">
+                <img src="stylesheets/cetak.png" alt="Picture">
+            </div>
+        </a>
+    </div>
+    <md-content class="md-padding" ng-show="!isShowSoap">
+        <!-- <div class="grid_12">
+            <div class="grid_2">
+                <label c-label c-label-text="No Registrasi"></label>
+                <input c-text-box type="input" filter="'varchar'" class="k-textbox" ng-model="cari.noregistrasi" />
+            </div>
+            <div class="grid_1">
+                <label c-label c-label-text="S"></label>
+                <input c-text-box type="input" filter="'varchar'" class="k-textbox" ng-model="cari.s" />
+            </div>
+            <div class="grid_1">
+                <label c-label c-label-text="O"></label>
+                <input c-text-box type="input" filter="'varchar'" class="k-textbox" ng-model="cari.o" />
+            </div>
+            <div class="grid_1">
+                <label c-label c-label-text="A"></label>
+                <input c-text-box type="input" filter="'varchar'" class="k-textbox" ng-model="cari.a" />
+            </div>
+            <div class="grid_1">
+                <label c-label c-label-text="P"></label>
+                <input c-text-box type="input" filter="'varchar'" class="k-textbox" ng-model="cari.p" />
+            </div>
+            <div class="grid_1">
+                <label c-label c-label-text=""></label>
+                <em style="margin-top:6px;" ng-click='resetFilter()' id="iconButton" data-role="button" class="k-button k-button-icon k-primary"
+                    role="button" aria-disabled="false" tabindex="0"><span class="k-sprite k-icon k-i-cancel">Refresh</span></em>
+            </div>
+        </div> -->
+        <div class="grid_12">
+            <div class="panel-body grid_12">
+                <div class="grid_12 headerBox">
+                    <p>Riwayat CPPT</p>
+                </div>
+                <div class="grid_12 borderBox">
+                    <div kendo-grid id="idGridCPPT" k-data-source="sourceCPPT" k-selectable="'row'" options="gridCPPT"
+                        k-ng-model="dataCPPT"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid_12">
+            <div class="grid_6"></div>
+            <div class="grid_6">
+
+                <div class="grid_3">
+                    <button class="btnTemplate1" ng-click="showSoap(true)"><i class="fa fa-plus"></i>Buat Baru</button>
+                    <!-- <button class="c-button" ng-click="showSoap(true)">
+                        <span style="font-size:10!important">Buat Baru</span>
+                    </button> -->
+                </div>
+                <div class="grid_3">
+                    <button class="btnTemplate1" ng-click="showSoap(true, true,true)"><i
+                            class="fa fa-users"></i>Verifikasi Dokter</button>
+                    <!-- <button class="c-button" ng-click="showSoap(true, true,true)">
+                        <span style="font-size:10!important">Verifikasi Dokter</span>
+                    </button> -->
+                </div>
+                <div class="grid_3">
+                    <button class="btnTemplate1 cancel" ng-click="delete()"><i class="fa fa-trash"></i>Hapus</button>
+                    <!-- <button class="c-button error" ng-click="delete()">
+                        <span style="font-size:10!important">Hapus</span>
+                    </button> -->
+                </div>
+                <div class="grid_3">
+                    <button class="btnTemplate1 " ng-click="showSoap(true,true)"><i class="fa fa-edit"></i>Edit</button>
+                    <!-- <button class="c-button" ng-click="showSoap(true,true)">
+                        <span style="font-size:10!important">Edit</span>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+        <div class="grid_12">
+            <div class="panel-body grid_12">
+                <div class="grid_12 headerBox">
+                    <p>Riwayat CPPT yang belum di Verif</p>
+                </div>
+                <div class="grid_12 borderBox">
+                    <div kendo-grid id="idGridCPPTnotVerif" k-data-source="sourceCPPTnotVerif" k-selectable="'row'"
+                        options="gridCPPTnotVerif" k-ng-model="dataCPPT"></div>
+                </div>
+            </div>
+        </div>
+    </md-content>
+    <div class="
+                        panel-body" ng-show="isShowSoap">
+        <hr>
+        <div class="grid_12">
+            <div class="grid_1">
+                <span class="big-title">S</span>
+            </div>
+            <div class="grid_11">
+                <textarea style="width: 99%; height: 80px;" ng-model="cppt.s"></textarea>
+            </div>
+        </div>
+        <hr>
+        <div class="grid_12">
+            <div class="grid_1">
+                <span class="big-title">O</span>
+            </div>
+            <div class="grid_11">
+                <textarea style="width: 99%; height: 80px;" ng-model="cppt.o"></textarea>
+            </div>
+        </div>
+        <hr>
+        <div class="grid_12">
+            <div class="grid_1">
+                <span class="big-title">A</span>
+            </div>
+            <div class="grid_11">
+                <textarea style="width: 99%; height: 80px;" ng-model="cppt.a"></textarea>
+            </div>
+        </div>
+        <hr>
+        <div class="grid_12">
+            <div class="grid_1">
+                <span class="big-title">P</span>
+            </div>
+            <div class="grid_11"> <textarea style="width: 99%; height: 80px;" ng-model="cppt.p"></textarea></div>
+        </div>
+
+        <div class="grid_12" style="padding-top:10px">
+            <div class="grid_3" style="float:right">
+                <c-button ng-show="!isLoading" class="success"
+                    style="width: 100%; font-size: 24px; padding:0px, margin:0px;" item="item" size="36"
+                    position=" 'right'" is-validate click="Save">
+                    <span class="title">Simpan</span>
+                </c-button>
+            </div>
+            <div class="grid_3" style="float:right;">
+                <c-button ng-show="!isLoading" style="width: 100%; font-size: 24px; padding:0px, margin:0px;"
+                    item="item" size="36" class="cancel" position=" 'right'" click="Batal">
+                    <span class="title">Batal</span>
+                </c-button>
+            </div>
+            <div class="grid_3" style="float:right;">
+                <c-button ng-show="!isLoading" style="width: 100%; font-size: 24px; padding:0px, margin:0px;"
+                    item="item" size="36" position=" 'right'" click="showSoap">
+                    <span class="title">Kembali</span>
+                </c-button>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<div kendo-window="popUp" k-title="'Detail SOAP'" k-width="750" k-height="500" k-visible="false"
+    k-on-open="win2visible = true" k-on-close="win2visible = true">
+    <div class="panel panel-default container_12">
+        <!-- <hr> -->
+        <div class="grid_12">
+            <div class="grid_1">
+                <span class="big-title">S</span>
+            </div>
+            <div class="grid_11">
+                <textarea style="width: 99%; height: 50px;" ng-model="show.s" disabled></textarea>
+            </div>
+        </div>
+        <hr>
+        <div class="grid_12">
+            <div class="grid_1">
+                <span class="big-title">O</span>
+            </div>
+            <div class="grid_11">
+                <textarea style="width: 99%; height: 50px;" ng-model="show.o" disabled></textarea>
+            </div>
+        </div>
+        <hr>
+        <div class="grid_12">
+            <div class="grid_1">
+                <span class="big-title">A</span>
+            </div>
+            <div class="grid_11">
+                <textarea style="width: 99%; height: 50px;" ng-model="show.a" disabled></textarea>
+            </div>
+        </div>
+        <hr>
+        <div class="grid_12">
+            <div class="grid_1">
+                <span class="big-title">P</span>
+            </div>
+            <div class="grid_11"> <textarea style="width: 99%; height: 50px;" ng-model="show.p" disabled></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid_12">
+    <div kendo-window="popUpRiwayatRegistrasi" k-title="'Data Riwayat Registrasi'" k-width="1000" k-visible="false">
+        <div class="panel panel-default container_12" style="padding: 0px 10px;">
+            <div class="grid_11">
+                <div class="grid_2" style="margin-top:5px">
+                    <label c-label real>No RM </label>
+                    <input c-text-box type="input" filter="'char'" class="k-textbox" ng-model="itemD.noRM"
+                        ng-keypress="($event.which == 13)? SearchEnterDetail():itemD.noRM" disabled />
+                </div>
+                <div class="grid_6" style="margin-top:5px">
+                    <label c-label real>Nama Pasien </label>
+                    <input c-text-box type="input" filter="'char'" class="k-textbox" ng-model="itemD.namaPasien"
+                        ng-keypress="($event.which == 13)? SearchEnterDetail():itemD.namaPasien" disabled />
+                </div>
+                <!-- <div class="grid_3" style="margin-top:5px">
+                                    <label c-label real>Tgl Lahir </label>
+                                    <input style="width: 100%" kendo-date-picker placeholer="dd-mm-yyyy" k-ng-model="itemD.tglLahir" k-format="'dd-MM-yyyy'" ng-keypress="($event.which == 13)? SearchEnterDetail():itemD.tglLahir" disabled/>
+                                </div> -->
+                <div class="grid_2" style="margin-top:5px">
+                    <label c-label real>No Registrasi </label>
+                    <input c-text-box type="input" filter="'char'" class="k-textbox" ng-model="itemD.noRegistrasi"
+                        ng-keypress="($event.which == 13)? SearchEnterDetail():itemD.noRegistrasi" />
+                </div>
+                <div class="grid_2" style="margin-top:5px">
+                    <label c-label real>Jumlah Rawat Inap</label>
+                    <input c-text-box type="input" filter="'char'" class="k-textbox" ng-model="itemD.JumlahRawat"
+                        disabled />
+                </div>
+            </div>
+            <div class="grid_1" style="margin-top:10px">
+                <label c-label c-label-text=""></label>
+                <em style="margin-top:6px;" ng-click='SearchEnterDetail()' id="iconButton" data-role="button"
+                    class="k-button k-button-icon" role="button" aria-disabled="false" tabindex="0"><span
+                        class="k-sprite k-icon k-i-refresh">Refresh</span></em>
+            </div>
+            <div class="grid_12">
+                <div class="grid_12 headerBox">
+                    <p>Riwayat Registrasi</p>
+                </div>
+                <div class="clear"></div>
+                <!-- grid table -->
+                <div class="grid_12 borderBox">
+                    <kendo-grid id="kGrid" data-source="dataRiwayatRegistrasi" options="columnRiwayatRegistrasi"
+                        k-pageable="'true'" k-sortable="'true'" k-resizable="'true'" k-selectable="'row'"
+                        k-ng-model="dataPasienSelected" ng-click="klikGrid(dataPasienSelected)">
+                    </kendo-grid>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="grid_12">
+                <div class="k-edit-buttons  k-state-default pull-right" style="margin-top:10px">
+                    <button class="k-button  k-button-icontext" ng-show="cetakVisible" ng-click="printEmr()"><span
+                            class="k-icon k-save"></span>Cetak</button>
+                    <button class="k-button  k-button-icontext" ng-click="TutupPopUp()"><span
+                            class="k-icon k-cancel"></span>Tutup</button>
+                </div>
+            </div>
+            <div class="grid_12" style="margin-top:60px">
+                <div ng-include='"../app/module/Shared/TemplateLoading"'></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="diaglog" kendo-window="winCetakEmrPengkajianMedis" k-title="''" k-width="500" k-height="245" k-visible="false"
+    k-on-open="win2visible = true" k-on-close="win2visible = false">
+    <div class="panel panel-default container_12">
+        <div class="grid_2"></div>
+        <div class="grid_8">
+            <table width="100%">
+                <tr>
+                    <td width="25" align="center"><img class="normalTidakNormal"
+                            src="images/logo_rs/logokotamataram_small.png"></td>
+                    <td width="50" align="center"><label c-label real>
+                            <h1 style="color: black;text-align: center;font-size: 12px;font-family: tahoma;">PEMERINTAH
+                                KOTA MATARAM</h1><label c-label real>
+                                <h1 style="color: black;text-align: center;font-size: 12px;font-family: tahoma;">RUMAH
+                                    SAKIT UMUM DAERAH KOTA MATARAM</h1>
+                            </label>
+                        </label><label c-label real
+                            style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Jl. Bung Karno
+                            No. 3 Pagutan - Mataram Telp. (0370) 640774 Fax. (0370) 646928</label><label c-label real
+                            style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">website:
+                            www.rsudmataram.com Email: rsud_mataram@mataramkota.go.id</label></td>
+                    <td width="25" align="center"><img class="normalTidakNormal"
+                            src="images/logo_rs/logorsudmataram_small.png"></td>
+                </tr>
+            </table>
+            <hr size="3">
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td width="40" align="center" rowspan="2">
+                            <p style="color: black;text-align: center;font-size: 12px;font-family: tahoma;">
+                                <strong>SOAP</strong></p>
+                            <p style="color: black;text-align: center;font-size: 12px;font-family: tahoma;">
+                                <strong>(Dilengkapi dalam waktu 2 jam masuk klinik/ruangan)</strong></p>
+                            <p style="color: black;text-align: center;font-size: 12px;font-family: tahoma;">&nbsp;</p>
+                        </td>
+                        <td width="40" align="center" rowspan="2">
+                        </td>
+                        <td width="20" align="center" rowspan="2">
+                            <table width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td width="35%"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">No
+                                                Rekam Medis</label></td>
+                                        <td width="65%"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">{{labelNoRm}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="35%"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Noregistrasi</label>
+                                        </td>
+                                        <td width="65%"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">{{labelNoRegistrasi}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="35%"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Nama
+                                                Pasien</label></td>
+                                        <td width="65%"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">{{labelNamaPasien}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="35%"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Tanggal
+                                                Lahir</label></td>
+                                        <td width="65%"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">{{labelTglLahir}}</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="35%"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Ruangan</label>
+                                        </td>
+                                        <td width="65%"><label c-label real
+                                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">{{labelRuangan}}</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td width="38"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Tanggal
+                                Masuk :&nbsp;{{labelTglMasuk}}</label></td>
+                        <td width="28" align="center">&nbsp;</td>
+                        <td width="34"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">Dokter&nbsp;&nbsp;&nbsp;{{labelNamaDokter}}</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td style="width: 39px; text-align: center;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;"><strong>S</strong></label>
+                        </td>
+                        <td style="width: 12px; text-align: center;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;"><strong>:</strong></label>
+                        </td>
+                        <td style="width: 534px;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">{{labelS}}</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="28" align="center">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 39px; text-align: center;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;"><strong>O</strong></label>
+                        </td>
+                        <td style="width: 12px; text-align: center;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;"><strong>:</strong></label>
+                        </td>
+                        <td style="width: 534px;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">{{labelO}}</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="28" align="center">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 39px; text-align: center;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;"><strong>A</strong></label>
+                        </td>
+                        <td style="width: 12px; text-align: center;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;"><strong>:</strong></label>
+                        </td>
+                        <td style="width: 534px;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">{{labelA}}</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="28" align="center">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 39px; text-align: center;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;"><strong>P</strong></label>
+                        </td>
+                        <td style="width: 12px; text-align: center;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;"><strong>:</strong></label>
+                        </td>
+                        <td style="width: 534px;"><label c-label real
+                                style="color: black;text-align: center;font-size: 10px;font-family: tahoma;">{{labelP}}</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="grid_2"></div>
+    </div>
+</div>

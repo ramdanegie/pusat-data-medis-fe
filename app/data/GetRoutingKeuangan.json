@@ -1,0 +1,1482 @@
+[
+  {
+    "name": "InputTindakan",
+    "url": "/InputTindakan/:norecPD/:norecAPD",
+    "templateurl": "module/TataRekening/InputTindakan.html",
+    "controller": "InputTindakanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DetailRegistrasi",
+    "url": "/RGV0YWlsUmVnaXN0cmFzaQ==/:dataPasien",
+    "templateurl": "module/TataRekening/DetailRegistrasi.html",
+    "controller": "DetailRegistrasiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "RincianTagihan",
+    "url": "/RincianTagihan/:dataPasien",
+    "templateurl": "module/TataRekening/RincianTagihan.html",
+    "controller": "RincianTagihanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "RekapTagihan",
+    "url": "/RekapTagihan/:dataPasien",
+    "templateurl": "module/TataRekening/RekapTagihan.html",
+    "controller": "RekapTagihanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarNonLayananKasir",
+    "url": "/RGFmdGFyTm9uTGF5YW5hbkthc2ly",
+    "templateurl": "module/Kasir/DaftarNonLayananKasir.html",
+    "controller": "DaftarNonLayananKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "InputTagihanNonLayanan",
+    "url": "/SW5wdXRUYWdpaGFuTm9uTGF5YW5hbg==",
+    "templateurl": "module/Kasir/InputTagihanNonLayanan.html",
+    "controller": "InputTagihanNonLayananCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PembayaranTagihanNonLayananKasir",
+    "url": "/UGVtYmF5YXJhblRhZ2loYW5Ob25MYXlhbmFuS2FzaXI=/:dataPasien",
+    "templateurl": "module/Kasir/PembayaranTagihanNonLayananKasir.html",
+    "controller": "PembayaranTagihanNonLayananKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPasienPulangKasir",
+    "url": "/RGFmdGFyUGFzaWVuUHVsYW5nS2FzaXI=",
+    "templateurl": "module/Kasir/DaftarPasienPulangKasir.html",
+    "controller": "DaftarPasienPulangKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PembayaranTagihanLayananKasir",
+    "url": "/UGVtYmF5YXJhblRhZ2loYW5MYXlhbmFuS2FzaXI=/:dataPasien",
+    "templateurl": "module/Kasir/PembayaranTagihanLayananKasir.html",
+    "controller": "PembayaranTagihanLayananKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPiutangKasir",
+    "url": "/RGFmdGFyUGl1dGFuZ0thc2ly",
+    "templateurl": "module/Kasir/DaftarPiutangKasir.html",
+    "controller": "DaftarPiutangKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPasienAktif",
+    "url": "/RGFmdGFyUGFzaWVuQWt0aWY=",
+    "templateurl": "module/Kasir/DaftarPasienAktif.html",
+    "controller": "DaftarPasienAktifCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPenerimaanKasir",
+    "url": "/RGFmdGFyUGVuZXJpbWFhbkthc2ly",
+    "templateurl": "module/Kasir/DaftarPenerimaanKasir.html",
+    "controller": "DaftarPenerimaanKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanPenerimaanKasir",
+    "url": "/TGFwb3JhblBlbmVyaW1hYW5LYXNpcg==",
+    "templateurl": "module/Kasir/LaporanKasir/LaporanPenerimaanKasir.html",
+    "controller": "LaporanPenerimaanKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanPendapatan",
+    "url": "/TGFwb3JhblBlbmRhcGF0YW4=",
+    "templateurl": "module/Kasir/LaporanKasir/LaporanPendapatan.html",
+    "controller": "LaporanPendapatanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanPendapatanRuangan",
+    "url": "/TGFwb3JhblBlbmRhcGF0YW5SdWFuZ2Fu",
+    "templateurl": "module/Kasir/LaporanKasir/LaporanPendapatanRuangan.html",
+    "controller": "LaporanPendapatanRuanganCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanPiutangPenjamin",
+    "url": "/TGFwb3JhblBpdXRhbmdQZW5qYW1pbg==",
+    "templateurl": "module/Kasir/LaporanKasir/LaporanPiutangPenjamin.html",
+    "controller": "LaporanPiutangPenjaminCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PenerimaanPembayaranKasir",
+    "url": "/UGVuZXJpbWFhblBlbWJheWFyYW5LYXNpcg==/:dataPasien",
+    "templateurl": "module/Kasir/PenerimaanPembayaranKasir.html",
+    "controller": "PenerimaanPembayaranKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "SetoranKasir",
+    "url": "/U2V0b3Jhbkthc2ly",
+    "templateurl": "module/BendaharaPenerimaan/SetoranKasir.html",
+    "controller": "SetoranKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MonitoringRekeningKoranBendaharaPenerimaan",
+    "url": "/TW9uaXRvcmluZ1Jla2VuaW5nS29yYW5CZW5kYWhhcmFQZW5lcmltYWFu",
+    "templateurl": "module/BendaharaPenerimaan/MonitoringRekeningKoranBendaharaPenerimaan.html",
+    "controller": "MonitoringRekeningKoranBendaharaPenerimaanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MonitoringRekeningKoranBendaharaPenerimaan",
+    "url": "/TW9uaXRvcmluZ1Jla2VuaW5nS29yYW5CZW5kYWhhcmFQZW5lcmltYWFu",
+    "templateurl": "module/BendaharaPenerimaan/MonitoringRekeningKoranBendaharaPenerimaan.html",
+    "controller": "MonitoringRekeningKoranBendaharaPenerimaanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPembayaran",
+    "url": "/RGFmdGFyUGVtYmF5YXJhbkJlbmRhaGFyYVBlbmdlbHVhcmFu",
+    "templateurl": "module/BendaharaPengeluaran/DaftarPembayaran.html",
+    "controller": "DaftarPembayaranCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarTagihanSupplier",
+    "url": "/RGFmdGFyVGFnaWhhblN1cHBsaWVy",
+    "templateurl": "module/BendaharaPengeluaran/DaftarTagihanSupplier.html",
+    "controller": "DaftarTagihanSupplierCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DetailTagihanRekanan",
+    "url": "/RGV0YWlsVGFnaWhhblJla2FuYW4=/:noTerima",
+    "templateurl": "module/BendaharaPengeluaran/DetailTagihanRekanan.html",
+    "controller": "DetailTagihanRekananCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PembayaranTagihan",
+    "url": "/UGVtYmF5YXJhblRhZ2loYW4=",
+    "templateurl": "module/BendaharaPengeluaran/PembayaranTagihan.html",
+    "controller": "PembayaranTagihanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "JasaPelayananSatuRev2",
+    "url": "/SmFzYVBlbGF5YW5hblNhdHVSZXYy",
+    "templateurl": "module/Remunerasi/JasaPelayananSatuRev2.html",
+    "controller": "JasaPelayananSatuRev2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarJasaPelayananSatu",
+    "url": "/RGFmdGFySmFzYVBlbGF5YW5hblNhdHU=",
+    "templateurl": "module/Remunerasi/DaftarJasaPelayananSatu.html",
+    "controller": "DaftarJasaPelayananSatuCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PotonganRemunPegawai",
+    "url": "/UG90b25nYW5SZW11blBlZ2F3YWk=",
+    "templateurl": "module/Remunerasi/PotonganRemunPegawai.html",
+    "controller": "PotonganRemunPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MappingJasaPelayananToPegawai",
+    "url": "/MappingJasaPelayananToPegawai",
+    "templateurl": "module/Remunerasi/MappingJasaPelayananToPegawai.html",
+    "controller": "MappingJasaPelayananToPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarJasaPelayananPegawai",
+    "url": "/RGFmdGFySmFzYVBlbGF5YW5hblBlZ2F3YWk=",
+    "templateurl": "module/Remunerasi/DaftarJasaPelayananPegawai.html",
+    "controller": "DaftarJasaPelayananPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanTransaksiInstalasi",
+    "url": "/LaporanTransaksiInstalasi",
+    "templateurl": "module/Remunerasi/LaporanTransaksiInstalasi.html",
+    "controller": "LaporanTransaksiInstalasiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PerhitunganIndexPostRemun",
+    "url": "/UGVyaGl0dW5nYW5JbmRleFBvc3RSZW11bg==",
+    "templateurl": "module/Remunerasi/PerhitunganIndexPostRemun.html",
+    "controller": "PerhitunganIndexPostRemunCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanRemunerasi",
+    "url": "/TGFwb3JhblJlbXVuZXJhc2k=",
+    "templateurl": "module/Remunerasi/LaporanRemunerasi.html",
+    "controller": "LaporanRemunerasiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPengeluaranSetoran",
+    "url": "/RGFmdGFyUGVuZ2VsdWFyYW5TZXRvcmFu",
+    "templateurl": "module/BendaharaPengeluaran/DaftarPengeluaranSetoran.html",
+    "controller": "DaftarPengeluaranSetoranCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanBukuBesar",
+    "url": "/TGFwb3JhbkJ1a3VCZXNhcg==",
+    "templateurl": "module/Akuntansi/LaporanBukuBesar.html",
+    "controller": "LaporanBukuBesarCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "BukuBesarPembantu",
+    "url": "/QnVrdUJlc2FyUGVtYmFudHU=",
+    "templateurl": "module/Akuntansi/BukuBesarPembantu.html",
+    "controller": "BukuBesarPembantuCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "TrialBalance",
+    "url": "/VHJpYWxCYWxhbmNl",
+    "templateurl": "module/Akuntansi/TrialBalance.html",
+    "controller": "TrialBalanceCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "AkuntansiNeraca",
+    "url": "/QWt1bnRhbnNpTmVyYWNh",
+    "templateurl": "module/Akuntansi/AkuntansiNeraca.html",
+    "controller": "AkuntansiNeracaCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "AkuntansiArusKas",
+    "url": "/QWt1bnRhbnNpQXJ1c0thcw==",
+    "templateurl": "module/Akuntansi/AkuntansiArusKas.html",
+    "controller": "AkuntansiArusKasCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "AkuntansiLaporanAktivitas",
+    "url": "/QWt1bnRhbnNpTGFwb3JhbkFrdGl2aXRhcw==",
+    "templateurl": "module/Akuntansi/AkuntansiLaporanAktivitas.html",
+    "controller": "AkuntansiLaporanAktivitasCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "AkuntansiPendapatan",
+    "url": "/QWt1bnRhbnNpUGVuZGFwYXRhbg==",
+    "templateurl": "module/Akuntansi/AkuntansiPendapatan.html",
+    "controller": "AkuntansiPendapatanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PiutangPasienJurnal",
+    "url": "/UGl1dGFuZ1Bhc2llbkp1cm5hbA==",
+    "templateurl": "module/Akuntansi/PiutangPasienJurnal.html",
+    "controller": "PiutangPasienJurnalCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "VerifikasiTagihanSupplier",
+    "url": "/VmVyaWZpa2FzaVRhZ2loYW5TdXBwbGllcg==",
+    "templateurl": "module/BendaharaPengeluaran/VerifikasiTagihanSupplier.html",
+    "controller": "VerifikasiTagihanSupplierCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "VerifikasiPembayaranGaji",
+    "url": "/VmVyaWZpa2FzaVBlbWJheWFyYW5HYWpp",
+    "templateurl": "module/BendaharaPengeluaran/VerifikasiPembayaranGaji.html",
+    "controller": "VerifikasiPembayaranGajiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MasterChartOfAccount",
+    "url": "/TWFzdGVyQ2hhcnRPZkFjY291bnQ=",
+    "templateurl": "module/Akuntansi/MasterChartOfAccount.html",
+    "controller": "MasterChartOfAccountCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPiutangPasien",
+    "url": "/RGFmdGFyUGl1dGFuZ1Bhc2llbg==",
+    "templateurl": "module/Piutang/DaftarPiutangPasien.html",
+    "controller": "DaftarPiutangPasienCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PencatatanPiutangDaftarLayanan",
+    "url": "/UGVuY2F0YXRhblBpdXRhbmdEYWZ0YXJMYXlhbmFu",
+    "templateurl": "module/Piutang/PencatatanPiutangDaftarLayanan.html",
+    "controller": "PencatatanPiutangDaftarLayananCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "JurnalRev2018",
+    "url": "/SnVybmFsUmV2MjAxOA==",
+    "templateurl": "module/Akuntansi/JurnalRev2018.html",
+    "controller": "JurnalRev2018Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PencatatanPiutangDaftarNonLayanan",
+    "url": "/UGVuY2F0YXRhblBpdXRhbmdEYWZ0YXJOb25MYXlhbmFu",
+    "templateurl": "module/Piutang/PencatatanPiutangDaftarNonLayanan.html",
+    "controller": "PencatatanPiutangDaftarNonLayananCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarCollectingPiutang",
+    "url": "/RGFmdGFyQ29sbGVjdGluZ1BpdXRhbmc=",
+    "templateurl": "module/Piutang/DaftarCollectingPiutang.html",
+    "controller": "DaftarCollectingPiutangCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "CollectingPiutang",
+    "url": "/Q29sbGVjdGluZ1BpdXRhbmc=/:dataFilter",
+    "templateurl": "module/Piutang/CollectingPiutang.html",
+    "controller": "CollectingPiutangCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DetailCollectingPiutang",
+    "url": "/RGV0YWlsQ29sbGVjdGluZ1BpdXRhbmc=/:dataCollect",
+    "templateurl": "module/Piutang/DetailCollectingPiutang.html",
+    "controller": "DetailCollectingPiutangCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PembayaranPiutangKasir",
+    "url": "/UGVtYmF5YXJhblBpdXRhbmdLYXNpcg==/:data",
+    "templateurl": "module/Piutang/PembayaranPiutangKasir.html",
+    "controller": "PembayaranPiutangKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PenerimaanPembayaranKasirPiutang",
+    "url": "/UGVuZXJpbWFhblBlbWJheWFyYW5LYXNpclBpdXRhbmc=/:dataPasien",
+    "templateurl": "module/Piutang/PenerimaanPembayaranKasirPiutang.html",
+    "controller": "PenerimaanPembayaranKasirPiutangCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarKartuPiutang",
+    "url": "/RGFmdGFyS2FydHVQaXV0YW5n",
+    "templateurl": "module/Piutang/DaftarKartuPiutang.html",
+    "controller": "DaftarKartuPiutangCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPembayaranPiutangPerusahaanPeriode",
+    "url": "/RGFmdGFyUGVtYmF5YXJhblBpdXRhbmdQZXJ1c2FoYWFuUGVyaW9kZQ==",
+    "templateurl": "module/Piutang/DaftarPembayaranPiutangPerusahaanPeriode.html",
+    "controller": "DaftarPembayaranPiutangPerusahaanPeriodeCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPenerimaanHarianPiutang",
+    "url": "/RGFmdGFyUGVuZXJpbWFhbkhhcmlhblBpdXRhbmc=",
+    "templateurl": "module/Piutang/DaftarPenerimaanHarianPiutang.html",
+    "controller": "DaftarPenerimaanHarianPiutangCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarHisoriPiutang",
+    "url": "/RGFmdGFySGlzb3JpUGl1dGFuZw==",
+    "templateurl": "module/Piutang/DaftarHisoriPiutang.html",
+    "controller": "DaftarHisoriPiutangCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "RekapKlaimByDiagnosa",
+    "url": "/UmVrYXBLbGFpbUJ5RGlhZ25vc2E=",
+    "templateurl": "module/Piutang/RekapKlaimByDiagnosa.html",
+    "controller": "RekapKlaimByDiagnosaCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PenyetoranDepositKasir",
+    "url": "/UGVueWV0b3JhbkRlcG9zaXRLYXNpcg==/:dataPasien",
+    "templateurl": "module/Kasir/PenyetoranDepositKasir.html",
+    "controller": "PenyetoranDepositKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "BPJSKlaim",
+    "url": "/QlBKU0tsYWlt",
+    "templateurl": "module/Piutang/BPJSKlaim.html",
+    "controller": "BPJSKlaimCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DataChecklistKlaim",
+    "url": "/RGF0YUNoZWNrbGlzdEtsYWlt",
+    "templateurl": "module/Piutang/DataChecklistKlaim.html",
+    "controller": "DataChecklistKlaimCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DataGagalKlaimBPJS",
+    "url": "/RGF0YUdhZ2FsS2xhaW1CUEpT",
+    "templateurl": "module/Piutang/DataGagalKlaimBPJS.html",
+    "controller": "DataGagalKlaimBPJSCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PembayaranKembaliDepositKasir",
+    "url": "/UGVtYmF5YXJhbktlbWJhbGlEZXBvc2l0S2FzaXI=/:dataPasien",
+    "templateurl": "module/Kasir/PembayaranKembaliDepositKasir.html",
+    "controller": "PembayaranKembaliDepositKasirCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanRincianPenerimaan",
+    "url": "/TGFwb3JhblJpbmNpYW5QZW5lcmltYWFu",
+    "templateurl": "module/Kasir/LaporanKasir/LaporanRincianPenerimaan.html",
+    "controller": "LaporanRincianPenerimaanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanRekapPendapatanHarian",
+    "url": "/TGFwb3JhblJla2FwUGVuZGFwYXRhbkhhcmlhbg==",
+    "templateurl": "module/Kasir/LaporanKasir/LaporanRekapPendapatanHarian.html",
+    "controller": "LaporanRekapPendapatanHarianCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanPendapatanRuanganRev",
+    "url": "/TGFwb3JhblBlbmRhcGF0YW5SdWFuZ2FuUmV2",
+    "templateurl": "module/Kasir/LaporanKasir/LaporanPendapatanRuanganRev.html",
+    "controller": "LaporanPendapatanRuanganCtrlRev",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LapBendaharaAdministrasi",
+    "url": "/TGFwQmVuZGFoYXJhQWRtaW5pc3RyYXNp",
+    "templateurl": "module/BendaharaPenerimaan/LapBendaharaAdministrasi.html",
+    "controller": "LapBendaharaAdministrasiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LapBendaharaFungsional",
+    "url": "/TGFwQmVuZGFoYXJhRnVuZ3Npb25hbA==",
+    "templateurl": "module/BendaharaPenerimaan/LapBendaharaFungsional.html",
+    "controller": "LapBendaharaFungsionalCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LapPenerimaanPerRekening",
+    "url": "/TGFwUGVuZXJpbWFhblBlclJla2VuaW5n",
+    "templateurl": "module/BendaharaPenerimaan/LapPenerimaanPerRekening.html",
+    "controller": "LapPenerimaanPerRekeningCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanRincianPenerimaanMingguan",
+    "url": "/TGFwb3JhblJpbmNpYW5QZW5lcmltYWFuTWluZ2d1YW5DdHJs",
+    "templateurl": "module/BendaharaPenerimaan/LaporanRincianPenerimaanMingguan.html",
+    "controller": "LaporanRincianPenerimaanMingguanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanRekapRetribusiDaerah",
+    "url": "/TGFwb3JhblJla2FwUmV0cmlidXNpRGFlcmFoQ3RybA",
+    "templateurl": "module/BendaharaPenerimaan/LaporanRekapRetribusiDaerah.html",
+    "controller": "LaporanRekapRetribusiDaerahCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanTargetRealisasiPendapatan",
+    "url": "/TGFwb3JhblRhcmdldFJlYWxpc2FzaVBlbmRhcGF0YW4",
+    "templateurl": "module/BendaharaPenerimaan/LaporanTargetRealisasiPendapatan.html",
+    "controller": "LaporanTargetRealisasiPendapatanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MasterSAL",
+    "url": "/TWFzdGVyU0FM",
+    "templateurl": "module/Akuntansi/MasterSAL.html",
+    "controller": "MasterSALCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },  
+  {
+    "name": "MonitoringRekeningKoranBendaharaPengeluaran",
+    "url": "/TW9uaXRvcmluZ1Jla2VuaW5nS29yYW5CZW5kYWhhcmFQZW5nZWx1YXJhbg==",
+    "templateurl": "module/BendaharaPengeluaran/MonitoringRekeningKoranBendaharaPengeluaran.html",
+    "controller": "MonitoringRekeningKoranBendaharaPengeluaranCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  }
+]

@@ -1,0 +1,216 @@
+<style type="text/css">
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid #228be6;
+    }
+
+    .k-slider-horizontal {
+        display: inline-block;
+        float: left;
+        width: 450px;
+
+        height: 26px;
+
+
+
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    .k-slider {
+
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        display: inline-block;
+    }
+
+    .activeBtn {
+        background-color: #10c4b2;
+        color: #ffffff;
+    }
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate> Observasi Pasien Resiko Jatuh</div>
+        </div>
+
+        <div class="grid_12" style="margin-top: 10px;">
+
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Bulan"></label>
+                </div>
+                <!-- <div class="grid_12">
+                    <input style="width: 100%" k-ng-model="item.obj[10728]" kendo-combo-box type="month" k-format="'yyyy-MM'" />
+                </div> -->
+                <select kendo-combo-box k-ng-model="item.obj[100382]">
+                  <option value="1" text="Januari">Januari</option>
+                  <option value="2" text="Februari">Februari</option>
+                  <option value="3" text="Maret">Maret</option>
+                  <option value="4" text="April">April</option>
+                  <option value="5" text="Mei">Mei</option>
+                  <option value="6" text="Juni">Juni</option>
+                  <option value="7" text="Juli">Juli</option>
+                  <option value="8" text="Agustus">Agustus</option>
+                  <option value="9" text="September">September</option>
+                  <option value="10" text="Oktober">Oktober</option>
+                  <option value="11" text="Nopember">Nopember</option>
+                  <option value="12" text="Desember">Desember</option>
+                </select>
+            </div>
+
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Ruangan"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[100383]" k-data-text-field="'text'"
+                        k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false"
+                        k-data-source="listRuangan" />
+
+                </div>
+            </div>
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="DPJP"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[100384]" k-data-text-field="'text'"
+                        k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false"
+                        k-data-source="listPegawai" />
+                </div>
+            </div>
+
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Diagnosa Medis"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[100385]" k-data-text-field="'text'"
+                        k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false"
+                        k-data-source="listDiagnosa" />
+                </div>
+            </div>
+            <div class="grid_12">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Faktor Dinamis"></label>
+                </div>
+                <!-- <div class="grid_12">
+                    <textarea c-text-area type="input" filter="'string'" class="k-textbox" ng-model="item.obj[10732]"
+                        placeholder="" style="height: 80px; width: 98%; " />
+                    </div> -->
+            </div>
+                
+
+        </div>
+        <div class="grid_12">
+            <fieldset style="margin-top: 10px; ">
+                <div class="grid_12" style="margin-top: 20px">
+                    <table style="width:100%;color: #4c5356;">
+                        <!-- <tr style="text-align: center;">
+
+                            <th style="text-align: center;width: 200px;">Tanggal</th> 
+                            <th style="text-align: center;"></th>
+                            <th style="text-align: center;"></th>
+                            <th colspan="3" style="text-align: center;" ng-repeat="list in listTanggal | orderBy:'id'" ng-init="jawabIndex = $index">
+                                <div class="grid_12">
+                                        <input style="width: 100%" k-ng-model="item.obj[list.id]" kendo-datepicker
+                                        placeholer="yyyy-MM-dd" k-format="'yyyy-MM-dd'" parsedate="yyyy-MM-dd" />
+                                  
+                                </div>
+                            </th>
+                            
+                        </tr> -->
+                        <tr>
+                            <th rowspan="2" style="text-align: center;">NO</th>
+                            <th rowspan="2" style="text-align: center;">Tindakan</th>
+                            <th colspan="31" style="text-align: center;">Tanggal</th>
+                          
+                        </tr>
+                        <tr>
+                                
+                                <th style="text-align: center;">1</th>
+                                <th style="text-align: center;">2</th>
+                                <th style="text-align: center;">3</th>
+                                <th style="text-align: center;">4</th>
+                                <th style="text-align: center;">5</th>
+                                <th style="text-align: center;">6</th>
+                                <th style="text-align: center;">7</th>
+                                <th style="text-align: center;">8</th>
+                                <th style="text-align: center;">9</th>
+                                <th style="text-align: center;">10</th>
+                                <th style="text-align: center;">11</th>
+                                <th style="text-align: center;">12</th>
+                                <th style="text-align: center;">13</th>
+                                <th style="text-align: center;">14</th>
+                                <th style="text-align: center;">15</th>
+                                <th style="text-align: center;">16</th>
+                                <th style="text-align: center;">17</th>
+                                <th style="text-align: center;">18</th>
+                                <th style="text-align: center;">19</th>
+                                <th style="text-align: center;">20</th>
+                                <th style="text-align: center;">21</th>
+                                <th style="text-align: center;">22</th>
+                                <th style="text-align: center;">23</th>
+                                <th style="text-align: center;">24</th>
+                                <th style="text-align: center;">25</th>
+                                <th style="text-align: center;">26</th>
+                                <th style="text-align: center;">27</th>
+                                <th style="text-align: center;">28</th>
+                                <th style="text-align: center;">29</th>
+                                <th style="text-align: center;">30</th>
+                                <th style="text-align: center;">31</th>
+                                
+                        <tr ng-repeat="list in listData1 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td>{{list.namaexternal}}</td>
+                            <td>{{list.reportdisplay}}</td>
+                            <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                            ng-value="{{jawab.value}}">
+                                        <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </td>
+                      </tr>
+                </table>
+
+                </div>
+
+                
+           </fieldset>
+       </div>
+
+
+    <div class="grid_12">
+        <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+    </div>
+</div>
+</div>

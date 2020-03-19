@@ -1,0 +1,304 @@
+{
+    "path": [
+        {
+            "nameDep": "InputTindakanCtrl",
+            "urlDep": "module/TataRekening/InputTindakanCtrl"
+        },
+        {
+            "nameDep": "DetailRegistrasiCtrl",
+            "urlDep": "module/TataRekening/DetailRegistrasiCtrl"
+        },
+        {
+            "nameDep": "RincianTagihanCtrl",
+            "urlDep": "module/TataRekening/RincianTagihanCtrl"
+        },
+        {
+            "nameDep": "RekapTagihanCtrl",
+            "urlDep": "module/TataRekening/RekapTagihanCtrl"
+        },
+        {
+            "nameDep": "DaftarNonLayananKasirCtrl",
+            "urlDep": "module/Kasir/DaftarNonLayananKasirCtrl"
+        },
+        {
+            "nameDep": "InputTagihanNonLayananCtrl",
+            "urlDep": "module/Kasir/InputTagihanNonLayananCtrl"
+        },
+        {
+            "nameDep": "InputTagihanNonLayananCtrl",
+            "urlDep": "module/Kasir/InputTagihanNonLayananCtrl"
+        },
+        {
+            "nameDep": "PembayaranTagihanNonLayananKasirCtrl",
+            "urlDep": "module/Kasir/PembayaranTagihanNonLayananKasirCtrl"
+        },
+        {
+            "nameDep": "DaftarPasienPulangKasirCtrl",
+            "urlDep": "module/Kasir/DaftarPasienPulangKasirCtrl"
+        },
+        {
+            "nameDep": "PembayaranTagihanLayananKasirCtrl",
+            "urlDep": "module/Kasir/PembayaranTagihanLayananKasirCtrl"
+        },
+        {
+            "nameDep": "DaftarPiutangKasirCtrl",
+            "urlDep": "module/Kasir/DaftarPiutangKasirCtrl"
+        },
+        {
+            "nameDep": "DaftarPasienAktifCtrl",
+            "urlDep": "module/Kasir/DaftarPasienAktifCtrl"
+        },
+        {
+            "nameDep": "DaftarPenerimaanKasirCtrl",
+            "urlDep": "module/Kasir/DaftarPenerimaanKasirCtrl"
+        },
+        {
+            "nameDep": "LaporanPenerimaanKasirCtrl",
+            "urlDep": "module/Kasir/LaporanKasir/LaporanPenerimaanKasirCtrl"
+        },
+        {
+            "nameDep": "LaporanPendapatanCtrl",
+            "urlDep": "module/Kasir/LaporanKasir/LaporanPendapatanCtrl"
+        },
+        {
+            "nameDep": "LaporanPendapatanRuanganCtrl",
+            "urlDep": "module/Kasir/LaporanKasir/LaporanPendapatanRuanganCtrl"
+        },
+        {
+            "nameDep": "LaporanPiutangPenjaminCtrl",
+            "urlDep": "module/Kasir/LaporanKasir/LaporanPiutangPenjaminCtrl"
+        },
+        {
+            "nameDep": "PenerimaanPembayaranKasirCtrl",
+            "urlDep": "module/Kasir/PenerimaanPembayaranKasirCtrl"
+        },
+        {
+            "nameDep": "SetoranKasirCtrl",
+            "urlDep": "module/BendaharaPenerimaan/SetoranKasirCtrl"
+        },
+        {
+            "nameDep": "MonitoringRekeningKoranBendaharaPenerimaanCtrl",
+            "urlDep": "module/BendaharaPenerimaan/MonitoringRekeningKoranBendaharaPenerimaanCtrl"
+        },
+        {
+            "nameDep": "MonitoringRekeningKoranBendaharaPenerimaanCtrl",
+            "urlDep": "module/BendaharaPenerimaan/MonitoringRekeningKoranBendaharaPenerimaanCtrl"
+        },
+        {
+            "nameDep": "DaftarPembayaranCtrl",
+            "urlDep": "module/BendaharaPengeluaran/DaftarPembayaranCtrl"
+        },
+        {
+            "nameDep": "DaftarTagihanSupplierCtrl",
+            "urlDep": "module/BendaharaPengeluaran/DaftarTagihanSupplierCtrl"
+        },
+        {
+            "nameDep": "PembayaranTagihanCtrl",
+            "urlDep": "module/BendaharaPengeluaran/PembayaranTagihanCtrl"
+        },
+        {
+            "nameDep": "JasaPelayananSatuRev2Ctrl",
+            "urlDep": "module/Remunerasi/JasaPelayananSatuRev2Ctrl"
+        },
+        {
+            "nameDep": "DaftarJasaPelayananSatuCtrl",
+            "urlDep": "module/Remunerasi/DaftarJasaPelayananSatuCtrl"
+        },
+        {
+            "nameDep": "PotonganRemunPegawaiCtrl",
+            "urlDep": "module/Remunerasi/PotonganRemunPegawaiCtrl"
+        },
+        {
+            "nameDep": "MappingJasaPelayananToPegawaiCtrl",
+            "urlDep": "module/Remunerasi/MappingJasaPelayananToPegawaiCtrl"
+        },
+        {
+            "nameDep": "DaftarJasaPelayananPegawaiCtrl",
+            "urlDep": "module/Remunerasi/DaftarJasaPelayananPegawaiCtrl"
+        },
+        {
+            "nameDep": "LaporanTransaksiInstalasiCtrl",
+            "urlDep": "module/Remunerasi/LaporanTransaksiInstalasiCtrl"
+        },
+        {
+            "nameDep": "PerhitunganIndexPostRemunCtrl",
+            "urlDep": "module/Remunerasi/PerhitunganIndexPostRemunCtrl"
+        },
+        {
+            "nameDep": "LaporanRemunerasiCtrl",
+            "urlDep": "module/Remunerasi/LaporanRemunerasiCtrl"
+        },
+        {
+            "nameDep": "DaftarPengeluaranSetoranCtrl",
+            "urlDep": "module/BendaharaPengeluaran/DaftarPengeluaranSetoranCtrl"
+        },
+        {
+            "nameDep": "LaporanBukuBesarCtrl",
+            "urlDep": "module/Akuntansi/LaporanBukuBesarCtrl"
+        },
+        {
+            "nameDep": "BukuBesarPembantuCtrl",
+            "urlDep": "module/Akuntansi/BukuBesarPembantuCtrl"
+        },
+        {
+            "nameDep": "TrialBalanceCtrl",
+            "urlDep": "module/Akuntansi/TrialBalanceCtrl"
+        },
+        {
+            "nameDep": "AkuntansiNeracaCtrl",
+            "urlDep": "module/Akuntansi/AkuntansiNeracaCtrl"
+        },
+        {
+            "nameDep": "AkuntansiArusKasCtrl",
+            "urlDep": "module/Akuntansi/AkuntansiArusKasCtrl"
+        },
+        {
+            "nameDep": "AkuntansiLaporanAktivitasCtrl",
+            "urlDep": "module/Akuntansi/AkuntansiLaporanAktivitasCtrl"
+        },
+        {
+            "nameDep": "AkuntansiPendapatanCtrl",
+            "urlDep": "module/Akuntansi/AkuntansiPendapatanCtrl"
+        },
+        {
+            "nameDep": "PiutangPasienJurnalCtrl",
+            "urlDep": "module/Akuntansi/PiutangPasienJurnalCtrl"
+        },
+        {
+            "nameDep": "VerifikasiTagihanSupplierCtrl",
+            "urlDep": "module/BendaharaPengeluaran/VerifikasiTagihanSupplierCtrl"
+        },
+        {
+            "nameDep": "VerifikasiPembayaranGajiCtrl",
+            "urlDep": "module/BendaharaPengeluaran/VerifikasiPembayaranGajiCtrl"
+        },
+        {
+            "nameDep": "MasterChartOfAccountCtrl",
+            "urlDep": "module/Akuntansi/MasterChartOfAccountCtrl"
+        },
+        {
+            "nameDep": "DaftarPiutangPasienCtrl",
+            "urlDep": "module/Piutang/DaftarPiutangPasienCtrl"
+        },
+        {
+            "nameDep": "PencatatanPiutangDaftarLayananCtrl",
+            "urlDep": "module/Piutang/PencatatanPiutangDaftarLayananCtrl"
+        },
+        {
+            "nameDep": "JurnalRev2018Ctrl",
+            "urlDep": "module/Akuntansi/JurnalRev2018Ctrl"
+        },
+        {
+            "nameDep": "PencatatanPiutangDaftarNonLayananCtrl",
+            "urlDep": "module/Piutang/PencatatanPiutangDaftarNonLayananCtrl"
+        },
+        {
+            "nameDep": "DaftarCollectingPiutangCtrl",
+            "urlDep": "module/Piutang/DaftarCollectingPiutangCtrl"
+        },
+        {
+            "nameDep": "CollectingPiutangCtrl",
+            "urlDep": "module/Piutang/CollectingPiutangCtrl"
+        },
+        {
+            "nameDep": "DetailCollectingPiutangCtrl",
+            "urlDep": "module/Piutang/DetailCollectingPiutangCtrl"
+        },
+        {
+            "nameDep": "PembayaranPiutangKasirCtrl",
+            "urlDep": "module/Piutang/PembayaranPiutangKasirCtrl"
+        },
+        {
+            "nameDep": "PenerimaanPembayaranKasirPiutangCtrl",
+            "urlDep": "module/Piutang/PenerimaanPembayaranKasirPiutangCtrl"
+        },
+        {
+            "nameDep": "DaftarKartuPiutangCtrl",
+            "urlDep": "module/Piutang/DaftarKartuPiutangCtrl"
+        },
+        {
+            "nameDep": "DaftarPembayaranPiutangPerusahaanPeriodeCtrl",
+            "urlDep": "module/Piutang/DaftarPembayaranPiutangPerusahaanPeriodeCtrl"
+        },
+        {
+            "nameDep": "DaftarPenerimaanHarianPiutangCtrl",
+            "urlDep": "module/Piutang/DaftarPenerimaanHarianPiutangCtrl"
+        },
+        {
+            "nameDep": "DaftarHisoriPiutangCtrl",
+            "urlDep": "module/Piutang/DaftarHisoriPiutangCtrl"
+        },
+        {
+            "nameDep": "RekapKlaimByDiagnosaCtrl",
+            "urlDep": "module/Piutang/RekapKlaimByDiagnosaCtrl"
+        },
+        {
+            "nameDep": "PenyetoranDepositKasirCtrl",
+            "urlDep": "module/Kasir/PenyetoranDepositKasirCtrl"
+        },
+        {
+            "nameDep": "BPJSKlaimCtrl",
+            "urlDep": "module/Piutang/BPJSKlaimCtrl"
+        },
+        {
+            "nameDep": "DataChecklistKlaimCtrl",
+            "urlDep": "module/Piutang/DataChecklistKlaimCtrl"
+        },
+        {
+            "nameDep": "DataGagalKlaimBPJSCtrl",
+            "urlDep": "module/Piutang/DataGagalKlaimBPJSCtrl"
+        },
+        {
+            "nameDep": "PembayaranKembaliDepositKasirCtrl",
+            "urlDep": "module/Kasir/PembayaranKembaliDepositKasirCtrl"
+        },
+        {
+            "nameDep": "LaporanRincianPenerimaanCtrl",
+            "urlDep": "module/Kasir/LaporanKasir/LaporanRincianPenerimaanCtrl"
+        },
+        {
+            "nameDep": "LaporanRekapPendapatanHarianCtrl",
+            "urlDep": "module/Kasir/LaporanKasir/LaporanRekapPendapatanHarianCtrl"
+        },
+        {
+            "nameDep": "LaporanPendapatanRuanganCtrlRev",
+            "urlDep": "module/Kasir/LaporanKasir/LaporanPendapatanRuanganCtrlRev"
+        },
+        {
+            "nameDep": "LapBendaharaAdministrasiCtrl",
+            "urlDep": "module/BendaharaPenerimaan/LapBendaharaAdministrasiCtrl"
+        },
+        {
+            "nameDep": "LapBendaharaFungsionalCtrl",
+            "urlDep": "module/BendaharaPenerimaan/LapBendaharaFungsionalCtrl"
+        },
+        {
+            "nameDep": "LapPenerimaanPerRekeningCtrl",
+            "urlDep": "module/BendaharaPenerimaan/LapPenerimaanPerRekeningCtrl"
+        },
+        {
+            "nameDep": "LaporanRincianPenerimaanMingguanCtrl",
+            "urlDep": "module/BendaharaPenerimaan/LaporanRincianPenerimaanMingguanCtrl"
+        },
+        {
+            "nameDep": "LaporanRekapRetribusiDaerahCtrl",
+            "urlDep": "module/BendaharaPenerimaan/LaporanRekapRetribusiDaerahCtrl"
+        },
+        {
+            "nameDep": "LaporanTargetRealisasiPendapatanCtrl",
+            "urlDep": "module/BendaharaPenerimaan/LaporanTargetRealisasiPendapatanCtrl"
+        },
+        {
+            "nameDep": "MasterSALCtrl",
+            "urlDep": "module/Akuntansi/MasterSALCtrl"
+        },
+        {
+            "nameDep": "DetailTagihanRekananCtrl",
+            "urlDep": "module/BendaharaPengeluaran/DetailTagihanRekananCtrl"
+        },
+        {
+            "nameDep": "MonitoringRekeningKoranBendaharaPengeluaranCtrl",
+            "urlDep": "module/BendaharaPengeluaran/MonitoringRekeningKoranBendaharaPengeluaranCtrl"
+        }
+    ]
+}

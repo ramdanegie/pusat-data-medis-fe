@@ -1,0 +1,363 @@
+<style type="text/css">
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid #228be6;
+    }
+
+    .k-slider-horizontal {
+        display: inline-block;
+        float: left;
+        width: 450px;
+
+        height: 26px;
+
+
+
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    .k-slider {
+
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        display: inline-block;
+    }
+
+    .activeBtn {
+        background-color: #10c4b2;
+        color: #ffffff;
+    }
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate> Asesmen Ulang RI (Risiko Bunuh Diri)</div>
+        </div>
+
+        <div class="grid_12" style="margin-top: 10px;">
+
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Tanggal Masuk"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%" k-ng-model="item.obj[20000]" kendo-datetimepicker
+                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                </div>
+            </div>
+
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Ruangan"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[20001]" k-data-text-field="'text'"
+                        k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false"
+                        k-data-source="listRuangan" />
+
+                </div>
+            </div>
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="DPJP"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[20002]" k-data-text-field="'text'"
+                        k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false"
+                        k-data-source="listPegawai" />
+                </div>
+            </div>
+
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Diagnosa Medis"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[20003]" k-data-text-field="'text'"
+                        k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false"
+                        k-data-source="listDiagnosa" />
+                </div>
+            </div>
+            <div class="grid_12">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Faktor Dinamis"></label>
+                </div>
+                <!-- <div class="grid_12">
+                    <textarea c-text-area type="input" filter="'string'" class="k-textbox" ng-model="item.obj[20004]"
+                        placeholder="" style="height: 80px; width: 98%; " />
+                    </div> -->
+            </div>
+                
+
+        </div>
+        <div class="grid_12">
+            <fieldset style="margin-top: 10px; ">
+                <div class="grid_12" style="margin-top: 20px">
+                    <table style="width:100%;color: #4c5356;">
+                        <tr style="text-align: center;">
+
+                            <th style="text-align: center;width: 200px;">Tanggal</th> 
+                            <th style="text-align: center;"></th>
+                            <th style="text-align: center;"></th>
+                            <th colspan="3" style="text-align: center;" ng-repeat="list in listTanggal | orderBy:'id'" ng-init="jawabIndex = $index">
+                                <div class="grid_12">
+                                        <input style="width: 100%" k-ng-model="item.obj[list.id]" kendo-datepicker
+                                        placeholer="yyyy-MM-dd" k-format="'yyyy-MM-dd'" parsedate="yyyy-MM-dd" />
+                                  
+                                </div>
+                            </th>
+                            <!-- <th style="width:40px;font-weight: bold;text-align: center">SKOR</th>
+                        <th style="font-weight: bold;text-align: center">PARAMETER</th> -->
+                        </tr>
+                        <tr>
+                            <th style="text-align: center;">Shift Jaga</th>
+                            <th style="text-align: center;"></th>
+                            <th style="text-align: center;"></th>
+                            <th style="text-align: center;">P</th>
+                            <th style="text-align: center;">S</th>
+                            <th style="text-align: center;">M</th>
+                            <th style="text-align: center;">P</th>
+                            <th style="text-align: center;">S</th>
+                            <th style="text-align: center;">M</th>
+                            <th style="text-align: center;">P</th>
+                            <th style="text-align: center;">S</th>
+                            <th style="text-align: center;">M</th>
+                            <th style="text-align: center;">P</th>
+                            <th style="text-align: center;">S</th>
+                            <th style="text-align: center;">M</th>
+                            <th style="text-align: center;">P</th>
+                            <th style="text-align: center;">S</th>
+                            <th style="text-align: center;">M</th>
+                            <th style="text-align: center;">P</th>
+                            <th style="text-align: center;">S</th>
+                            <th style="text-align: center;">M</th>
+                          
+                        </tr>
+                        <tr>
+                                <th style="text-align: center;font-weight: bold;">FAKTOR RISIKO</th>
+                                <th style="text-align: center;font-weight: bold;">SKALA</th>
+                                <th style="text-align: center;font-weight: bold;">POIN</th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                                <th style="text-align: center;"></th>
+                         </tr>
+                        <tr ng-repeat="list in listData1 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td>{{list.namaexternal}}</td>
+                            <td>{{list.satuan}}</td>
+                            <td>{{list.style}}</td>
+                            <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                            ng-value="{{jawab.value}}">
+                                        <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </td>
+                      </tr>
+                      <tr>
+                           <td colspan="3">Skor Saat Ini (Dinamis)</td>
+                           <td >{{skors1}}</td>
+                           <td>{{skors2}}</td>
+                           <td>{{skors3}}</td>
+                           <td>{{skors4}}</td>
+                           <td>{{skors5}}</td>
+                           <td>{{skors6}}</td>
+                           <td>{{skors7}}</td>
+                           <td>{{skors8}}</td>
+                           <td>{{skors9}}</td>
+                           <td>{{skors10}}</td>
+                           <td>{{skors11}}</td>
+                           <td>{{skors12}}</td>
+                           <td>{{skors13}}</td>
+                           <td>{{skors14}}</td>
+                           <td>{{skors15}}</td>
+                           <td>{{skors16}}</td>
+                           <td>{{skors17}}</td>
+                           <td>{{skors18}}</td>
+                     </tr>
+                     <tr>
+                            <td colspan="3">Skor Asesmen Awal (Statis)</td>
+                            <td ng-repeat="list in listSkorStatis | orderBy:'id'" ng-init="jawabIndex = $index">    
+                                <input c-text-box type="text" filter="" class="k-textbox"
+                                ng-model="item.obj[20389]" disabled />
+                            </td>
+                            <!-- <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td> -->
+                      </tr>
+                      <tr>
+                            <td colspan="3" style="font-weight: bold;">Total Skor</td>
+                            <td ng-repeat="list in listTotalSkor | orderBy:'id'" ng-init="jawabIndex = $index">    
+                                <input c-text-box type="text" filter="" class="k-textbox"
+                                ng-model="item.obj[list.id]" />
+                            </td>
+                         
+                      </tr>
+                      <tr>
+                            <td colspan="3" >Initial Perawat Penilai</td>
+                            <td ng-repeat="list in listInitial | orderBy:'id'" ng-init="jawabIndex = $index">    
+                                <input c-text-box type="text" filter="" class="k-textbox"
+                                ng-model="item.obj[list.id]" />
+                            </td>
+                         
+                      </tr>
+                      <tr>
+                            <td colspan="3" >Paraf</td>
+                            <td ng-repeat="list in listParaf | orderBy:'id'" ng-init="jawabIndex = $index">    
+                                <input c-text-box type="text" filter="" class="k-textbox"
+                                ng-model="item.obj[list.id]" />
+                            </td>
+                         
+                      </tr>
+                </table>
+
+                </div>
+                <div class="grid_12">
+                        <div class="grid_12">
+                            <div class="grid_6">
+                                    <div class="grid_12 ">      
+                                            <label c-label item="item">LEVEL RISIKO BUNUH DIRI Total Skor</label></div>
+                                    <div class="grid_12 ">
+                                            <input c-text-box type="text" filter="" class="k-textbox" ng-model="item.obj[10704]"  />
+                                        </div>
+                            </div>
+                            <div class="grid_6">
+                                    <div class="grid_4" style="margin-top: 15px;" ng-repeat="jawab in listRisikoJatuhSkor | orderBy:'id'"
+                                    ng-init="jawabIndex = $index">
+                                  
+                                        <div ng-switch on="jawabIndex">
+                                            <div ng-switch-default>
+                                                <input type="checkbox" class="k-checkbox"  id="item.obj{{jawab.id}}"
+                                                    ng-model="item.obj[jawab.id]">
+                                                <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                                    &nbsp;{{jawab.nama}}</label>
+                                            </div>
+                                        </div>
+                               
+                                </div>
+                        </div>
+                </div>
+
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th></th>
+                        <th style="text-align:center">Risiko</th>
+                        <th style="text-align:center">Manajemen Plan</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center" rowspan="10">Skoring</td>
+                        <td style="text-align:center" rowspan="3">Rendah</td>
+                        <td>1. Rawat jalan dan pemberian terapi </td>
+                    </tr>
+                    <tr>
+                        <td>2. Advise untuk mengenali tanda-tanda perburukan dan segera kontrol </td>
+                    </tr>
+                    <tr>
+                        <td>3. Psikoterapi</td>
+                    </tr>
+                    <tr>
+                            <td style="text-align:center" rowspan="2">Sedang</td>
+                            <td>1. Lapor DPJP </td>
+                    </tr>
+                    <tr>
+                            <td>2. Pemakaian gelang risiko</td>
+                    </tr>
+                    <tr>
+                            <td style="text-align:center" rowspan="5">Berat</td>
+                            <td>1. Pemakaian gelang risiko </td>
+                    </tr>
+                    <tr>
+                            <td>2. Lapor DPJP</td>
+                    </tr>
+                    <tr>
+                            <td>3. Rawat inap dengan terapi dan perawatan intensif</td>
+                    </tr>
+                    <tr>
+                            <td>4. Ruang isolasi / Restraint</td>
+                    </tr>
+                    <tr>
+                            <td>5. Observasi Ketat</td>
+                    </tr>
+                  
+                </table>
+                <table style="width:100%;color: #4c5356;margin-top: 5px;border-color: transparent;">
+                        <tr>
+                                <td rowspan="5">Petunjuk Pengisian : </td>
+                                <td>1. Tanggal di isi sesuai pelaksanaan asesmen ulang </td>
+                        </tr>
+                        <tr>
+                                <td>2. Pengukuran ulang pasien berisiko dilakukan 3x sehari sesuai shift jaga</td>
+                        </tr>
+                        <tr>
+                                <td>3. Isi dengan angka sesuai poin atau ceklis </td>
+                        </tr>
+                        <tr>
+                                <td>4. Hasil ditulis dalam kotak sesuai skala / skor Pengukuran yang di dapatkan </td>
+                        </tr>
+                        <tr>
+                                <td>5. Tulis initial nama dan paraf perawat yang melakukan </td>
+                        </tr>
+                    </table>
+           </fieldset>
+       </div>
+
+
+    <div class="grid_12">
+        <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+    </div>
+</div>
+</div>

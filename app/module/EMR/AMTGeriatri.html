@@ -1,0 +1,124 @@
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+        background-color: #e8edff;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+    }
+
+    .tg .tg-yw4l {
+        vertical-align: top
+    }
+
+    .header {
+        font-size: 120%;
+        font-weight: 700;
+    }
+
+    .rowstyle {
+        border-bottom: 1px dashed lightblue
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 120%;
+        font-weight: 700;
+        margin-bottom: 20px
+    }
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate>AMT (Abbreviated Mental Test)</div>
+        </div>
+        <!-- <div style="background-color: #10C4B2; height: 25px; margin-top: 5p; text-align: left; border: 1px solid; border-color: #10C4B2; padding: 10px 0 10px 10px;"
+            class="grid_12">
+            <div class="grid_12">
+                <span style="font-size: 18px; color: white; padding: 5px;">AMT (Abbreviated Mental Test)</span>
+            </div>
+        </div> -->
+        <div class="grid_12 header">
+            <!-- <div class="grid_1" >
+                </div> -->
+            <div class="grid_11" style="border-bottom:1px solid blue;">
+                <b>Parameter</b>
+            </div>
+            <div class="grid_1" style="border-bottom:1px solid blue; text-align:center">
+                <b>Nilai</b>
+            </div>
+            <!-- <div class="grid_1" style="border-bottom:1px solid blue; text-align:center">
+                <b>Nilai</b>
+            </div> -->
+        </div>
+        <div ng-repeat="tanya in listParameter | orderBy:'id'">
+            <div class="grid_12" ng-repeat="jawab in tanya.detail | orderBy:'id'" ng-init="jawabIndex = $index">
+                <div ng-switch on="jawabIndex">
+                    <div ng-switch-default>
+                        <div class="grid_12">
+                            <div class="grid_11" style="margin-bottom: 10px">
+                                <div class="grid_12">
+                                    <!-- <input type="radio" name="{{jawab.nama}}" id="{{jawab.nama}}" class="k-radio"
+                                            ng-model="item.umur" value="{{jawab.id}}"
+                                            ng-click="cekSkorHumpy(tanya, jawab)">
+                                        <label class="k-radio-label" for="{{jawab.nama}}">{{jawab.nama}}</label> -->
+
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                        ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                    <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                        &nbsp;{{jawab.nama}}</label>
+                                </div>
+                            </div>
+                            <div class="grid_1" style="text-align:center">
+                                <label>{{jawab.descNilai}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid_12 rowstyle">&nbsp;</div>
+        <div class="grid_12 footer" style="border-top:1px solid lightblue">
+            <div class="grid_11">Jumlah</div>
+            <div class="grid_1">{{totalSkor}}</div>
+        </div>
+        <div class="grid_12" ng-repeat="ket in listKeterangan ">
+            <div class="grid_1">{{ket.descNilai}} </div>
+            <div class="grid_11" style="margin-left:-5px"> : {{ket.nama}}</div>
+        </div>
+    </div>
+
+</div>
+
+<br />
+<br />
+<div class="grid_12">
+    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+
+</div>

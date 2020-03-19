@@ -1,0 +1,30 @@
+<div class="panel panel-default container_12">
+        <!-- <div ng-include='"../app/module/EMR/Breadcumb.html" '></div> -->
+    <div class='panel-heading' style="font-size: 18px;" c-translate>Pengkajian Keperawatan</div>
+    <div class="panel-body">
+        <div class="grid_12">
+            <div class="grid_12">
+                <div kendo-grid k-data-source="sourcePAP" k-selectable="'row'" options="mainGridOptions"
+                    k-ng-model="current" ng-click="kl(current)"></div>
+            </div>
+            <div class="grid_12">
+                <div class="grid_6"></div>
+                <div class="grid_3">
+                    <button class="btnTemplate1" style="margin-left: 0;" ng-click="Lihat()"><i
+                            class="fa fa-search"></i>Lihat</button>
+                    <!-- <button class="c-button" ng-click="Lihat()" style="font-size:20px">Lihat</button> -->
+                </div>
+                <div class="grid_3">
+                    <button class="btnTemplate1" style="margin-left: 0;" ng-click="create()"><i
+                            class="fa fa-plus-circle"></i>Buat Baru</button>
+                    <!-- <button class="c-button" ng-click="create()" style="font-size:20px">Buat Baru</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="grid_12" style="margin-top:60px">
+    <div ng-include='"../app/template/Shared/TemplateLoading"'></div>
+</div>

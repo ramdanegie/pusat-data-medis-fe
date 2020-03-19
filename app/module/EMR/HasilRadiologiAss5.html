@@ -1,0 +1,150 @@
+<style type="text/css">
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid #228be6;
+    }
+
+    .k-slider-horizontal {
+        display: inline-block;
+        float: left;
+        width: 450px;
+
+        height: 26px;
+
+ 
+
+    }
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    .k-slider {
+
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        display: inline-block;
+    }
+
+    .activeBtn {
+        background-color: #10c4b2;
+        color: #ffffff;
+    }
+</style>
+
+<div class="grid_12">
+    <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate>Hasil Pemeriksaan Radiologi k-5</div>
+    </div>
+    <!-- <div class="grid_12" style="margin-top: 20px">
+    <fieldset>
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Tanggal dan Jam Datang"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%" k-ng-model="item.obj[14741]" kendo-datetimepicker
+                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                </div>
+            </div>
+
+
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Dpjp"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[14742]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai " />
+                </div>
+            </div> 
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Bangsal"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[14743]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listRuang" />
+                </div>
+            </div> 
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Kelas"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[14744]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listKelas " />
+                </div>
+            </div> 
+
+    </fieldset>
+    </div> -->
+    <div class="grid_12">
+                <div class="grid_12" style="margin-top: 20px">
+                    <div><b>No.Foto</b></div>
+                    <div class="grid_8">
+                        <input class="k-textbox" ng-model="item.obj[110037]" type="text"
+                            placeholder="{{data.satuan}}" ng-value="{{data.value}}">
+                    </div>
+                    
+                    <div class="grid_12">
+                        <textarea style="height: 900px;width: 800px" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                         ng-model="item.obj[110034]" />
+                    </div>
+                </div>
+                    <div class="grid_6">
+                        <table>
+                            <tr>
+                                <td><p><b>Catatan :</b></p>
+                                    <p>Bila terdapat keraguan terhadap hasil pemeriksaan radiologi diatas dapat menghubungi :
+                                    </p>
+                                    <p><b>Instalasi Radiologi</b></p>
+                                    <p>RSJD  dr. Arif Zainudin Surakarta</p>
+                                    <p>Telp. 0271-641442 ext.150</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="grid_6" style="margin-top: 10px">
+                            <div class="grid_12">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Tanggal dan Jam"></label>
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%" k-ng-model="item.obj[110035]" kendo-datetimepicker
+                                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'"
+                                        parsedate="yyyy-MM-dd HH:mm" />
+
+                                </div>
+                            </div>
+                            <div class="grid_12" style="margin-top:10px">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Petugas"></label>
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[110036]"
+                                        k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                                        k-auto-bind="false" k-data-source="listPegawai" />
+
+                                </div>
+                            </div>
+                        </div>
+
+               
+            </div>
+</div>
+
+
+        <div class="grid_12">
+            <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,474 @@
+<style type='text/css'>
+    .button_sliding {
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        transition: all ease 0.5s;
+        border: none;
+        color: #ffffff;
+        margin: 3px;
+    }
+
+    .button_sliding:hover {
+        box-shadow: inset 0 50px 0 0 #ffffff;
+        color: #0b9c8d;
+    }
+
+    .text-smart {
+        /* font-family: 'Gotham Light';
+            font-size: 31px; */
+        color: #444444;
+        margin-top: -15px;
+        display: block;
+        font-size: 24pt !important;
+        font-family: ProximaNovaLight !important;
+    }
+
+    .text-rs {
+        font-weight: bold;
+        /* font-size: 31px; */
+        margin-top: -15px;
+        color: #444444;
+        /* font-family: 'Gotham Light'; */
+        font-size: 24pt !important;
+        font-family: ProximaNovaLight !important;
+    }
+
+    .k-menu.k-header {
+        border-color: #ffffff;
+        margin-top: 15px;
+    }
+
+    #header {
+        background-color: #2a2d33;
+        /* background-color: #ffffff; */
+
+        -webkit-box-shadow: 0px 7px 26px -1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 7px 26px -1px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 7px 26px -1px rgba(0, 0, 0, 0.25);
+    }
+
+    .li-style {
+        border-color: #ffffff;
+        margin-top: 15px;
+        outline: 0;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        zoom: 1;
+        cursor: default;
+        background-color: #ffffff;
+        background-repeat: repeat;
+        background-position: 0 center;
+        background-image: none;
+        background-position: 50% 50%;
+    }
+
+    md-sidenav md-content {
+        background-color: #363940;
+    }
+
+    /* .k-header .k-widget { */
+    /* background-color: #363940; */
+    /* } */
+
+    md-sidenav.md-default-theme,
+    md-sidenav,
+    md-sidenav.md-default-theme md-content,
+    md-sidenav md-content {
+        background-color: #363940;
+    }
+
+    .icon-logouts {
+        float: right;
+        /* top: 3.2%;
+        left: 97%; */
+        margin-top: 15px;
+        margin-right: 20px;
+        /* color: #ccc5c5; */
+        font-size: 25px;
+    }
+
+    .icon-settings {
+        /* color: #ccc5c5; */
+        float: right;
+        /* top: 3.2%;
+        left: 90.5%; */
+        margin-top: 15px;
+        margin-right: 110px;
+        font-size: 25px;
+    }
+
+    .icon-notifs {
+        float: right;
+        margin-top: 15px;
+        /* margin-top: 13px; */
+        margin-right: 60px;
+        font-size: 25px;
+        /* color: #ccc5c5; */
+    }
+
+    .icon-settings:hover {
+        background-color: rgba(207, 186, 186, 0.356);
+        border-radius: 3px;
+    }
+
+    .icon-notifs:hover {
+        background-color: rgba(207, 186, 186, 0.356);
+        border-radius: 3px;
+    }
+
+    .icon-logouts:hover {
+        background-color: rgba(207, 186, 186, 0.356);
+        border-radius: 3px;
+    }
+
+    .box-profile {
+        z-index: 99;
+        position: absolute;
+        top: 80px;
+        right: 70px;
+        width: 200px;
+        padding: 10px;
+        background-color: #ffffff;
+        /* border: 4px solid #10c4b2; */
+    }
+
+    .box-profile2 {
+        z-index: 99;
+        position: absolute;
+        top: 80px;
+        right: 30px;
+        width: 200px;
+
+        padding: 10px;
+        background-color: #ffffff;
+    }
+
+    .z-button .title {
+        font-size: 14pt !important;
+    }
+
+    .z-button.fa {
+        margin-top: 5px;
+    }
+
+    .z-button {
+        float: left;
+        text-align: center;
+        cursor: pointer;
+        height: 100%;
+        min-height: 26px;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 14px;
+        color: white;
+        background-color: #41abf2;
+        width: 100%;
+        border: 1px transparent solid;
+        padding: 5px;
+    }
+
+    .z-button:hover {
+        background-color: #363940;
+    }
+
+    .accent>.z-button {
+        background-color: #363940 !important;
+    }
+
+    .accent>.z-button:hover {
+        background-color: #10c4b2 !important;
+    }
+
+    .box-theme {
+        z-index: 99;
+        position: absolute;
+        top: 65px;
+        right: 4px;
+        width: 300px;
+        background-color: #2a2d33;
+        height: auto;
+        max-height: 500px;
+        overflow-y: scroll;
+        border: 4px solid #10c4b2;
+    }
+
+    .parent-side-nav,
+    .side-nav {
+        overflow: auto;
+        background-color: #292d32 !important;
+        width: 200px;
+        position: fixed;
+        height: 100%;
+        min-height: 100%;
+        color: white;
+    }
+
+    .show {
+        display: block;
+    }
+
+    #menu h2 {
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: 5px 10px;
+    }
+
+    #template img {
+        margin: 5px 20px 0 0;
+        float: left;
+    }
+
+    #template {
+        width: 380px;
+    }
+
+    #template ol {
+        float: left;
+        margin: 0 0 0 30px;
+        padding: 10px 10px 0 10px;
+    }
+
+    #template:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    #template .k-button {
+        float: left;
+        clear: left;
+        margin: 5px 0 5px 12px;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    .user-header {
+        height: 120px;
+        padding: 20px;
+        background-color: #2a2d33;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .img-circle {
+        border-radius: 50%;
+        z-index: 5;
+        height: 90px;
+        width: 90px;
+        border: 3px solid;
+        border-color: transparent;
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .user-footer {
+        background-color: #f9f9f9;
+        padding: 10px;
+    }
+</style>
+<div ng-controller="HeaderCtrl">
+    <div class="container" style="padding:0; margin:0">
+        <div>
+            <!-- <img src="images/asset2019/icon-dashboard-menu.png" style="position: absolute;top: 15px;" aria-hidden="true"
+                ng-click="showMenu()"></img> -->
+            <span class="fa fa-th-list" aria-hidden="true" style="position: absolute;
+            top: 20px;
+            font-size: 25px;" ng-click="showMenu()"></span>
+            <div style="margin-top: 9px">
+                <!-- <img  src="images/transmedic_home.png"/> -->
+                <!-- <img src="images/asset/logo-medifirst2000.png" style="width:90px;margin-left:45px;margin-top: 0" aria-hidden="true"></img> -->
+                <span ng-click="showMenu()" style="color: #ffffff;
+                margin-left: 35px;
+                cursor: pointer;
+                font-size: 20pt !important;
+                font-weight: bold;
+                     ">
+                     TRANSDATA
+                     <!-- <span style="font-weight:bold;color:#f50909">M</span>EDIC   -->
+                     <!-- <span style="color: #ffffff;
+                        margin-bottom: : 8px;
+                        font-size: 12pt;"> |{{NamaRs}} </span> -->
+                </span>
+
+                <!-- <span class=" text-smart" style="margin-left:35px">Medifirst</span><span class=" text-rs">2000 </span> -->
+                <span class="c-color sub-title" style="color: #ffffff;
+                margin-top: 2px;
+                font-size: 10pt;
+                font-style: italic;
+                margin-left: 40px;"> 
+                    Medical Records
+                    <!-- {{NamaRs}} -->
+               <!--  TRANS<span style="font-weight:bold;color:#f50909">M</span>EDIC E-HealthCare  -->
+            </span>
+            </div>
+        </div>
+        <!-- <div class="nav-buttons"  style="position:absolute;right: 43px;top: 0;">
+            <ul id="NavigationMenu" class="li-style" >
+                <li ng-repeat="menu in listMenuHeader" class="button_sliding"  ng-click="goToLink(menu.link)"  style="border: 0px solid #ffff; background:#10c4b2 !important;">
+            
+                    <button class="button_sliding"style="margin:0px; padding: 0px; background:none; border:none; ">
+                            <span class="fa fa-th-large" style="position: absolute;
+                            top: 55%;
+                            margin-top: -.5em;
+                            height: 1em;
+                            left: 2em;
+                        "></span><span style="padding: 6px 12px 6px 28px">{{menu.caption}}</span> 
+                    </button>
+                </li>
+            </ul>
+           
+        </div> -->
+
+        <div class="badge ">
+            <ul id="menusss">
+                <li>
+                    <i class="fa fa-bell" style="font-size: 20px"></i>
+                </li>
+                <li>
+                    <i class="fa fa-cogs" style="font-size: 20px"></i>
+                    <ul>
+                        <li ng-click='goToLink("#/VWJhaFBhc3N3b3Jk")'><i class="fa fa-unlock"
+                                style="margin-right: 2px"></i>&nbsp;&nbsp;Password</li>
+                        <li ng-click='showBoxTheme()'><i class="fa fa-home"
+                                style="margin-right: 2px"></i>&nbsp;&nbsp;Theme</li>
+                    </ul>
+                </li>
+                <li>
+                    <i class="fa fa-power-off" style="font-size: 20px"></i>
+                    <ul>
+                        <li>
+
+                            <div class="user-header">
+                                <img src="stylesheets/surgeon.png" class="img-circle" alt="User Image">
+                                <p>
+                                    {{dataPegawai.namaLengkap}}
+                                    <!-- <small>Member since Nov. 2017</small> -->
+                                </p>
+                            </div>
+                        </li>
+                        <!-- <li><i class="fa fa-user" style="margin-right: 2px"></i>&nbsp;&nbsp;{{dataPegawai.namaLengkap}}</li> -->
+                        <li ng-click='goToLink("Logout")'>
+                            <i class="fa fa-arrow-right" style="margin-right: 2px"></i>&nbsp;&nbsp;Logout</li>
+                    </ul>
+
+                </li>
+            </ul>
+           <!--  <span class="c-color sub-title" style="color: #ffffff;
+                margin-top: 2px;
+                font-size: 10pt;
+                font-style: italic;
+                /*margin-left: 40px;*/
+                "> 
+                    {{NamaRs}}
+            </span> -->
+        </div>
+        <!-- <span class="badge   fa fa-bell icon-notifs" ng-click='open()'>
+        </span>
+        <span class="badge  fa fa-cogs icon-settings " ng-click="showBoxSetting()">
+        </span>
+        <span class="badge  fa fa-power-off icon-logouts" ng-click='showBoxProfile()'>
+        </span> -->
+
+
+
+
+        <div class="box-profile" ng-show='isBoxSetting'>
+            <table style="color: white; padding: 20px;">
+                <tr>
+                    <td><button class="z-button" ng-click='goToLink("#/UbahPassword")'> <span class="fa fa-unlock-alt "
+                                style="/*position: absolute;
+                    top:18%;
+                    height: 1em;
+                    left: 2em;*/
+                    float: left
+                "></span><span style="padding: 6px 12px 6px 28px">Password</span> </button></td>
+                </tr>
+                <tr>
+                    <td><button class="z-button" ng-click='showBoxTheme()'> <span class="fa fa-cube " style="/*position: absolute;
+                    top: 55%;
+                    height: 1em;
+                    left: 2em;*/
+                       float: left
+                "></span><span style="padding: 6px 12px 6px 28px">Theme</span> </button></td>
+                </tr>
+            </table>
+
+            <!-- <ul>
+                <li class="button_sliding"> Red</li>
+                <li class="button_sliding"> Green</li>
+                <li class="button_sliding"> Blue</li>
+            </ul> -->
+        </div>
+        <div class="box-profile2" ng-show='isShowBoxProfile'>
+            <table style="color: black; padding: 20px;">
+                <tr>
+                    <td></td>
+                    <td style="text-align: center;"><img class="avatar" src="resources/images/docters.jpg" alt="avatar"
+                            style="width:40px" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: center;">{{dataPegawai.namaLengkap}}</td>
+                    <td></td>
+                </tr>
+
+            </table>
+            <div style="padding:0px 20px 20px 20px">
+                <button class="z-button" ng-click='goToLink("Logout")'> <span class="fa fa-power-off "></span><span
+                        style="padding: 6px 12px 6px 28px">Logout</span> </button>
+            </div>
+            <!-- <ul>
+                    <li class="button_sliding"> Red</li>
+                    <li class="button_sliding"> Green</li>
+                    <li class="button_sliding"> Blue</li>
+                </ul> -->
+        </div>
+
+        <!-- <div class="box-theme" ng-show='isShowTheme'> -->
+        <c-side-nav header="'Theme'" position="'right'" top="70" hide-toggle='true' ng-show='isShowTheme'
+            is-tablet="isTablet">
+            <ul>
+                <li ng-repeat="itemTheme in themes" style="margin-top:15px">
+                    <span ng-click='changeColor(itemTheme.color)'> <span
+                            style="border-radius:5px;background-color:{{itemTheme.color}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        {{itemTheme.name}}
+                    </span>
+                </li>
+            </ul>
+        </c-side-nav>
+
+
+        <!-- <table style="color: white; padding: 10px;">
+            <tr ng-repeat="notif in listNotification" style="cursor: pointer;" ng-click="checkNotif(notif)">
+                <td style="text-align: left;">
+                    <p style="margin: 2px; font-weight: bold; ">{{notif.title}}</p>
+                    <p style="margin: 2px;">Dari : {{notif.fromPegawai}}</p>
+                    <p style="margin: 2px;" ng-hide="notif.unitKerja == null">Unit Kerja : {{notif.unitKerja}}</p>
+                    <p style="margin: 2px;">{{notif.description}}</p>
+                    <p style="margin: 2px;font-size: 11px;text-align: right;">{{notif.date}}</p>
+                    <hr style="margin: 15px 0px; border: 0.5px solid #68696b;" />
+                </td>
+            </tr>
+        </table>
+    </div> -->
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#NavigationMenu").kendoMenu();
+            $("#menusss").kendoMenu();
+        });
+
+        $(document.body).keydown(function (e) {
+            if (e.altKey && e.keyCode == 87) {
+                $("#NavigationMenu").focus();
+            }
+        });
+    </script>

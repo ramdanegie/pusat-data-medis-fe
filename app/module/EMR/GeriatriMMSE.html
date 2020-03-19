@@ -1,0 +1,208 @@
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+        background-color: #e8edff;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+    }
+
+    .tg .tg-yw4l {
+        vertical-align: top
+    }
+
+    .header {
+        font-size: 120%;
+        font-weight: 700;
+    }
+
+    .rowstyle {
+        border-bottom: 1px dashed lightblue
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 120%;
+        font-weight: 700;
+        margin-bottom: 20px
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate>MMSE ( Mini Mental State Examination )</div>
+        </div>
+        <!-- <div style="background-color: #10C4B2; height: 25px; margin-top: 5p; text-align: left; border: 1px solid; border-color: #10C4B2; padding: 10px 0 10px 10px;"
+            class="grid_12">
+            <div class="grid_12">
+                <span style="font-size: 18px; color: white; padding: 5px;">MMSE ( Mini Mental State Examination )</span>
+            </div>
+        </div> -->
+        <div class="grid_12" style="margin-top: 20px">
+            <table style="width:100%;">
+                <tr>
+                    <th style="width:20px">Skor Maks</th>
+                    <th style="width:20px">Skor Lansia</th>
+                    <th>Pertanyaan &nbsp; &nbsp; &nbsp; Jam Mulai : <input k-ng-model="item.obj[1109]"
+                            kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'"
+                            parsedate="yyyy-MM-dd HH:mm" ng-value="{{data.datevalue}}" </th> </tr> <tr>
+                    <th colspan="3">ORIENTASI</th>
+
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td> <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[1101]" /></td>
+                    <td>Sekarang (hari),(tanggal),(bulan),(tahun) berapa , (musim) apa ? </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td> <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[1102]" /></td>
+                    <td>Sekarang kita berada dimana ?(jalan),(nomor rumah),(kota),(kabupaten),(propinsi) </td>
+                </tr>
+                <tr>
+                    <th colspan="3">REGISTRASI</th>
+
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td> <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[1103]" /></td>
+                    <td>Pewawancara menyebutkan nama 3 buah benda, 1 detik untuk tiap benda. Kemudian mintalah klien
+                        mengukang ke 3 nama benda tersebut . Berikan 1 angka untuk tiap jawaban yang benar. Bila masih
+                        salah, ulangi penyebutan ke 3 nama benda tsb sampai ia dapat mengulangnya dengan benar.
+                        Hitunglah jumlah percobaan dan catatlah (bola,kursi,sepatu)</td>
+                </tr>
+                <tr>
+                    <th colspan="3">ATENSI dan KALKULASI</th>
+
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td> <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[1104]" /></td>
+                    <td>Hitunglah selama berturut-turut selang 7 mulai dari 100 kebawah. Berilah 1 angka untuk tiap
+                        jawab yang benar. Berhenti setelah 5 hitungan (93,86,79,72,65). Kemungkinan lain, ejalah kata
+                        "dunia" dari akhir ke awal (a-i-n-u-d)</td>
+                </tr>
+
+                <tr>
+                    <th colspan="3">MENGINGAT</th>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td> <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[1105]" /></td>
+                    <td>Tanyalah kembali ke 3 nama benda yang telah disebutkan diatas. Berilah 1 angka untuk setiap
+                        jawaban yang benar </td>
+                </tr>
+                <tr>
+                    <th colspan="3">BAHASA</th>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td> <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[1106]" /></td>
+                    <td>Apakah nama benda-benda ini ? Perlihatkan pensil dan arloji (2 angka ) ulanglah kalimat berikut
+                        : "Jika tidak, dan atau tapi". (1 angka) . Laksanakan 3 buah perintah ini : "Peganglah selembar
+                        kertas dengan tangan kanan, Lipatlah kertas itu pada pertengahan dan letakanlah dilantai". (3
+                        angka). Bacalah dan laksanakan perintah berikut "PEJAMKAN MATA ANDA" , (1 angka). Tulislah
+                        sebuah kalimat. Tirulah gambar ini (1 angka) </td>
+                </tr>
+                <tr>
+                    <td>SKOR</td>
+                    <td> <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[1107]" /></td>
+                    <td> Jam Selesai : <input k-ng-model="item.obj[1108]" kendo-datetimepicker
+                            placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm"
+                            ng-value="{{data.datevalue}}" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- <div class="grid_12 header">
+
+            <div class="grid_11" style="border-bottom:1px solid blue;">
+                <b>Parameter</b>
+            </div>
+            <div class="grid_1" style="border-bottom:1px solid blue; text-align:center">
+                <b>Nilai</b>
+            </div>
+
+        </div>
+        <div ng-repeat="tanya in listParameter | orderBy:'id'">
+            <div class="grid_12" ng-repeat="jawab in tanya.detail | orderBy:'id'" ng-init="jawabIndex = $index">
+                <div ng-switch on="jawabIndex">
+                    <div ng-switch-default>
+                        <div class="grid_12">
+                            <div class="grid_11" style="margin-bottom: 10px">
+                                <div class="grid_12">
+
+
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                        ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                    <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                        &nbsp;{{jawab.nama}}</label>
+                                </div>
+                            </div>
+                            <div class="grid_1" style="text-align:center">
+                                <label>{{jawab.descNilai}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid_12 rowstyle">&nbsp;</div>
+        <div class="grid_12 footer" style="border-top:1px solid lightblue">
+            <div class="grid_11">Jumlah</div>
+            <div class="grid_1">{{totalSkor}}</div>
+        </div> -->
+        <div class="grid_12">
+            <div class="grid_12"><b> Keterangan : </b> </div>
+            <div class="grid_12"> Diluar nilai 30 yang mungkin, nilai yang kurang dari 25 mengarahkan adanya gangguan
+                dan nilai yang kurang dari 20 menyatakan gangguan yang pasti.</div>
+        </div>
+        <!-- </div> -->
+
+    </div>
+
+    <br />
+    <br />
+    <div class="grid_12">
+        <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+
+    </div>

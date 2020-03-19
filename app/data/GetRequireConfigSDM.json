@@ -1,0 +1,165 @@
+{
+  "path": [
+    {
+      "nameDep": "DataPegawaiCtrl",
+      "urlDep": "module/SDM/DataPegawaiCtrl"
+    },
+    {
+      "nameDep": "MasterPegawaiCtrl",
+      "urlDep": "module/SDM/MasterPegawaiCtrl"
+    },
+    {
+      "nameDep": "DaftarUrutKepangkatanCtrl",
+      "urlDep": "module/SDM/DaftarUrutKepangkatanCtrl"
+    },
+    {
+      "nameDep": "MonitoringJadwalKerjaRuanganCtrl",
+      "urlDep": "module/SDM/MonitoringJadwalKerjaRuanganCtrl"
+    },
+    {
+      "nameDep": "SipStrExpiredCtrl",
+      "urlDep": "module/SDM/SipStrExpiredCtrl"
+    },
+    {
+      "nameDep": "DaftarPegawaiPensiunMeninggalCtrl",
+      "urlDep": "module/SDM/DaftarPegawaiPensiunMeninggalCtrl"
+    },
+    {
+      "nameDep": "daftarPensiunPegawaiCtrl",
+      "urlDep": "module/SDM/daftarPensiunPegawaiCtrl"
+    },
+    {
+      "nameDep": "JadwalKerjaPegawaiCtrl",
+      "urlDep": "module/SDM/JadwalKerjaPegawaiCtrl"
+    },
+    {
+      "nameDep": "MonitoringAbsensiCtrl",
+      "urlDep": "module/SDM/MonitoringAbsensiCtrl"
+    },
+    {
+      "nameDep": "MonitoringPengajuanPelatihanCtrl",
+      "urlDep": "module/SDM/Pelatihan/MonitoringPengajuanPelatihanCtrl"
+    },
+    {
+      "nameDep": "PermintaaanPelatihanCtrl",
+      "urlDep": "module/SDM/Pelatihan/PermintaaanPelatihanCtrl"
+    },
+    {
+      "nameDep": "TambahPengajuanPelatihanCtrl",
+      "urlDep": "module/SDM/Pelatihan/TambahPengajuanPelatihanCtrl"
+    },
+    {
+      "nameDep": "DaftarUndanganPelatihanCtrl",
+      "urlDep": "module/SDM/Pelatihan/DaftarUndanganPelatihanCtrl"
+    },
+    {
+      "nameDep": "DaftarKehadiranPesertaPelatihanCtrl",
+      "urlDep": "module/SDM/Pelatihan/DaftarKehadiranPesertaPelatihanCtrl"
+    },
+    {
+      "nameDep": "DaftarRekapitulasiKehadiranCtrl",
+      "urlDep": "module/SDM/Pelatihan/DaftarRekapitulasiKehadiranCtrl"
+    },
+    {
+      "nameDep": "PelaksanaanPelatihanCtrl",
+      "urlDep": "module/SDM/Pelatihan/PelaksanaanPelatihanCtrl"
+    },
+    {
+      "nameDep": "InputEvaluasiPenyelenggaraanCtrl",
+      "urlDep": "module/SDM/Pelatihan/InputEvaluasiPenyelenggaraanCtrl"
+    },
+    {
+      "nameDep": "InputEvaluasiNarasumberCtrl",
+      "urlDep": "module/SDM/Pelatihan/InputEvaluasiNarasumberCtrl"
+    },
+    {
+      "nameDep": "DaftarEvaluasiPenyelenggaraCtrl",
+      "urlDep": "module/SDM/Pelatihan/DaftarEvaluasiPenyelenggaraCtrl"
+    },
+    {
+      "nameDep": "DaftarEvaluasiNarasumberCtrl",
+      "urlDep": "module/SDM/Pelatihan/DaftarEvaluasiNarasumberCtrl"
+    },
+    {
+      "nameDep": "MasterKategoriPendidikanCtrl",
+      "urlDep": "module/SDM/Pendidikan/MasterKategoriPendidikanCtrl"
+    },
+    {
+      "nameDep": "MasterJurusanPeminatanCtrl",
+      "urlDep": "module/SDM/Pendidikan/MasterJurusanPeminatanCtrl"
+    },
+    {
+      "nameDep": "MasterMappingKategoriPendidikanToProgramPendidikanCtrl",
+      "urlDep": "module/SDM/Pendidikan/MasterMappingKategoriPendidikanToProgramPendidikanCtrl"
+    },
+    {
+      "nameDep": "PesertaDidikCtrl",
+      "urlDep": "module/SDM/Pendidikan/PesertaDidikCtrl"
+    },
+    {
+      "nameDep": "TenagaPengajarCtrl",
+      "urlDep": "module/SDM/Pendidikan/TenagaPengajarCtrl"
+    },
+    {
+      "nameDep": "MasterNarasumberCtrl",
+      "urlDep": "module/SDM/Pelatihan/MasterNarasumberCtrl"
+    },
+    {
+      "nameDep": "PenelitianEksternalCtrl",
+      "urlDep": "module/SDM/Penelitian/PenelitianEksternalCtrl"
+    },
+    {
+      "nameDep": "DaftarPenelitianEksternalCtrl",
+      "urlDep": "module/SDM/Penelitian/DaftarPenelitianEksternalCtrl"
+    },
+    {
+      "nameDep": "PenelitianPegawaiCtrl",
+      "urlDep": "module/SDM/Penelitian/PenelitianPegawaiCtrl"
+    },
+    {
+      "nameDep": "DaftarPenelitianPegawaiCtrl",
+      "urlDep": "module/SDM/Penelitian/DaftarPenelitianPegawaiCtrl"
+    },
+    {
+      "nameDep": "RekapPegawaiCtrl",
+      "urlDep": "module/SDM/RekapPegawaiCtrl"
+    },
+    {
+      "nameDep": "InformasiPosisiStrukturalPegawaiCtrl",
+      "urlDep": "module/SDM/InformasiPosisiStrukturalPegawaiCtrl"
+   
+    },
+    {
+      "nameDep": "PermohonanCutiCtrl",
+      "urlDep": "module/SDM/PermohonanCutiCtrl"
+    },
+    {
+      "nameDep": "AbsensiPegawaiCtrl",
+      "urlDep": "module/SDM/AbsensiPegawaiCtrl"
+    },
+    {
+      "nameDep": "LaporanPendapatanPelayananDiklitbangCtrl",
+      "urlDep": "module/SDM/Pelatihan/LaporanPendapatanPelayananDiklitbangCtrl"
+    },
+    {
+      "nameDep": "RekapPendapatanDiklitbangCtrl",
+      "urlDep": "module/SDM/Pelatihan/RekapPendapatanDiklitbangCtrl"
+    },
+    {
+      "nameDep": "AbsensiPegawaiRevCtrl",
+      "urlDep": "module/SDM/AbsensiPegawaiRevCtrl"
+    },
+    {
+      "nameDep": "SuratKeputusanCtrl",
+      "urlDep": "module/SDM/SuratKeputusanCtrl"
+    },
+    {
+      "nameDep": "ShiftKerjaCtrl",
+      "urlDep": "module/SDM/ShiftKerjaCtrl"
+    },
+    {
+      "nameDep": "MapPegawaiToUnitKerjaCtrl",
+      "urlDep": "module/SDM/MapPegawaiToUnitKerjaCtrl"
+    }
+  ]
+}

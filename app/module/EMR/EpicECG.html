@@ -1,0 +1,178 @@
+<style type="text/css">
+    .style-center {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .style-right {
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+    }
+
+    .style-left {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .img-btn {
+        position: absolute;
+        top: 40%;
+        margin-top: -.5em;
+        height: 1.5em;
+        left: 2em;
+    }
+
+    c-button-header,
+    .c-button {
+        float: left;
+        text-align: center;
+        cursor: pointer;
+        height: 100%;
+        min-height: 70px;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 12px;
+        color: black;
+        background-color: #fff;
+        width: 100%;
+        border: 1px transparent solid;
+        padding: 5px;
+        -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+    }
+
+    c-button-header:hover,
+    .c-button:hover {
+        background-color: #10c4b2;
+    }
+
+    c-button-header,
+    .c-button-asli {
+        float: left;
+        text-align: center;
+        cursor: pointer;
+        height: 100%;
+        min-height: 26px;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 14px;
+        color: white;
+        background-color: #10c4b2;
+        width: 100%;
+        border: 1px transparent solid;
+        padding: 5px;
+    }
+    }
+
+    .title {
+        font-size: 12px;
+    }
+</style>
+
+<div class="grid_2">
+    <div class="grid_12 ">
+        <div kendo-grid k-data-source="sourceKomponens" k-selectable="'row'" k-columns="columnKomponens"
+            k-pageable="'true'" k-sortable="'true'" k-ng-model="dataSelectedKomponen"
+            ng-click="klikKomponen(dataSelectedKomponen)">
+        </div>
+    </div>
+    <!-- <div class="pull-right" style="margin-top:4%">
+            <button class="k-button" ng-click="LoadDataECG()" >Load Data</button>
+            <button class="k-button" ng-click="tutupPOPupECG()">Tutup</button>
+    </div> -->
+</div>
+<div class="grid_10">
+    <div class="grid_12">
+        <div class="grid_4">
+            <div class="grid_12">
+                <div class="grid_12">
+                    <label c-label item="item">NoOfBytesPerFrame : {{item.NoOfBytesPerFrame}}</label>
+                </div>
+            </div>
+            <div class="grid_12">
+                <div class="grid_12">
+                    <label c-label item="item">MobilePhoneNo : {{item.MobilePhoneNo}}</label>
+                </div>
+            </div>
+            <div class="grid_12">
+                <div class="grid_12">
+                    <label c-label item="item">PhoneIMSINo : {{item.PhoneIMSINo}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="grid_4">
+            <div class="grid_12">
+                <div class="grid_12">
+                    <label c-label item="item">CustomerID : {{item.CustomerID}}</label>
+                </div>
+            </div>
+            <div class="grid_12">
+                <div class="grid_12">
+                    <label c-label item="item">Date : {{item.Date}}</label>
+                </div>
+            </div>
+            <div class="grid_12">
+                <div class="grid_12">
+                    <label c-label item="item">SignalStrength : {{item.SignalStrength}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="grid_4">
+            <div class="grid_12">
+                <div class="grid_12">
+                    <label c-label item="item">SampleRate : {{item.SampleRate}}</label>
+                </div>
+            </div>
+            <div class="grid_12">
+                <div class="grid_12">
+                    <label c-label item="item">HeartBeat : {{item.HeartBeat}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="grid_1"></div> -->
+    <!-- <canvas id="myCanvas" width="1300" height="450" style="margin-top: -170px;margin-left: 25px">
+        Your browser does not support the HTML5 canvas tag.</canvas> -->
+    <canvas id="myCanvas" width="1300" height="450" style="margin-left: 25px">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+
+
+    <div class="grid_12">
+        <div class="grid_10">
+            <div class="grid_12">
+                <label c-label item="item">Expertise</label>
+            </div>
+            <textarea ng-model="item.expertise" style="height:70px; margin-top:5px"></textarea>
+        </div>
+
+        <!-- <div class="grid_1" style="margin-top: 20px">
+            <button class="c-button-asli" ng-click="loadECG()">List ECG</button>
+        </div> -->
+        <div class="grid_1" style="margin-top: 20px">
+            <button class="btnTemplate1" ng-click="save()"><i class="fa fa-save"></i>Simpan</button>
+        </div>
+        <!-- <div class="grid_1" style="margin-top: 20px">
+            <button class="error c-button-asli" ng-click="batal()">Batal</button>
+        </div> -->
+    </div>
+</div>
+<div kendo-window="popupKomponen" k-title="'Daftar ECG'" k-visible="false" k-width="600" k-height="400">
+    <div class="panel panel-default container_12">
+
+        <div class="grid_12 ">
+            <div kendo-grid k-data-source="sourceKomponens" k-selectable="'row'" k-columns="columnKomponens"
+                k-pageable="'true'" k-sortable="'true'" k-ng-model="dataSelectedKomponen"
+                ng-click="klikKomponen(dataSelectedKomponen)">
+            </div>
+        </div>
+        <div class="pull-right" style="margin-top:4%">
+            <button class="k-button" ng-click="LoadDataECG()">Load Data</button>
+            <button class="k-button" ng-click="tutupPOPupECG()">Tutup</button>
+        </div>
+    </div>
+
+</div>

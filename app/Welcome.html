@@ -1,0 +1,412 @@
+<style>
+    .menu-layanan {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+
+    .box-menu-layanan {
+        padding: 13px !important;
+    }
+
+    .box-image-menu-layanan {
+        width: 100%;
+        box-shadow: 5px 10px 18px 1px #abaaaa;
+    }
+
+    .menu-back {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        background: white;
+        height: 50px;
+        box-shadow: 0px 2px 20px 1px #abaaaa;
+    }
+
+    .container-navigation-menu {
+        position: relative;
+    }
+
+    .btn-back-menu-layanan {
+        cursor: pointer;
+        color: #bbbcbd;
+        font-weight: 700;
+        padding-left: 30px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .title-menu-layanan {
+        cursor: pointer;
+        color: black;
+        font-weight: 700;
+        padding-right: 30px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        text-align: right;
+        display: inline-block;
+    }
+
+    .tooltip-rmpelayanan {
+        z-index: 10;
+        background-color: #2a2d33;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: -75px;
+        left: 67px;
+    }
+
+    .tooltip-keuangan {
+        z-index: 10;
+        background-color: #2a2d33;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 85px;
+        right: -119px;
+    }
+
+    .tooltip-sdm {
+        bottom: 85px;
+        left: -190px;
+        z-index: 10;
+        background-color: #2a2d33;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+    }
+
+    .tooltip-sarpras {
+        bottom: 84px;
+        right: -190px;
+        z-index: 10;
+        background-color: #2a2d33;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+    }
+
+    .tooltip-manajemen {
+        top: 82px;
+        left: -125px;
+        z-index: 10;
+        background-color: #2a2d33;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+    }
+
+    .text-smarts {
+        font-family: 'Gotham Light';
+        font-size: 18pt;
+        color: #393939;
+        margin-left: -15px;
+        z-index: 1;
+        width: 10px;
+        height: 10px;
+    }
+
+    .text-rss {
+        font-weight: bold;
+        font-size: 25pt;
+        color: #393939;
+        font-family: 'Gotham Light';
+        z-index: 1;
+    }
+
+    .home-animation .mainmenu .logotitle1 {
+        position: absolute;
+        top: -5%;
+        /* margin-top: -30px; */
+        margin-left: 115px;
+        animation-name: logotitle;
+        animation-duration: .7s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-delay: 1s;
+    }
+
+    .home-animation .mainmenu .logotitle2 {
+        position: absolute;
+        top: 10%;
+        margin-top: 5px;
+        margin-left: 138px;
+        animation-name: logotitle;
+        animation-duration: .7s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-delay: 1s;
+    }
+
+    .border-luhur {
+        border-left: 5px solid #b9b5b5;
+        height: 50PX;
+        position: absolute;
+        left: 50%;
+        margin-left: -5px;
+        top: 30%;
+    }
+
+    .border-luhur {
+        border-left: 5px solid #b9b5b5;
+        height: 65px;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        top: 30%;
+    }
+
+    .border-horizontal {
+        border-bottom: 5px solid #b9b5b5;
+        width: 458px;
+        position: absolute;
+        left: -21%;
+        /* margin-left: -5px; */
+        top: 52%;
+    }
+
+    .home-animation .mainmenu img.menu_header:hover {
+       
+        height: 400px;
+       
+        transition: all .3s;
+        z-index: 1;
+
+    }
+
+    .tex01 {
+        position: absolute;
+        left: -143%;
+        right: 0;
+        width: 100px;
+        top: 100%;
+        margin: 0 auto;
+        transition: all .2s;
+        text-align: center;
+        font-size: 10pt;
+        border-collapse: separate;
+        border: 1px solid #ccc5c5;
+        background-color: #ffffff;
+        border-radius: 30px
+    }
+
+    .tex02 {
+        position: absolute;
+        left: -71%;
+        right: 0;
+        width: 100px;
+        top: 100%;
+        margin: 0 auto;
+        transition: all .2s;
+        text-align: center;
+        font-size: 10pt;
+        border-collapse: separate;
+        border: 1px solid #ccc5c5;
+        background-color: #ffffff;
+        border-radius: 30px
+    }
+
+    .tex03 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100px;
+        top: 100%;
+        margin: 0 auto;
+        transition: all .2s;
+        text-align: center;
+        font-size: 10pt;
+        border-collapse: separate;
+        border: 1px solid #ccc5c5;
+        background-color: #ffffff;
+        border-radius: 30px
+    }
+
+    .tex04 {
+        position: absolute;
+        left: 0;
+        right: -70%;
+        width: 100px;
+        top: 100%;
+        margin: 0 auto;
+        transition: all .2s;
+        text-align: center;
+        font-size: 10pt;
+        border-collapse: separate;
+        border: 1px solid #ccc5c5;
+        background-color: #ffffff;
+        border-radius: 30px
+    }
+
+    .tex05 {
+        position: absolute;
+        left: 0;
+        right: -103%;
+        width: 100px;
+        top: 100%;
+        margin: 0 auto;
+        transition: all .2s;
+        text-align: center;
+        font-size: 10pt;
+    }
+
+    .tex06 {
+        position: absolute;
+        left: 0;
+        right: -140%;
+        width: 100px;
+        top: 100%;
+        margin: 0 auto;
+        transition: all .2s;
+        text-align: center;
+        font-size: 10pt;
+        border-collapse: separate;
+        border: 1px solid #ccc5c5;
+        background-color: #ffffff;
+        border-radius: 30px
+    }
+
+    #rcorners2 {
+        border-radius: 30px;
+        border: 2px solid #ccc5c5;
+        padding: 5px 5px 20px 5px;
+        width: 95px;
+        height: 20px;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="stylesheets/fonts/gotham/style.css">
+<div ng-controller="WelcomeCtrl">
+    <br />
+    <br />
+    <button ng-show="listMenu.length!==1" ng-click='Back()'>Back</button>
+
+    <!-- navigasi back -->
+    <div class="menu-back" ng-hide="showMenuUtama">
+        <div class="container-navigation-menu" ng-click="backToMenuUtama()">
+            <h3 class="btn-back-menu-layanan"><i class="fa fa-arrow-left"
+                    style="color:#bbbcbd;margin-right: 15px;"></i>back</h3>
+            <h3 class="title-menu-layanan">{{titleMenu}}</h3>
+        </div>
+    </div>
+
+    <!-- nampilin sub menu -->
+    <div class="menu-layanan" ng-hide="showMenuUtama">
+        <div class="{{gridStyle}} box-menu-layanan" ng-repeat="dataMenu in DaftarMenu"
+            ng-click="showSubMenu(dataMenu.title)">
+            <img ng-src="images/menu/{{dataMenu.url_image}}" class="box-image-menu-layanan">
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+
+    <div class="home-animation" ng-show="showMenuUtama">
+        <div class="mainmenu mdl-grid">
+
+            <!-- <a>
+                <img class="menu_header anime01" src="images/asset2019/icon-01-00-smart-rs.png" style="cursor: pointer">
+            </a> -->
+            <img class="text-smarts  menu_header logotitle1" src="images/transmedic_home.png"
+                style="width: 400px;
+                height: 165px;
+                top: 1%; ">
+            <!-- <p class="text-smarts menu_header logotitle1">SMART </p>
+            <p class="text-rss menu_header logotitle2">RS </p> -->
+            <!-- <span class="border-luhur"></span> -->
+            <span class="border-horizontal"></span>
+            <a ng-mouseleave="leaveMenu('showTooltipRmPelayanan')"
+                ng-mouseover="hoverMenu('showTooltipRmPelayanan')"><img class="menu01 anime01"
+                    src="images/asset/icon-01-rekam-medis.png" style="cursor: pointer">
+                <!-- <span class="tooltip-rmpelayanan" ng-show="showTooltipRmPelayanan">Rekam Medis & Pelayanan</span> -->
+                <p class="tex01 anime01" id="rcorners2">Rekam Medis & Pelayanan</p>
+                <!-- <span class="tex01 anime01">Rekam Medis & Pelayanan</span> -->
+            </a>
+
+            <a ng-mouseleave="leaveMenu('showTooltipKeuangan')" ng-mouseover="hoverMenu('showTooltipKeuangan')"><img
+                    class="menu02 anime01" src="images/asset/icon-02-keuangan.png" style="cursor: pointer">
+                <!-- <span class="tooltip-keuangan" ng-show="showTooltipKeuangan">Keuangan</span> -->
+                <span class="tex02 anime01" id="rcorners2">Keuangan</span>
+            </a>
+            <a ng-mouseleave="leaveMenu('showTooltipSarpras')" ng-mouseover="hoverMenu('showTooltipSarpras')"><img
+                    class="menu03 anime01" src="images/asset/icon-03-sarana-prasarana.png" style="cursor: pointer">
+                <!-- <span class="tooltip-sarpras" ng-show="showTooltipSarpras">Sarana dan Prasarana</span> -->
+                <span class="tex03 anime01" id="rcorners2">Sarana & Prasarana</span>
+            </a>
+            <a ng-mouseleave="leaveMenu('showTooltipSDM')" ng-mouseover="hoverMenu('showTooltipSDM')"><img
+                    class="menu04 anime01" src="images/asset/icon-04-sdm.png" style="cursor: pointer">
+                <!-- <span class="tooltip-sdm" ng-show="showTooltipSDM">Sumber Daya Manusia</span> -->
+                <span class="tex04 anime01" id="rcorners2">Sumber Daya Manusia</span>
+            </a>
+
+            <!-- <a><img class="menu05 anime01" src="images/asset2019/icon-01-04-aplikasi-dokter.png"
+                    style="cursor: pointer">
+                <span class="tex05 anime01">Aplikasi Dokter</span>
+
+            </a> -->
+
+            <a ng-mouseleave="leaveMenu('showTooltipManajemen')" ng-mouseover="hoverMenu('showTooltipManajemen')"><img
+                    class="menu06 anime01" src="images/asset/icon-05-manajemen.png" style="cursor: pointer">
+                <!-- <span class="tooltip-manajemen" ng-show="showTooltipManajemen">Manajemen</span></a> -->
+                <span class="tex06 anime01" id="rcorners2">Manajemen</span>
+
+        </div>
+    </div>
+
+
+    <div class="tiles" style="display:none">
+        <div class="grid_6">
+            <h1>FRONT OFFICE</h1>
+            <div class="grid_12" ng-repeat="menu in menus">
+                <div class="tile bg-yellow-saffron primary" style="height:200px;" ng-click="changeMenu(menu)">
+                    <div class="corner" style="float: left; font-weight: bold; padding: 0 5px;"><span></span></div>
+                    <div class="check"></div>
+                    <div class="tile-body" style="overflow: initial">
+                        <i style="font-style: normal;"></i>
+                    </div>
+                    <div class="tile-object" style=";top:0 !important;bottom:auto !important;">
+                        <div class="icon-panel main">
+                            <img height='150px' src='' />
+                        </div>
+                        <div class="text_panel main">
+                            <span class="title"><label c-label c-label-text="{{menu.title}}"
+                                    class="title"></label></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid_6">
+            <h1>BACK OFFICE</h1>
+            <div class="grid_12" ng-repeat="menu in menuBackOffices">
+                <div class="tile bg-yellow-saffron primary" style="height:200px;" ng-click="changeMenu(menu)">
+                    <div class="corner" style="float: left; font-weight: bold; padding: 0 5px;"><span></span></div>
+                    <div class="check"></div>
+                    <div class="tile-body" style="overflow: initial">
+                        <i style="font-style: normal;"></i>
+                    </div>
+                    <div class="tile-object" style=";top:0 !important;bottom:auto !important;">
+                        <div class="icon-panel main">
+
+                        </div>
+                        <div class="text_panel main">
+                            <span class="title"><label c-label c-label-text="{{menu.title}}"
+                                    class="title"></label></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

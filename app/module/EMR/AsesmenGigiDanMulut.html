@@ -1,0 +1,598 @@
+<style type="text/css">
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid #228be6;
+    }
+
+    .k-slider-horizontal {
+        display: inline-block;
+        float: left;
+        width: 450px;
+
+        height: 26px;
+
+
+    }
+
+    .k-slider {
+
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        display: inline-block;
+    }
+
+    .activeBtn {
+        background-color: #10c4b2;
+        color: #ffffff;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    .img-btn {
+        /* margin-left: 30px; */
+        float: left;
+        outline: none;
+        width: 14px;
+        display: inline-block;
+        /* font: normal normal normal 14px/1 FontAwesome; */
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    c-button-header,
+    .c-button {
+        float: left;
+        text-align: center;
+        cursor: pointer;
+        height: 100%;
+        min-height: 70px;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 12px;
+        color: black;
+        background-color: #fff;
+        width: 100%;
+        border: 1px transparent solid;
+        padding: 5px;
+        -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+    }
+
+    .gede {
+        float: left;
+        text-align: center;
+        cursor: pointer;
+        height: 100%;
+        min-height: 70px;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 12px;
+        color: black;
+        background-color: #fff;
+        width: 100%;
+        border: 1px transparent solid;
+        padding: 5px;
+        -webkit-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.25);
+
+    }
+
+    c-button-header:hover,
+    .c-button:hover {
+        background-color: #10c4b2;
+    }
+
+    c-button-header,
+    .c-button-asli {
+        float: left;
+        text-align: center;
+        cursor: pointer;
+        height: 100%;
+        min-height: 26px;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 14px;
+        color: white;
+        background-color: #10c4b2;
+        width: 100%;
+        border: 1px transparent solid;
+        padding: 5px;
+    }
+
+
+    .title {
+        font-size: 12px;
+    }
+
+    .activeBtn {
+        background-color: #10c4b2;
+        color: #ffffff;
+    }
+  
+
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate>Asesmen Kesehatan Gigi dan Mulut</div>
+        </div>
+        <div class="grid_12" style="margin-top: 10px;">
+            <fieldset style="margin-top: 10px">
+                <div style="margin-top: 20px" class="grid_12">
+                    <div class="grid_12">
+                        <div class="grid_3">
+                            <label c-label item="item"><b>Ruang / Bangsal</b></label>
+                        </div>
+                        <div class="grid_4" style="margin-top: -10px;">
+                            <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[50010]"
+                                placeholder="Ruang/Bangsal" />
+                        </div>
+                    </div>
+                    <div class="grid_12">
+                        <div class="grid_3">
+                            <label c-label item="item"><b>I. Keluhan Utama</b></label>
+                        </div>
+                        <div class="grid_4">
+                            <textarea ng-model="item.obj[50011]"
+                                style="width: 100%; height: 65px;border-radius: 5px"></textarea>
+                        </div>
+                    </div>
+                    <div class="grid_12">
+                        <div class="grid_3">
+                            <label c-label item="item"><b>II. Riwayat Kesehatan</b></label>
+                        </div>
+                    </div>
+                    <div class="grid_12" style="margin-left: 20px">
+                        <div class="grid_9">
+                            <label>1. Apakah anda dalam perawatan dokter ?</label>
+                        </div>
+                        <div class="grid_3">
+                            <div ng-repeat="stat in listYa  | orderBy:'id'">
+                                <div class="grid_6">
+                                    <md-radio-group ng-model="item.obj[50012]">
+                                        <md-radio-button value="{{stat.id}}" class="md-primary">{{stat.name}}
+                                        </md-radio-button>
+                                    </md-radio-group>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_12" style="margin-left: 20px">
+                        <div class="grid_9">
+                            <label>2. Pernahkah anda menderita penyakit yang serius ?</label>
+                        </div>
+                        <div class="grid_3">
+                            <div ng-repeat="stat in listYa  | orderBy:'id'">
+                                <div class="grid_6">
+                                    <md-radio-group ng-model="item.obj[50013]">
+                                        <md-radio-button value="{{stat.id}}" class="md-primary">{{stat.name}}
+                                        </md-radio-button>
+                                    </md-radio-group>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid_12" style="margin-left: 20px">
+                        <div class="grid_12">
+                            <label>3. Apakah anda menderita penyakit ?</label>
+                        </div>
+                        <div class="grid_12" style="margin-left: 20px;">
+                            <div class="grid_9">
+                                ● Diabetes / Gula
+                            </div>
+                            <div class="grid_3" style="margin-left: -15px;">
+                                <div ng-repeat="stat in listYa  | orderBy:'id'">
+                                    <div class="grid_6">
+                                        <md-radio-group ng-model="item.obj[50014]">
+                                            <md-radio-button value="{{stat.id}}" class="md-primary">{{stat.name}}
+                                            </md-radio-button>
+                                        </md-radio-group>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid_12" style="margin-left: 20px;margin-top:-10px ;">
+                            <div class="grid_9">
+                                ● Hipertensi / Darah Tinggi
+                            </div>
+                            <div class="grid_3" style="margin-left: -15px;">
+                                <div ng-repeat="stat in listYa  | orderBy:'id'">
+                                    <div class="grid_6">
+                                        <md-radio-group ng-model="item.obj[50015]">
+                                            <md-radio-button value="{{stat.id}}" class="md-primary">{{stat.name}}
+                                            </md-radio-button>
+                                        </md-radio-group>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_12" style="margin-left: 20px;margin-top:-10px ;">
+                            <div class="grid_9">
+                                ● TBC
+                            </div>
+                            <div class="grid_3" style="margin-left: -15px;">
+                                <div ng-repeat="stat in listYa  | orderBy:'id'">
+                                    <div class="grid_6">
+                                        <md-radio-group ng-model="item.obj[50016]">
+                                            <md-radio-button value="{{stat.id}}" class="md-primary">{{stat.name}}
+                                            </md-radio-button>
+                                        </md-radio-group>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_12" style="margin-left: 20px;margin-top:-10px ;">
+                            <div class="grid_9">
+                                ● Gastric Ucler
+                            </div>
+                            <div class="grid_3" style="margin-left: -15px;">
+                                <div ng-repeat="stat in listYa  | orderBy:'id'">
+                                    <div class="grid_6">
+                                        <md-radio-group ng-model="item.obj[50017]">
+                                            <md-radio-button value="{{stat.id}}" class="md-primary">{{stat.name}}
+                                            </md-radio-button>
+                                        </md-radio-group>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid_12" style="margin-left: 20px;margin-top:-10px ;">
+                            <div class="grid_3">
+                                ● Penyakit Lain (sebutkan)
+                            </div>
+                            <div class="grid_3">
+                                <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[11]"
+                                    placeholder="" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="grid_12" style="margin-left: 20px">
+                        <div class="grid_12">
+                            <label>4. Apakah anda alergi terhadap salah satu obat dibawah ini ?</label>
+                        </div>
+                        <div class="grid_12" style="margin-left: 20px">
+                            <div class="grid_3" ng-repeat="jawab in listAlergi | orderBy:'id'">
+                                <div ng-switch on="jawab.type">
+                                    <div class="grid_12" ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                    <div class="grid_12" ng-switch-when="textbox"
+                                        style="margin-left:-20px;margin-top: -10px;">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_12">
+                        <div class="grid_3">
+                            <label c-label item="item"><b>III. Status Lokalis Gigi</b></label>
+                        </div>
+                    </div>
+                    <div class="grid_12">
+                        <canvas id="myCanvas" width="1100" height="450">
+                            Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                    <div class="grid_12">
+                        <div class="grid_3" style="margin-top: 5px">
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede"    ng-class="{'activeBtn': activeStatus == 1}" ng-click="BelumErupsi()">
+                                        <img class="img-btn" src="images/odontogram/blmErupsi.bmp">   
+                                        <span style="font-size: 18px;    margin-left: -30px;">Belum Erupsi</span>
+                                    </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 1}"
+                                    ng-click="BelumErupsi()">
+                                    <img class="img-btn" src="images/odontogram/blmErupsi.bmp"> Belum Erupsi</button>
+                            </div>
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede"    ng-class="{'activeBtn': activeStatus == 2}" ng-click="ErupsiSebagian()">
+                                        <img class="img-btn" src="images/odontogram/erupsiSebagian.bmp">   
+                                        <span style="font-size: 18px; margin-left: -30px;">Erupsi Sebagian</span>
+                                    </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 2}"
+                                    ng-click="ErupsiSebagian()">
+                                    <img class="img-btn" src="images/odontogram/erupsiSebagian.bmp"> Erupsi
+                                    Sebagian</button>
+                            </div>
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede"    ng-class="{'activeBtn': activeStatus == 3}" ng-click="AnomaliBentuk()">
+                                            <img class="img-btn" src="images/odontogram/anomaliBentuk.bmp">   
+                                            <span style="font-size: 18px; margin-left: -30px;">Anomali Bentuk</span>
+                                        </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 3}"
+                                    ng-click="AnomaliBentuk()">
+                                    <img class="img-btn" src="images/odontogram/anomaliBentuk.bmp"> Anomali
+                                    Bentuk</button>
+                            </div>
+                            <div class="grid_12" style="margin-top: 5px">
+
+                                <!-- <button class="btnTemplate1 gede"    ng-class="{'activeBtn': activeStatus == 4}" ng-click="Karies()">
+                                            <img class="img-btn" src="images/odontogram/karies.bmp">   
+                                            <span style="font-size: 18px; margin-left: -30px;">Karies</span>
+                                        </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 4}"
+                                    ng-click="Karies()">
+                                    <img class="img-btn" src="images/odontogram/karies.bmp"> Karies</button>
+                            </div>
+
+                        </div>
+                        <div class="grid_3" style="margin-top: 5px">
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede"    ng-class="{'activeBtn': activeStatus == 5}" ng-click="TambalanLogam()">
+                                            <img class="img-btn" src="images/odontogram/tambalanLogam.bmp">   
+                                            <span style="font-size: 18px; margin-left: -30px;">Tambalan Logam</span>
+                                        </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 5}"
+                                    ng-click="TambalanLogam()">
+                                    <img class="img-btn" src="images/odontogram/tambalanLogam.bmp"> Tambalan
+                                    Logam</button>
+                            </div>
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede"    ng-class="{'activeBtn': activeStatus == 6}" ng-click="TambalanNonLogam()">
+                                            <img class="img-btn" src="images/odontogram/tambalanNonLogam.bmp">   
+                                            <span style="font-size: 18px; margin-left: -30px;">Tambalan Non Logam</span>
+                                        </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 6}"
+                                    ng-click="TambalanNonLogam()">
+                                    <img class="img-btn" src="images/odontogram/tambalanNonLogam.bmp"> Tambalan Non
+                                    Logam</button>
+                            </div>
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede"    ng-class="{'activeBtn': activeStatus == 7}" ng-click="MahkotaLogam()">
+                                            <img class="img-btn" src="images/odontogram/mahkotaLogam.bmp">   
+                                            <span style="font-size: 18px; margin-left: -30px;">Mahkota Logam </span>
+                                        </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 7}"
+                                    ng-click="MahkotaLogam()">
+                                    <img class="img-btn" src="images/odontogram/mahkotaLogam.bmp"> Mahkota
+                                    Logam</button>
+                            </div>
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede"    ng-class="{'activeBtn': activeStatus == 8}" ng-click="mahkotaNonLogam()">
+                                            <img class="img-btn" src="images/odontogram/mahkotaNonLogam.bmp">   
+                                            <span style="font-size: 18px; margin-left: -30px;">Mahkota Non Logam </span>
+                                        </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 8}"
+                                    ng-click="mahkotaNonLogam()">
+                                    <img class="img-btn" src="images/odontogram/mahkotaNonLogam.bmp"> Mahkota Non
+                                    Logam</button>
+                            </div>
+                        </div>
+                        <div class="grid_3" style="margin-top: 5px">
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede" ng-class="{'activeBtn': activeStatus == 9}"
+                                    ng-click="SisaAkar()">
+                                    <img class="img-btn" src="images/odontogram/sisaAkar.bmp">
+                                    <span style="font-size: 18px; margin-left: -30px;">Sisa Akar</span>
+                                </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 9}"
+                                ng-click="SisaAkar()">
+                                <img class="img-btn" src="images/odontogram/sisaAkar.bmp"> Sisa Akar</button>
+                            </div>
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede" ng-class="{'activeBtn': activeStatus == 10}"
+                                    ng-click="gigiHilang()">
+                                    <img class="img-btn" src="images/odontogram/gigiHilang.bmp">
+                                    <span style="font-size: 18px; margin-left: -30px;">Gigi Hilang</span>
+                                </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 10}"
+                                ng-click="gigiHilang()">
+                                <img class="img-btn" src="images/odontogram/gigiHilang.bmp"> Gigi Hilang</button>
+                            </div>
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede" ng-class="{'activeBtn': activeStatus == 11}"
+                                    ng-click="Jembatan()">
+                                    <img class="img-btn" src="images/odontogram/jembatan.bmp">
+                                    <span style="font-size: 18px; margin-left: -30px;">Jembatan</span>
+                                </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 11}"
+                                ng-click="Jembatan()">
+                                <img class="img-btn" src="images/odontogram/jembatan.bmp"> Jembatan</button>
+                            </div>
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede" ng-class="{'activeBtn': activeStatus == 12}"
+                                    ng-click="GigiTiruanLepas()">
+                                    <img class="img-btn" src="images/odontogram/gigiTiruanLepas.bmp">
+                                    <span style="font-size: 18px; margin-left: -30px;">Gigi Tiruan Lepas</span>
+                                </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 12}"
+                                ng-click="GigiTiruanLepas()">
+                                <img class="img-btn" src="images/odontogram/gigiTiruanLepas.bmp"> Gigi Tiruan Lepas</button>
+                            </div>
+
+                        </div>
+                        <div class="grid_3" style="margin-top: 5px">
+
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede" ng-class="{'activeBtn': activeStatus == 13}"
+                                    ng-click="NonVital()">
+                                    <img class="img-btn" src="images/odontogram/nonVital.bmp">
+                                    <span style="font-size: 18px; margin-left: -30px;">Non Vital </span>
+                                </button> -->
+                                <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 13}"
+                                ng-click="NonVital()">
+                                <img class="img-btn" src="images/odontogram/nonVital.bmp"> Non Vital</button>
+                            </div>
+                            <div class="grid_12" style="margin-top: 5px">
+                                <!-- <button class="btnTemplate1 gede" ng-class="{'activeBtn': activeStatus == 14}"
+                                    ng-click="Clear()">
+
+                                    <span style="font-size: 18px;">Clear </span>   </button> -->
+                                    <button class="btnTemplate1" ng-class="{'activeBtn': activeStatus == 14}"
+                                    ng-click="Clear()"><i class="fa fa-refresh"></i>
+                                  Clear</button>
+                             
+
+                            </div>
+                        </div>
+                    </div>
+
+            </fieldset>
+            <fieldset style="margin-top:10px">
+                <div class="grid_6">
+                    <div class="grid_12" style="margin-top: 20px">
+                        <table style="width:100%;color: #4c5356;">
+
+                            <tr>
+                                <th colspan="2">
+                                    <div class="grid_3">DI : </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50025]"
+                                            type="text"></div>
+                                </th>
+                                <th> </th>
+                                <th colspan="2">
+                                    <div class="grid_3">CI : </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50026]"
+                                            type="text"></div>
+                                </th>
+                                <th> </th>
+                            </tr>
+                            <tr>
+                                <td> <input class="k-textbox" ng-model="item.obj[50027]" type="text"> </td>
+                                <td> <input class="k-textbox" ng-model="item.obj[50028]" type="text"> </td>
+                                <td> <input class="k-textbox" ng-model="item.obj[50029]" type="text"> </td>
+                                <td> <input class="k-textbox" ng-model="item.obj[50030]" type="text"> </td>
+                                <td> <input class="k-textbox" ng-model="item.obj[50031]" type="text"> </td>
+                                <td> <input class="k-textbox" ng-model="item.obj[50032]" type="text"> </td>
+                            </tr>
+                            <tr>
+                                <td> <input class="k-textbox" ng-model="item.obj[50033]" type="text"> </td>
+                                <td> <input class="k-textbox" ng-model="item.obj[50034]" type="text"> </td>
+                                <td> <input class="k-textbox" ng-model="item.obj[50035]" type="text"> </td>
+                                <td> <input class="k-textbox" ng-model="item.obj[50036]" type="text"> </td>
+                                <td> <input class="k-textbox" ng-model="item.obj[50037]" type="text"> </td>
+                                <td> <input class="k-textbox" ng-model="item.obj[50037]" type="text"> </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="grid_3">OHIS : </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50039]"
+                                            type="text"></div>
+                                </td>
+
+                                <td colspan="3">
+                                    <div class="grid_3">Kriteria : </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50040]"
+                                            type="text"></div>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </div>
+                <div class="grid_6">
+                    <div class="grid_12" style="margin-top: 20px">
+                        <table style="width:100%;color: #4c5356;">
+                            <tr>
+                                <th>
+                                    <div class="grid_3">DMF-T : </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50041]"
+                                            type="text"></div>
+                                </th>
+                                <th>
+                                    <div class="grid_3">def-t : </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50042]"
+                                            type="text"></div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="grid_3">D</div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50043]"
+                                            type="text"></div>
+                                </td>
+                                <td>
+                                    <div class="grid_3">d </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50044]"
+                                            type="text"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="grid_3">M </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50045]"
+                                            type="text"></div>
+                                </td>
+                                <td>
+                                    <div class="grid_3">e </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50046]"
+                                            type="text"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="grid_3">F </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50047]"
+                                            type="text"></div>
+                                </td>
+                                <td>
+                                    <div class="grid_3">f </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50048]"
+                                            type="text"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="grid_3">PTI : </div>
+                                    <div class="grid_9"> <input class="k-textbox" ng-model="item.obj[50049]"
+                                            type="text"></div>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset style="margin-top:10px">
+
+                <div style="margin-top: 20px" class="grid_12">
+                    <div class="grid_12">
+                        <div class="grid_3">
+                            <label c-label item="item"><b>IV. Lain-lain</b></label>
+                        </div>
+                    </div>
+                    <p>Surakarta, Tanggal</p>
+                    <div class="grid_12"><input style="width: 30%" k-ng-model="item.obj[50050]" kendo-datetimepicker
+                            placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                    </div>
+                    <p style="margin-top: 10px;">Pemeriksa</p>
+                    <div class="grid_12" style="margin-bottom: 5px;">
+                        <input style="width: 20%;" kendo-combo-box k-ng-model="item.obj[50051]"
+                            k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                            k-auto-bind="false" k-data-source="listPegawai" /></div>
+
+
+                </div>
+                <div class="grid_12">
+                    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+                </div>
+        </div>
+    </div>

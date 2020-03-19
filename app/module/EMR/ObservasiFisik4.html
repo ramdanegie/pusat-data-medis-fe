@@ -1,0 +1,192 @@
+<style type="text/css">
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid #228be6;
+    }
+
+    .k-slider-horizontal {
+        display: inline-block;
+        float: left;
+        width: 450px;
+
+        height: 26px;
+
+ 
+
+    }
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    .k-slider {
+
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        display: inline-block;
+    }
+
+    .activeBtn {
+        background-color: #10c4b2;
+        color: #ffffff;
+    }
+</style>
+
+<div class="grid_12">
+    <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate> Observasi Fisik </div>
+    </div>
+    <div class="grid_12" style="margin-top: 20px">
+    <fieldset>
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Tanggal dan Jam Datang"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%" k-ng-model="item.obj[73431]" kendo-datetimepicker
+                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                </div>
+            </div>
+
+
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Dpjp"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[73432]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai " />
+                </div>
+            </div> 
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Bangsal"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[73433]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listRuang" />
+                </div>
+            </div> 
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Kelas"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[73434]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listKelas " />
+                </div>
+            </div> 
+
+    </fieldset>
+    </div>
+    <div class="grid_12">
+                <fieldset style="margin-top: 10px; ">
+                    
+                    <div class="grid_12" style="margin-top: 20px">
+                        <table style="width:100%;color: #4c5356;">
+    
+                            <tr>
+                                
+                                <th style="text-align: center;width: 200px">Tanggal</th>
+                                <th style="text-align: center;width: 80px">Suhu</th>
+                                <th style="text-align: center;width: 80px">Nadi</th>
+                                <th style="text-align: center;width: 80px">Resp.</th>
+                                <th style="text-align: center;width: 80px">Tensi</th>
+                                <th style="text-align: center;width: 200px">Terapi</th>
+                                <th style="text-align: center;width: 200px">Keterangan</th>
+
+                                                                
+                               
+                            </tr>
+
+                            <tr ng-repeat="list in listData1 | orderBy:'id'" ng-init="jawabIndex = $index">
+                                
+                                <!-- <td>{{list.namaexternal}}</td> -->
+                                <td style="text-align: center; width: " ng-repeat="jawab in list.details">
+                                    <div class="grid_12">
+                                        <div ng-switch on="jawabIndex">
+
+                                            
+                                        </div>
+
+                                    <div ng-switch on="jawab.type">
+
+                                             <div ng-switch-when="datetime">
+                                                <input style="width: 100%" k-ng-model="item.obj[jawab.id]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                            </div>
+                                            
+                                            <div ng-switch-when="textarea">
+
+                                                <textarea style="width: 80%" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                ng-model="item.obj[jawab.id]" />
+                                            </div>
+
+                                            <div ng-switch-when="combobox">
+                                                <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[jawab.id]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />
+
+                                            </div>
+                                            <div ng-switch-when="textbox">
+                                                <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                                placeholder="{{data.satuan}}" ng-value="{{data.value}}">
+                                            </div>
+                                                
+                                    </div> 
+
+                                    </div>
+
+                                </td>
+                            </tr>
+
+
+                        </table>
+
+                    </div>
+                </fieldset>
+            </div>
+</div>
+<div class="grid_12">
+                <div class="grid_8"></div>
+                <div class="grid_4">
+                    <fieldset style="margin-top:10px;border-radius: 10px;height: 150px;">
+                        <div style="padding: 20px;">
+                            <div class="grid_12">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Tanggal dan Jam"></label>
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%" k-ng-model="item.obj[73435]" kendo-datetimepicker
+                                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'"
+                                        parsedate="yyyy-MM-dd HH:mm" />
+
+                                </div>
+                            </div>
+                            <div class="grid_12" style="margin-top:10px">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Petugas Pelaksana/Dokter"></label>
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[73436]"
+                                        k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                                        k-auto-bind="false" k-data-source="listPegawai" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+
+        <div class="grid_12">
+            <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+        </div>
+    </div>
+</div>

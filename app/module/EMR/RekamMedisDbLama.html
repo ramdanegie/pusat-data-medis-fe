@@ -1,0 +1,300 @@
+<div class="grid_12">
+    <div class="grid_12">
+        <c-panel item="item" header="'Rekam Medis'" disabled>
+            <div class=' grid_12 panel panel-default'>
+                <div class='panel-body animated'>
+                    <div class='grid_12'>
+                        <div class="grid_12 animated" ng-show="header.notransaksi!==undefined">
+                            <div class="grid_1">
+                                <fieldset class="effect-shadow" style="border-radius: 10px;">
+                                    <div ng-click="showPopUp()">
+                                        <img style="object-fit: cover;
+                                            object-position: center;
+                                            height: 140px;
+                                            display: block;
+                                                    max-width: 100%;
+                                            width: 120px;" src="{{header.image}}" alt="Photo" title="">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="grid_2">
+
+
+                                <div class="grid_12">
+                                    <!-- <input type="checkbox" class="k-checkbox" ng-model="checkNoregis" id="Generate"
+                                        ng-click="getRekamMedisCheck(checkNoregis)"> -->
+                                    <!-- <input type="checkbox" class="k-checkbox" id="Generate" ng-model="checkNoregis"
+                                        ng-click="getRekamMedisCheck()" > -->
+                                    <!-- <label class="k-checkbox-label" for="Generate"> --><b>No Transaksi</b><!-- </label> -->
+
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox"
+                                        ng-model="header.notransaksi" ng-disabled="true" />
+                                </div>
+
+                            </div>
+                            <div class="grid_2">
+                                <div class="grid_12">
+                                    <label c-label item="item">Tgl Registrasi</label>
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox"
+                                        ng-model="header.tglregistrasi" ng-disabled="true" />
+                                </div>
+                            </div>
+                            <div class="grid_2">
+                                <div class="grid_12">
+                                    <label c-label item="item">No Rekam Medis</label>
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox" ng-model="header.nocm"
+                                        ng-disabled="true" />
+                                </div>
+                            </div>
+
+                            <div class="grid_3">
+                                <div class="grid_12">
+                                    <label c-label item="item">Nama Pasien</label>
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox"
+                                        ng-model="header.namapasien" ng-disabled="true" />
+                                </div>
+                            </div>
+                            <div class="grid_2">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Umur"></label>
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox" ng-model="header.umur"
+                                        ng-disabled="true" />
+                                </div>
+                            </div>
+                            <div class="grid_2">
+                                <div class="grid_12">
+                                    <label c-label item="item">Jenis Kelamin</label>
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox"
+                                        ng-model="header.jeniskelamin" ng-disabled="true" />
+                                </div>
+                            </div>
+
+                            <div class="grid_2">
+                                <div class="grid_12">
+                                    <label c-label item="item">Kelompok Pasien</label>
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox"
+                                        ng-model="header.kelompokpasien" ng-disabled="true" />
+                                </div>
+                            </div>
+                           
+                            <div class="grid_4">
+                                <div class="grid_12">
+                                    <label c-label item="item">Alamat</label>
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox"
+                                        ng-model="header.alamatlengkap" ng-disabled="true" />
+                                </div>
+                            </div>
+                            <div class="grid_3">
+                                <div class="grid_12">
+                                    <label c-label item="item">Poliklinik</label>
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox"
+                                        ng-model="header.namaruangan" ng-disabled="true" />
+                                </div>
+                            </div>
+                            <!-- <div class="grid_2">
+                                <div class="grid_12">
+                                    <label c-label item="item">Golongan Darah</label>
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox"
+                                        ng-model="header.golongandarah" ng-disabled="true" />
+                                </div>
+                            </div>
+                            <div class="grid_2">
+                                <div class="grid_12">
+                                    <label c-label item="item">Pendidikan</label>
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox"
+                                        ng-model="header.pendidikan" ng-disabled="true" />
+                                </div>
+                            </div>
+                            <div class="grid_2">
+                                <div class="grid_12">
+                                    <label c-label item="item">Pekerjaan</label>
+                                </div>
+
+                                <div class="grid_12">
+                                    <input c-text-box type="input" filter="" class="k-textbox"
+                                        ng-model="header.pekerjaan" ng-disabled="true" />
+                                </div>
+                            </div> -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </c-panel>
+    </div>
+
+    <!-- <md-content class="md-padding animated slideInDown"> -->
+    <!-- <div ng-show="!isShowNavEMR"> -->
+    <div>
+        <div class="grid_2">
+            <div class="panel panel-default">
+                <div class="panel-heading"><span c-translate>Navigasi</span>
+                    <span class="icon fa fa-chevron-circle-up" ng-show="!isShowNavEMR" style="right:10px"
+                        ng-click="showNav()"></span>
+                    <span class="icon fa fa-chevron-circle-down" ng-show="isShowNavEMR" style="right:10px"
+                        ng-click="showNav()"></span>
+                </div>
+                <!-- <div class="panel-body" ng-show="!isShowNavEMR"> -->
+                <div class="panel-body" ng-show="!isShowNavEMR">
+                    <!-- <div class="panel-heading" ><span c-translate>Navigasi</span></div> -->
+                    <div class="border-menu">
+                        <div class="animated" style="z-index:2;text-align: center;" ng-show="isLoadingNav">
+                            <img height="50" src="../app/stylesheets/Flat/loading-image.gif" />
+
+                        </div>
+                        <div id="treeview" kendo-tree-view="tree" k-data-source="treeSourceMenu"
+                            options="mainTreeViewMenuOption" ng-model="treeView">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid_10">
+            <div ui-view></div>
+        </div>
+    </div>
+    <!-- <div ng-show="isShowNavEMR">
+        <div class="grid_1">
+            <div class="panel panel-default">
+                <div class="panel-heading"><span c-translate>Nav</span>
+                    <span class="icon fa fa-chevron-circle-left" ng-show="!isShowNavEMR" style="right:10px"
+                        ng-click="showNav()"></span>
+                    <span class="icon fa fa-chevron-circle-right" ng-show="isShowNavEMR" style="right:10px"
+                        ng-click="showNav()"></span>
+                </div>
+                <div class="panel-body" ng-show="!isShowNavEMR">
+
+             
+                    <div class="border-menu">
+                        <div class="animated" style="z-index:2;text-align: center;" ng-show="isLoadingNav">
+                            <img height="50" src="../app/stylesheets/Flat/loading-image.gif" />
+
+                        </div>
+                        <div id="treeview" kendo-tree-view="tree" k-data-source="treeSourceMenu"
+                            options="mainTreeViewMenuOption" ng-model="treeView">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid_11">
+            <div ui-view></div>
+        </div>
+    </div> -->
+    <!-- </md-content> -->
+</div>
+<style>
+    .k-treeview .k-in {
+        position: relative;
+    }
+
+    .k-treeview span.k-in {
+        /* background-color: #ff2359;
+    color: #ffffff; */
+        margin-left: 20px;
+    }
+
+    .gemblung {
+        background-color: #ff2359;
+        color: #ffffff;
+    }
+
+    .k-treeview .k-in:before {
+        /* content: "\f0ca";list */
+        color: #9e9c9cc5;
+        content: "\f0c9";
+        /*bar*/
+        /* this is your text. You can also use UTF-8 character codes as I do here */
+        font-family: FontAwesome;
+
+        margin-left: -16px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+    }
+
+    .carousel-inner>.item>a>img,
+    .carousel-inner>.item>img,
+    .img-responsive,
+    .thumbnail a>img,
+    .thumbnail>img {
+        display: block;
+        max-width: 80%;
+        height: auto;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    img {
+        border: 0;
+    }
+
+    .k-state-selected {
+        color: #4c5356;
+        background-color: #41abf2 !important;
+    }
+
+    .k-treeview .k-state-hover,
+    .k-state-hover:hover {
+        color: #4c5356;
+        background-color: #eaeaea !important;
+
+    }
+
+    .border-menu {
+        margin-top: 5px;
+        border: 1px solid #c8c8c8;
+        background-color: #ffffff;
+        color: #333333;
+        padding: 0.571em 1em;
+        border-radius: 5px;
+    }
+
+    .panel-default>.panel-heading {
+        position: relative;
+        z-index: 1;
+        color: white;
+        background-color: #41abf2;
+        font-size: 18px;
+    }
+</style>

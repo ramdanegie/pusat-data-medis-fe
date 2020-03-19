@@ -1,0 +1,140 @@
+<style type="text/css">
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid #228be6;
+    }
+
+    .k-slider-horizontal {
+        display: inline-block;
+        float: left;
+        width: 450px;
+
+        height: 26px;
+
+
+
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    .k-slider {
+
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        display: inline-block;
+    }
+
+    .activeBtn {
+        background-color: #10c4b2;
+        color: #ffffff;
+    }
+</style>
+
+<div class="grid_12">
+    <div class="panel panel-default container_12">
+        <div class="panel-heading" c-translate> Serah Terima Pasien Pada Keluarga</div>
+    </div>
+
+    <div class="grid_12">
+        <fieldset style="margin-top: 10px; ">
+            <legend><b>Grafik</b></legend>
+
+        </fieldset>
+        <fieldset style="margin-top: 10px; ">
+            <legend><b>Tanda Vital</b></legend>
+            <div class="grid_12" style="margin-top: 20px">
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th style="width:90px;font-weight: bold;text-align: center;background-color: #dedfe2d3;">
+                            Tanggal </th>
+                        <th colspan="4" style="text-align: center;background-color: #dedfe2d3;"
+                            ng-repeat="list in listTanggal | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <!-- <input class="k-textbox" ng-model="item.obj[list.id]" type="text"> -->
+                                <input style="width: 100%" k-ng-model="item.obj[list.id]" kendo-datepicker
+                                    placeholer="yyyy-MM-dd" k-format="'yyyy-MM-dd'" parsedate="yyyy-MM-dd" />
+
+                            </div>
+                        </th>
+                        <th style="background-color: #dedfe2d3;"></th>
+                    </tr>
+                    <tr ng-repeat="list in listData1 | orderBy:'id'" ng-init="jawabIndex = $index">
+                        <td style="width: 100px;{{list.style}}">{{list.namaexternal}}</td>
+                        <td style="text-align: center;{{list.style}}" ng-repeat="jawab in list.details">
+                            <div class="grid_12">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-blur="getSkor(jawab)" ng-model="item.obj[jawab.id]"
+                                            type="text">
+                                    </div>
+                                    <div ng-switch-when="label">
+                                        <label class="k-label"> {{jawab.caption}}</label>
+                                    </div>
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr ng-repeat="list in listData2 | orderBy:'id'" ng-init="jawabIndex = $index">
+                        <td style="width: 100px;{{list.style}}">{{list.namaexternal}}</td>
+                        <td colspan="4" style="text-align: center;{{list.style}}" ng-repeat="jawab in list.details">
+                            <div class="grid_12">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-blur="getSkor(jawab)" ng-model="item.obj[jawab.id]"
+                                            type="text">
+                                    </div>
+                                    <div ng-switch-when="label">
+                                        <label class="k-label"> {{jawab.caption}}</label>
+                                    </div>
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textarea">
+                                        <textarea c-text-area type="input" filter="'string'" style=" height: 300px;"
+                                            class="k-textbox" ng-model="item.obj[jawab.id]" placeholder=""></textarea>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+
+
+                </table>
+
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+
+<div class="grid_12">
+    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+</div>

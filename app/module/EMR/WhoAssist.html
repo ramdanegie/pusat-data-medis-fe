@@ -1,0 +1,801 @@
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+        background-color: #e8edff;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+    }
+
+    .tg .tg-yw4l {
+        vertical-align: top
+    }
+
+
+    .rowstyle {
+        border-bottom: 1px dashed lightblue
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 120%;
+        font-weight: 700;
+        margin-bottom: 20px
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    /* table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 40px;
+
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    } */
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate> Who Assist </div>
+        </div>
+        <div class="grid_12" style="margin-top: 20px">
+        <fieldset>
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Tanggal dan Jam Datang"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%" k-ng-model="item.obj[13303]" kendo-datetimepicker
+                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                </div>
+            </div>
+
+
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Dpjp"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[13304]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai " />
+                </div>
+            </div> 
+
+    </fieldset>
+    </div>
+
+    <div class="grid_12">
+        <fieldset>
+            <legend><b>Pendahuluan</b></legend>
+            <div class="grid_12">
+                <p>
+                    Pertanyaan-pertanyaan berikut ini mensnysksn tentang pengalaman Anda menggunakan alcohol, produk tembakau, dan zat adiktif lainnya seumur hidup Anda dan dalam tiga bulan terakhir. Zat-zat ini dapat dirokok, ditelan, dihisap, dihirup, atau disuntik (tunjukkan kartu respons).<br><br>
+                    Beberapa zat dalam dapat bisa diresepkan oleh dokter (seperti amphetamine, sedative, obat anti nyeri). Untuk wawancara ini, kami tidak akan mencatat obat-obat yang Anda gunakan seperti yang ditentukan oelh dokter Anda. Meskipun demikian, bila Anda menggukan obat-obat tersebut untuk alasan-alasan selain dari ketentuan, atau menggukan lebih sering, atau pada dosis yang lebih tinggi daripada yang di tentukan, atau dengan cara yang tidak seharusnya, mohon beritahu saya.<br><br>
+                    Walaupun kami juga tertarik untuk mengetahui tentang penggunaan obat-obat illegal Anda, yakinlah bahwa informasi penggunaan tersebut akan diperlakukna sangat rahasia.
+                </p>
+            </div>
+        </fieldset>
+    </div>
+        <div style="margin-top:10px">
+
+            <div class="grid_12" style="margin-top: 20px">
+                <fieldset>
+                <legend><b>Pertanyaan 1</b></legend>
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th style="width:500px;font-weight: bold;text-align: center;">Dalam hidup Anda, zat dapa dibawah ini yang pernah Anda gunakan? ( HANYA PENGGUNAAN NON-MEDIS)</th>
+                        <th style="width:100px;">Tidak Pernah</th>
+                        <th style="width:100px;">Pernah</th>
+                    </tr>
+
+                    <tr ng-repeat="list in listData1 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td>{{list.namaexternal}}</td>
+                            <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                            ng-value="{{jawab.value}}">
+                                        <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </td>
+                      </tr>
+                      <tr>
+                          <td>
+                             j. Lainnya - sebutkan <input class="k-textbox" ng-model="item.obj[90022]" type="text">
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90023]"
+                                ng-model="item.obj[90023]" ng-click="getSkor(jawab)">
+                                <label class="k-checkbox-label" for="item.obj[90023]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90024]"
+                                ng-model="item.obj[90024]" ng-click="getSkor(jawab)">
+                                <label class="k-checkbox-label" for="item.obj[90024]">
+                                </label>
+                          </td>
+                      </tr>
+
+
+
+                </table>
+                <p>
+                    Gali bila semua jawaban tidak pernah : ‘’tidak pernah juga menggunakan ketika Anda di sekolah?’’<br>
+                    Bila “tidak pernah” untuk semua butir, hentikan wawancara<br>
+                    Bila “pernah” untuk butir yang manapun, tanyakan Pertanyaan 2 untuk tiap zat pernah digunakan.
+                </p>
+                </fieldset>
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <fieldset>
+                <legend><b>Pertanyaan 2</b></legend>
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th style="width:500px;font-weight: bold;text-align: center;">Dalam tiga bulan terakhir, seberapa sering Anda menggunakan zat yang anda sebut (ZAT PERTAMA, ZAT KEDUA, DST)?</th>
+                        <th style="width:100px;">TIDAK PERNAH</th>
+                        <th style="width:100px;">SEKALI ATAU DUA KALI</th>
+                        <th style="width:100px;">TIAP BULAN</th>
+                        <th style="width:100px;">TIAP MINGGU</th>
+                        <th style="width:100px;">SELALU ATAU HAMPIR SELALU</th>
+                    </tr>
+
+                    <tr ng-repeat="list in listData2 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td>{{list.caption}}</td>
+                            <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                            ng-value="{{jawab.value}}">
+                                        <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </td>
+                      </tr>
+                      <tr ng-repeat="list in listData11 | orderBy:'id'" ng-init="jawabIndex = $index">
+                          <td>
+                            <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                            ng-value="{{jawab.value}}">
+                                        <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+
+                                    </div>
+                                </div>
+                             
+                          </td>
+                          
+                      </tr>
+
+
+                </table>
+                <p>
+                    Bila “ tidak pernah” untuk semua butir dalam Pertanyaan 2, loncat ke pertanyaan 6.<br>
+                    Bila zat-zat dalam Pertanyaan 2 digunakan dalam tiga bulan terakhir, lanjutkan dengan<br> 
+                    Pertanyaan 3, 4, & 5 untuk masing-masing zat yang digunakan.
+                </p>
+                </fieldset>
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <fieldset>
+                <legend><b>Pertanyaan 3</b></legend>
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th style="width:500px;font-weight: bold;text-align: center;">Selama tiga bulan terakhir, seberapa sering anda mempuyai keinginan atau dorongan yang kuat untuk menggunakan (ZAT PERTAMA, ZAT KEDUA, DLL)?</th>
+                        <th style="width:100px;">TIDAK PERNAH</th>
+                        <th style="width:100px;">SEKALI ATAU DUA KALI</th>
+                        <th style="width:100px;">TIAP BULAN</th>
+                        <th style="width:100px;">TIAP MINGGU</th>
+                        <th style="width:100px;">SELALU ATAU HAMPIR SELALU</th>
+                    </tr>
+
+                    <tr ng-repeat="list in listData3 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td>{{list.caption}}</td>
+                            <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                            ng-value="{{jawab.value}}">
+                                        <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </td>
+                      </tr>
+                      <tr>
+                          <td>
+                             j. Lainnya - sebutkan <input class="k-textbox" ng-model="item.obj[90121]" type="text">
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90122]"
+                                ng-model="item.obj[90122]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90122]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90123]"
+                                ng-model="item.obj[90123]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90123]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90124]"
+                                ng-model="item.obj[90124]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90124]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90125]"
+                                ng-model="item.obj[90125]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90125]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90126]"
+                                ng-model="item.obj[90126]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90126]">
+                                </label>
+                          </td>
+                      </tr>
+
+
+                </table>
+                </fieldset>
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <fieldset>
+                <legend><b>Pertanyaan 4</b></legend>
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th style="width:500px;font-weight: bold;text-align: center;">Selama tiga bulan terakhir, seberapa sering menggunakan ( ZAT PERTAMA, ZAT KEDUA, DLL)
+                        Anda menyebabkan masalah kesehatan, social, hokum, atau keuangan?</th>
+                        <th style="width:100px;">Tidak pernah</th>
+                        <th style="width:100px;">Satu atau dua kali</th>
+                        <th style="width:100px;">Tiap bulan</th>
+                        <th style="width:100px;">Tiap minggu</th>
+                        <th style="width:100px;">Harian atau hampir tiap hari</th>
+                    </tr>
+
+                    <tr ng-repeat="list in listData4 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td>{{list.caption}}</td>
+                            <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                            ng-value="{{jawab.value}}">
+                                        <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </td>
+                      </tr>
+                      <tr>
+                          <td>
+                             j. Lainnya - sebutkan <input class="k-textbox" ng-model="item.obj[90172]" type="text">
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90173]"
+                                ng-model="item.obj[90173]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90173]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90174]"
+                                ng-model="item.obj[90174]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90174]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90175]"
+                                ng-model="item.obj[90175]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90175]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90176]"
+                                ng-model="item.obj[90176]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90176]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90177]"
+                                ng-model="item.obj[90177]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90177]">
+                                </label>
+                          </td>
+                      </tr>
+
+
+                </table>
+                </fieldset>
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <fieldset>
+                <legend><b>Pertanyaan 5</b></legend>
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th style="width:500px;font-weight: bold;text-align: center;">Selama tiga bulan terakhir, seberapa sering Anda gagal melakukan hal-hal yang biasanya diharapkan dari Anda akibat penggunaan (ZAT PERTAMA, ZAT KEDUA, DST) Anda?</th>
+                        <th style="width:100px;">Tidak pernah</th>
+                        <th style="width:100px;">Satu atau dua kali</th>
+                        <th style="width:100px;">Tiap bulan</th>
+                        <th style="width:100px;">Tiap minggu</th>
+                        <th style="width:100px;">Harian atau hampir tiap hari</th>
+                    </tr>
+
+                    <tr ng-repeat="list in listData5 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td>{{list.caption}}</td>
+                            <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                            ng-value="{{jawab.value}}">
+                                        <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </td>
+                      </tr>
+                      <tr>
+                          <td>
+                             j. Lainnya - sebutkan <input class="k-textbox" ng-model="item.obj[90223]" type="text">
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90224]"
+                                ng-model="item.obj[90224]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90224]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90225]"
+                                ng-model="item.obj[90225]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90225]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90226]"
+                                ng-model="item.obj[90226]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90226]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90227]"
+                                ng-model="item.obj[90227]" ng-click="getSkor(jawab)">
+                                <label class="k-checkbox-label" for="item.obj[]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90228]"
+                                ng-model="item.obj[90228]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90228]">
+                                </label>
+                          </td>
+                      </tr>
+
+
+                </table>
+                </fieldset>
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <b>Tanyakan Pertanyaan 6 & 7 untuk semua zat yang pernah digunakan (yakni, zat yang didapat pada Pertanyaan 1)</b>
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <fieldset>
+                <legend><b>Pertanyaan 6</b></legend>
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th style="width:500px;font-weight: bold;text-align: center;">Pernahkan teman atau keluarga atau orang lain mengekspresikan kekhawatiran tentang penggunaan dari (ZAT PERTAMA, KEDUA, DST) Anda?</th>
+                        <th style="width:100px;">Tidak pernah</th>
+                        <th style="width:100px;">Pernah, dalam 3 bulan terakhir</th>
+                        <th style="width:100px;">Pernah, tapi tidak dalam 3 bulan terakhir</th>
+                    </tr>
+
+                    <tr ng-repeat="list in listData6 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td>{{list.caption}}</td>
+                            <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                            ng-value="{{jawab.value}}">
+                                        <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </td>
+                      </tr>
+                      <tr>
+                          <td>
+                             j. Lainnya - sebutkan <input class="k-textbox" ng-model="item.obj[90256]" type="text">
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90257]"
+                                ng-model="item.obj[90257]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90257]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90258]"
+                                ng-model="item.obj[90258]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90258]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90259]"
+                                ng-model="item.obj[90259]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90259]">
+                                </label>
+                          </td>
+                      </tr>
+                      
+
+
+                </table>
+                </fieldset>
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <fieldset>
+                <legend><b>Pertanyaan 7</b></legend>
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th style="width:500px;font-weight: bold;text-align: center;">Pernakah Anda mencoba untuk mengurangi atau menggunakan (ZAT PERTAMA, ZAT KEDUA, DST) tetapi gagal?</th>
+                        <th style="width:100px;">Tidak pernah</th>
+                        <th style="width:100px;">Pernah, dalam 3 bulan terakhir</th>
+                        <th style="width:100px;">Pernah, tapi tidak dalam 3 bulan terakhir</th>
+                    </tr>
+
+                    <tr ng-repeat="list in listData7 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td>{{list.caption}}</td>
+                            <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                            ng-value="{{jawab.value}}">
+                                        <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </td>
+                      </tr>
+                      <tr>
+                          <td>
+                             j. Lainnya - sebutkan <input class="k-textbox" ng-model="item.obj[90287]" type="text">
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90288]"
+                                ng-model="item.obj[90288]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90288]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90289]"
+                                ng-model="item.obj[90289]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90289]">
+                                </label>
+                          </td>
+                          <td style="text-align: center;">
+                                <input type="checkbox" class="k-checkbox" id="item.obj[90290]"
+                                ng-model="item.obj[90290]" ng-click="getSkor()">
+                                <label class="k-checkbox-label" for="item.obj[90290]">
+                                </label>
+                          </td>
+                      </tr>
+
+
+                </table>
+                </fieldset>
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <fieldset>
+                <legend><b>Pertanyaan 8</b></legend>
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th></th>
+                        <th style="width:100px;">Tidak pernah</th>
+                        <th style="width:100px;">Pernah, dalam 3 bulan terakhir</th>
+                        <th style="width:100px;">Pernah, tapi tidak dalam 3 bulan terakhir</th>
+                    </tr>
+
+                    <tr ng-repeat="list in listData8 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td style="width:500px;font-weight: bold;text-align: center;">Pernahkah Anda menggunakan obat dengan cara disuntik? (HANYA PENGGUNAAN NON MEDIS)</td>
+                            <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                            ng-value="{{jawab.value}}">
+                                        <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                            <!-- &nbsp;{{jawab.nama}} -->
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </td>
+                      </tr>
+                      
+
+
+                </table>
+                </fieldset>
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <b>
+                    <center>CATATAN PENTING:</center>
+                    Klien yang pernah menyuntik obat-obatan dalam tiga bulan terakhir harus ditanyakan mengenai pola menyuntiknya selama periode ini, untuk menentukan tingkat resikonya dan intervensi terbaik.
+                </b>
+            </div>
+            <div class="grid_12">
+                <div class="grid_5">
+                    <center><b>Pola Menyuntik</b></center>
+                </div>
+                <div class="grid_1"></div>
+                <div class="grid_5">
+                    <center><b>Panduan Intervensi</b></center>
+                </div>
+            </div>
+            <div class="grid_12">
+                <div class="grid_5">
+                    <div style="border-style: solid; padding: 5px;">Empat hari per bulan, rata-rata, selama tiga bulan terakhir atau kurang</div>
+                </div>
+                <div class="grid_1" style="font-size: 40px; margin-top: -8px; margin-left: 15px;">&#8594;</div>
+                <div class="grid_5">
+                    <div style="border-style: solid; padding: 5px; margin-top: 3px;">Intervensi singkat termasuk kartu ‘’ Risiko menyuntik”</div>
+                </div>
+            </div>
+            <br>
+            <div class="grid_12">
+                <div class="grid_5">
+                    <div style="border-style: solid; padding: 5px;">Lebih dari empat hari per bulan, rata-rata, selama tiga bulan terakhir</div>
+                </div>
+                <div class="grid_1" style="font-size: 40px; margin-top: -8px; margin-left: 15px;">&#8594;</div>
+                <div class="grid_5">
+                    <div style="border-style: solid; padding: 5px; margin-top: 5px">Asesmen lanjutan dan pengobatan yang lebih intensif</div>
+                </div>
+            </div>
+            <div class="grid_3" style="margin-top:10px">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Total Skor"></label>
+                </div>
+                <div class="grid_12">
+                    <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[9084]" />
+                </div>
+
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <fieldset>
+                <legend><b>BAGAIMANA CARA MENGHITUNG SKOR SPECIFIC SUBSTANCE INVOLMENT (SSI)</b></legend>
+                    <p>
+                        Untuk masing-masing zat (a.sampai j.) jumlahkan semua skor yang didapat dari pertanyaan 2 sampai 7. Jangan ikutkan hasil dari P1 ataupun P8 dalam skor ini.<br>
+                        Contoh, skor untuk kenabis (ganja) dijumlahkan dari : <b>P2c + P3c + P4c + P5c + P6c + P7c</b><br><br>
+
+                        Perhatikan bahwa P5 untuk tembakau tidak diberi kode, dan yang dijumlahkan hanya pertanyaan: <b>P2a + P3a + P4a + P6a + P7a</b>
+                    </p>
+                </fieldset>
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <fieldset>
+                <legend><b>JENIS INTERVENSI DITENTUKAN OLEH SKOR SSI PASIEN</b></legend>
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th style="width:300px;"></th>
+                        <th style="width:100px;">Catatan Skor SSI</th>
+                        <th style="width:100px;">Tidak ada Intervensi</th>
+                        <th style="width:100px;">Intervensi singkat</th>
+                        <th style="width:100px;">Pengobatan yang lebih intensif*</th>
+                    </tr>
+                    <tr>
+                        <td style="width:300px;">a. Tembakau</td>
+                        <td style="width:100px;text-align: center;">{{skors1}}</td>
+                        <td style="width:100px;text-align: center;">0 - 3</td>
+                        <td style="width:100px;text-align: center;">4 - 6</td>
+                        <td style="width:100px;text-align: center;">27+</td>
+                    </tr>
+                    <tr>
+                        <td style="width:300px;">b. Minuman beralkohol</td>
+                        <td style="width:100px;text-align: center;">{{skors2}}</td>
+                        <td style="width:100px;text-align: center;">0 - 10</td>
+                        <td style="width:100px;text-align: center;">11 - 26</td>
+                        <td style="width:100px;text-align: center;">27+</td>
+                    </tr>
+                    <tr>
+                        <td style="width:300px;">c. Kanabis</td>
+                        <td style="width:100px;text-align: center;">{{skors3}}</td>
+                        <td style="width:100px;text-align: center;">0 - 3</td>
+                        <td style="width:100px;text-align: center;">4 - 26</td>
+                        <td style="width:100px;text-align: center;">27+</td>
+                    </tr>
+                    <tr>
+                        <td style="width:300px;">d. Kokain</td>
+                        <td style="width:100px;text-align: center;">{{skors4}}</td>
+                        <td style="width:100px;text-align: center;">0 - 3</td>
+                        <td style="width:100px;text-align: center;">4 - 26</td>
+                        <td style="width:100px;text-align: center;">27+</td>
+                    </tr>
+                    <tr>
+                        <td style="width:300px;">e. Stimulan jenis amfetamin</td>
+                        <td style="width:100px;text-align: center;">{{skors5}}</td>
+                        <td style="width:100px;text-align: center;">0 - 3</td>
+                        <td style="width:100px;text-align: center;">4 - 26</td>
+                        <td style="width:100px;text-align: center;">27+</td>
+                    </tr>
+                    <tr>
+                        <td style="width:300px;">f. Inhalansia</td>
+                        <td style="width:100px;text-align: center;">{{skors6}}</td>
+                        <td style="width:100px;text-align: center;">0 - 3</td>
+                        <td style="width:100px;text-align: center;">4 - 26</td>
+                        <td style="width:100px;text-align: center;">27+</td>
+                    </tr>
+                    <tr>
+                        <td style="width:300px;">g. Sedativa atau obat tidur</td>
+                        <td style="width:100px;text-align: center;">{{skors7}}</td>
+                        <td style="width:100px;text-align: center;">0 - 3</td>
+                        <td style="width:100px;text-align: center;">4 - 26</td>
+                        <td style="width:100px;text-align: center;">27+</td>
+                    </tr>
+                    <tr>
+                        <td style="width:300px;">h. Halusinogen</td>
+                        <td style="width:100px;text-align: center;">{{skors8}}</td>
+                        <td style="width:100px;text-align: center;">0 - 3</td>
+                        <td style="width:100px;text-align: center;">4 - 26</td>
+                        <td style="width:100px;text-align: center;">27+</td>
+                    </tr>
+                    <tr>
+                        <td style="width:300px;">i. Oploid</td>
+                        <td style="width:100px;text-align: center;">{{skors9}}</td>
+                        <td style="width:100px;text-align: center;">0 - 3</td>
+                        <td style="width:100px;text-align: center;">4 - 26</td>
+                        <td style="width:100px;text-align: center;">27+</td>
+                    </tr>
+                    <tr>
+                        <td style="width:300px;">j. Zat-lain:</td>
+                        <td style="width:100px;text-align: center;">{{skors10}}</td>
+                        <td style="width:100px;text-align: center;">0 - 3</td>
+                        <td style="width:100px;text-align: center;">4 - 26</td>
+                        <td style="width:100px;text-align: center;">27+</td>
+                    </tr>
+
+                    
+                </table>
+                </fieldset>
+            </div>
+            <div class="grid_12" style="font-weight: bold;">
+                <p>
+                    Sekarang gunakan KARTU UMPAN BALIK ASSIST untuk memberikan klien intervensi singkat.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br />
+<div class="grid_12">
+    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+
+</div>

@@ -1,0 +1,72 @@
+<c-panel item="item" header="'MenuTransferElektromedik'" disabled>
+    <div class="panel panel-default container_12">
+        <div class="breadcrum detail" style='margin-top: 0px;'>
+            <div class="grid_2">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuTransfer3 == 'RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer25'}"
+                    ng-click="nav('RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer25')">Tab 1
+                </a>
+            </div>
+            <div class="grid_2">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuTransfer3 == 'RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer26'}"
+                    ng-click="nav('RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer26')">Tab 2
+                </a>
+            </div>
+            <div class="grid_2">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuTransfer3 == 'RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer27'}"
+                    ng-click="nav('RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer27')">Tab 3
+                </a>
+            </div>
+            <div class="grid_2">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuTransfer3 == 'RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer28'}"
+                    ng-click="nav('RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer28')">Tab 4
+                </a>
+            </div>
+            <div class="grid_2">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuTransfer3 == 'RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer29'}"
+                    ng-click="nav('RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer29')">Tab 5
+                </a>
+            </div>
+            <div class="grid_2">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuTransfer3 == 'RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer30'}"
+                    ng-click="nav('RekamMedis.AsesmenMedis.MenuTransfer3.FormulirTransfer30')">Tab 6
+                </a>
+            </div>
+            
+
+        </div>
+    </div>
+</c-panel>
+<style type="text/css">
+    .active {
+        /* background-color: white !important; */
+        background-color: rgb(255, 64, 129) !important;
+        color: white !important;
+        display: block;
+        padding: 10px 0 20px;
+        font-weight: 600;
+    }
+
+    .breadcrum a.default {
+        background: white;
+    }
+
+    .breadcrum a:hover {
+        background: #41abf2;
+        color: white;
+        border-bottom: solid 5px rgb(255, 64, 129);
+    }
+
+    .breadcrum a {
+        color: rgb(63, 81, 181);
+        border-bottom: solid 5px rgb(255, 64, 129);
+        border-top: solid 1px #cccccc;
+        border-right: solid 1px #cccccc;
+    }
+</style>
+<div ui-view></div>

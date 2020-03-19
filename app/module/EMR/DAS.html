@@ -1,0 +1,471 @@
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+        background-color: #e8edff;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+    }
+
+    .tg .tg-yw4l {
+        vertical-align: top
+    }
+
+
+    .rowstyle {
+        border-bottom: 1px dashed lightblue
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 120%;
+        font-weight: 700;
+        margin-bottom: 20px
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    /* table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 40px;
+
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    } */
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate> DAS (Daily Activity Skill) </div>
+        </div>
+        <div style="margin-top:10px">
+
+
+            <div class="grid_12" style="margin-top: 5px;">
+                <div class="grid_12" ng-repeat="list in listDaily | orderBy:'id'" style="padding: 5pt 10pt">
+                    <b>{{list.nama}}</b>
+                    <div class="grid_12" style="padding: 5pt">
+                        <div ng-repeat="jawab in list.detail | orderBy:'id'">
+                            <div ng-switch on="jawab.type">
+                                <div class="grid_2" ng-switch-when="checkbox">
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                        ng-model="item.obj[jawab.id]">
+                                    <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                        &nbsp;{{jawab.nama}}</label>
+
+                                </div>
+                                <div class="grid_3" ng-switch-when="textbox" style="margin-top: 0px;margin-left:-10px">
+                                    <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th colspan="2" style="width:150px;font-weight: bold;text-align: center;">Dalam 30 hari hari
+                            terakhir berapa besar kesulitan yang anda alami dalam : </th>
+                        <th style="font-weight: bold;text-align: center">Tidak Ada</th>
+                        <th style="font-weight: bold;text-align: center">Ringan </th>
+                        <th style="font-weight: bold;text-align: center">Sedang </th>
+                        <th style="font-weight: bold;text-align: center">Berat</th>
+                        <th style="font-weight: bold;text-align: center">Sgt Berat atau tidak mampu melakukan</th>
+                    </tr>
+                    <tr>
+                        <td>S1</td>
+                        <td>Berdiri untuk jangka waktu yang lama misal 30 menit ?</td>
+                        <td ng-repeat="jawab in listData1 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S2</td>
+                        <td>Melakukan pekerjaan rumah?</td>
+                        <td ng-repeat="jawab in listData2 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S3</td>
+                        <td>Mempelajari hal baru, misalnya pergi ketempat baru?</td>
+                        <td ng-repeat="jawab in listData3 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S4</td>
+                        <td>Apakah anda mengalami kesulitan bergabung dalam aktifitas di masyarakat?contohnya kegiataan,
+                            keagamaan, perayaan) seperti halnya yang dilakukan oleh orang lain?</td>
+                        <td ng-repeat="jawab in listData4 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S5</td>
+                        <td>Sejauh mana kondisi kesehatan anda mempengaruhi anda secara emosional ?</td>
+                        <td ng-repeat="jawab in listData5 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S6</td>
+                        <td>Berkonsentrasi yang melakukan sesuatu selama 10 menit</td>
+                        <td ng-repeat="jawab in listData6| orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S7</td>
+                        <td>Untuk berjalan dalam jarak yang jauh, misal nya 1km</td>
+                        <td ng-repeat="jawab in listData7 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S8</td>
+                        <td>Mandi</td>
+                        <td ng-repeat="jawab in listData8 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S9</td>
+                        <td>Berpakaian</td>
+                        <td ng-repeat="jawab in listData9 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S10</td>
+                        <td>Berhubungan dengan orang baru yang belum dikenal</td>
+                        <td ng-repeat="jawab in listData10 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S11</td>
+                        <td>Mempertahan kan pertemanan</td>
+                        <td ng-repeat="jawab in listData11 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>S12</td>
+                        <td>Kembali bekerja dan bersekolah</td>
+                        <td ng-repeat="jawab in listData12 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <div class="grid_12">
+                                <div ng-switch on="jawabIndex">
+
+                                    <div ng-switch-default>
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                            &nbsp;{{jawab.nama}}</label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+
+
+
+                </table>
+
+            </div>
+
+
+            <div class="grid_3" style="margin-top:10px">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Total Skor DAS (Daily Activity Skill)"></label>
+                </div>
+                <div class="grid_12">
+                    <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[9164]" />
+                </div>
+
+            </div>
+            <div class="grid_12" style="margin-top: 20px">
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <td>H1</td>
+                        <td>Dalam 30 hari ini secara keseluruhan, ada beberapa hari anda mengalami kesulitan tersebut
+                        </td>
+                        <td>
+                            <div class="grid_12">
+                                <label c-label item="item" c-label-text="Tuliskan Jumlah Harinya"></label>
+                            </div>
+                            <div class="grid_12">
+                                <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[9161]" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>H2</td>
+                        <td>Dalam 30 terakhir, selama beberapa hari anda sama sekali tidak mampu melakukan aktifitas
+                            atau pekerjaan seperti biasa karena ada masalah kesehatan ?
+                        </td>
+                        <td>
+                            <div class="grid_12">
+                                <label c-label item="item" c-label-text="Tuliskan Jumlah Harinya"></label>
+                            </div>
+                            <div class="grid_12">
+                                <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[9162]" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>H3</td>
+                        <td>Dalam 30 hari ini terakhir, dengan tidak memperhitungkan hari dimana anda sama sekali tidak
+                            mampu, beberapa hari anda harus mengurangi aktifitas atau pekerjaan yang biasa dilakukan
+                            karena masalah kesehatan tersebut
+                        </td>
+                        <td>
+                            <div class="grid_12">
+                                <label c-label item="item" c-label-text="Tuliskan Jumlah Harinya"></label>
+                            </div>
+                            <div class="grid_12">
+                                <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[9163]" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="grid_12">
+                <div class="grid_8"></div>
+                <div class="grid_4">
+                    <fieldset style="margin-top:10px;border-radius: 10px;height: 150px;">
+                        <div style="padding: 20px;">
+                            <div class="grid_12">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Tanggal dan Jam"></label>
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%" k-ng-model="item.obj[9165]" kendo-datetimepicker
+                                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'"
+                                        parsedate="yyyy-MM-dd HH:mm" />
+
+                                </div>
+                            </div>
+                            <div class="grid_12" style="margin-top:10px">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Dokter"></label>
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[9166]"
+                                        k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                                        k-auto-bind="false" k-data-source="listPegawai" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<br />
+<div class="grid_12">
+    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+
+</div>

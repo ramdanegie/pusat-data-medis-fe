@@ -1,0 +1,198 @@
+<style type="text/css">
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid #228be6;
+    }
+
+    .k-slider-horizontal {
+        display: inline-block;
+        float: left;
+        width: 450px;
+
+        height: 26px;
+
+
+
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    .k-slider {
+
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        display: inline-block;
+    }
+
+    .activeBtn {
+        background-color: #10c4b2;
+        color: #ffffff;
+    }
+</style>
+
+<div class="grid_12">
+    <div class="panel panel-default container_12">
+        <div class="panel-heading" c-translate> Laporan Hasil Pemeriksaan EEG</div>
+    </div>
+
+
+    <div class="grid_12">
+
+        <fieldset style="margin-top: 10px; ">
+            <!-- <legend><b>Tanda Vital</b></legend> -->
+            <div class="grid_12" style="margin-top: 20px">
+                <div class="grid_12">
+                    <div class="grid_3">
+                        <div class="grid_12">
+                            <label c-label item="item" c-label-text="Dokter"></label>
+                        </div>
+                        <div class="grid_12">
+                            <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[14352]"
+                                k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                                k-auto-bind="false" k-data-source="listDokter" />
+
+                        </div>
+                    </div>
+
+                    <div class="grid_3">
+                        <div class="grid_12">
+                            <label c-label item="item" c-label-text="Tanggal "></label>
+                        </div>
+                        <div class="grid_12">
+                            <input style="width: 100%" k-ng-model="item.obj[14353]" kendo-datetimepicker
+                                placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'"
+                                parsedate="yyyy-MM-dd HH:mm" />
+                        </div>
+                    </div>
+                    <div class="grid_3">
+                        <div class="grid_12">
+                            <label c-label item="item">No.EEG</label>
+                        </div>
+                        <div class="grid_12">
+                            <input class="k-textbox" ng-model="item.obj[14354]" type="text">
+
+                        </div>
+                    </div>
+                    <div class="grid_3">
+                        <div class="grid_12">
+                            <label c-label item="item">Premedikasi</label>
+                        </div>
+                        <div class="grid_12">
+                            <input class="k-textbox" ng-model="item.obj[14355]" type="text">
+
+                        </div>
+                    </div>
+
+                    <div class="grid_3">
+                        <div class="grid_12">
+                            <label c-label item="item">Pengobatan</label>
+                        </div>
+                        <div class="grid_12">
+                            <input class="k-textbox" ng-model="item.obj[14356]" type="text">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid_12" style="margin-top: 15px;">
+                    <label c-label item="item">A. Temuan</label>
+                </div>
+                <div class="grid_12" style="margin-top: 15px;">
+                    <table style="width:100%;color: #4c5356;">
+                        <tr>
+                            <th  style="text-align: center; width: 100px"> Conscious Level Activation</th>
+                            <th  style="text-align: center; width: 100px"> Activity </th>
+                            <th  style="text-align: center; width: 100px"> Frequency </th>
+                            <th  style="text-align: center; width: 100px"> Voltage </th>
+                            <th  style="text-align: center; width: 100px"> Distribution </th>
+                            <th  style="text-align: center; width: 100px"> Spesial Coment </th>
+                        </tr>
+                        
+                           
+
+
+                         <tr ng-repeat="list in listData1 | orderBy:'id'" ng-init="jawabIndex = $index">
+                                
+                                <td >{{list.namaexternal}}</td>
+                                <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                    <div class="grid_12">
+                                        <div ng-switch on="jawabIndex">
+
+                                            
+                                        </div>
+
+                                    <div ng-switch on="jawab.type">
+
+                                             <div ng-switch-when="datetime">
+                                                <input style="width: 100%" k-ng-model="item.obj[jawab.id]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                            </div>
+                                            <div ng-switch-when="textbox">
+                                                <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                                 ng-value="{{jawab.value}}">
+                                                <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                                    &nbsp;{{jawab.nama}}</label>
+
+                                            </div>
+                                                
+                                    </div> 
+
+                                    </div>
+
+                                </td>
+                            </tr>
+
+
+
+                    </table>
+                </div>
+                <div class="grid_12" style="margin-top: 15px;">
+                    <div class="grid_12">
+                        <label c-label item="item">B.Klasifikasi</label>
+                    </div>
+                    <div class="grid_12" style="margin-top: 5px;">
+                        <textarea c-text-area type="input" filter="'string'" class="k-textbox"
+                            ng-model="item.obj[14357]" placeholder="" style="height: 80px; width: 98%; "></textarea>
+                    </div>
+                </div>
+                <div class="grid_12" style="margin-top: 15px;">
+                    <div class="grid_12">
+                        <label c-label item="item">C. IMPRESI</label>
+                    </div>
+                    <div class="grid_12" style="margin-top: 5px;">
+                        <textarea c-text-area type="input" filter="'string'" class="k-textbox"
+                            ng-model="item.obj[14358]" placeholder="" style="height: 80px; width: 98%; "></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_12" style="margin-top: 15px;">
+                    <div class="grid_12">
+                        <label c-label item="item">D. SARAN</label>
+                    </div>
+                    <div class="grid_12" style="margin-top: 5px;">
+                        <textarea c-text-area type="input" filter="'string'" class="k-textbox"
+                            ng-model="item.obj[14359]" placeholder="" style="height: 80px; width: 98%; "></textarea>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+
+<div class="grid_12">
+    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+</div>

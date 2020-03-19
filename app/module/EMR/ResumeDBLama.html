@@ -1,0 +1,244 @@
+<style>
+    .k-grid-header .k-header .k-link {
+        height: auto;
+    }
+
+    .k-grid .k-grid-header .k-header {
+        white-space: normal;
+    }
+
+    .k-grid .k-grid-header .k-header {
+        text-align: center;
+    }
+</style>
+<div>
+    <div class="grid_12 headerBox">
+        <p>Diagnosa</p>
+    </div>
+    <div class="grid_12" style="margin: 5px 5px 5px 5px;">
+        <kendo-grid id="kGrid" data-source="sourceResume" options="resumeOpt"
+                k-pageable="'true'" k-sortable="'true'" k-resizable="'true'" k-selectable="'row'"
+                k-ng-model="dataPasienSelected" ng-click="klikGrid(dataPasienSelected)"></kendo-grid>
+        
+    </div>
+
+    <div class="grid_12" style="float:right">
+        <div class="grid_2 " style="margin-top: 10px ">
+            <button class="btnTemplate1"  item="item" is-validate ng-click="diagnosa()"><i class="fa fa-list-alt"></i>Lihat Diagnosa
+            
+            </button>
+        </div>
+    </div>
+    <div class="grid_12" style="margin-top:100px">
+        <div ng-include='"../app/template/Shared/TemplateLoading"'></div>
+    </div>
+</div>
+    <div kendo-window="popUpDiagnosa" k-title="'Data Diagnosa '" k-visible="false" k-width="900" k-height="500">
+        <div class="panel panel-default container_12">
+
+            <div class="grid_12">
+
+                <div class="grid_3">
+                    <div class="grid_12">
+                        <label c-label item="item">No Transaksi</label>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="notransaksi"
+                            ng-disabled="true"  />
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="grid_12">
+                        <label c-label item="item">Nama Pasien</label>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="namapasien"
+                            ng-disabled="true"  />
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="grid_12">
+                        <label c-label item="item">Dokter</label>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="dokter"
+                            ng-disabled="true"  />
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="grid_12">
+                        <label c-label item="item">Poliklinik</label>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="poliklinik"
+                            ng-disabled="true"  />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid_12">
+                <div class="grid_2">
+                    <div class="grid_12">
+                        <label c-label item="item">Tensi</label>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="tensi"
+                            ng-disabled="true" />
+                    </div>
+                </div>
+                <div class="grid_2">
+                    <div class="grid_12">
+                        <label c-label item="item">Berat Badan</label>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="bb"
+                            ng-disabled="true" />
+                    </div>
+                </div>
+                <div class="grid_2">
+                    <div class="grid_12">
+                        <label c-label item="item">Tinggi Badan</label>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="tb"
+                            ng-disabled="true" />
+                    </div>
+                </div>
+                <div class="grid_2">
+                    <div class="grid_12">
+                        <label c-label item="item">Nadi</label>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="nadi"
+                            ng-disabled="true" />
+                    </div>
+                </div>
+                <div class="grid_2">
+                    <div class="grid_12">
+                        <label c-label item="item">Suhu</label>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="suhu"
+                            ng-disabled="true" />
+                    </div>
+                </div>
+                <div class="grid_2">
+                    <div class="grid_12">
+                        <label c-label item="item">RR</label>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="rr"
+                            ng-disabled="true" />
+                    </div>
+                </div>
+            </div>
+            <div class="grid_12">
+                <div class="grid_3">
+                    <div class="grid_12">
+                        <label c-label item="item">Subjek</label>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="grid_12">
+                        <textarea style="width: 99%; height: 80px;" ng-model="subjek" class="ng-pristine ng-valid ng-empty ng-touched" aria-invalid="false" ng-disabled="true"></textarea>
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="grid_12">
+                        <label c-label item="item">Objek</label>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="grid_12">
+                        <textarea style="width: 99%; height: 80px;" ng-model="objek" class="ng-pristine ng-valid ng-empty ng-touched" aria-invalid="false" ng-disabled="true"></textarea>
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="grid_12">
+                        <label c-label item="item">Assesmen</label>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="grid_12">
+                        <textarea style="width: 99%; height: 80px;" ng-model="assesmen" class="ng-pristine ng-valid ng-empty ng-touched" aria-invalid="false" ng-disabled="true"></textarea>
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <div class="grid_12">
+                        <label c-label item="item">Planing</label>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="grid_12">
+                        <textarea style="width: 99%; height: 80px;" ng-model="planing" class="ng-pristine ng-valid ng-empty ng-touched" aria-invalid="false" ng-disabled="true"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_12 headerBox">
+                <p>Penyakit</p>
+            </div>
+            <div class="grid_12 ">
+                <div class="grid_2">
+                    <div class="grid_12">
+                        <label c-label item="item">Kode Penyakit</label>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="kodepenyakit"
+                            ng-disabled="true" />
+                    </div>
+                </div>
+                <div class="grid_5">
+                    <div class="grid_12">
+                        <label c-label item="item">Penyakit</label>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                    <div class="grid_12">
+                        <textarea style="width: 99%; height: 80px;" ng-model="penyakit" class="ng-pristine ng-valid ng-empty ng-touched" aria-invalid="false" ng-disabled="true"></textarea>
+                    </div>
+                </div>
+                <div class="grid_5">
+                    <div class="grid_12">
+                        <label c-label item="item">Description</label>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                    <div class="grid_12">
+                        <textarea style="width: 99%; height: 80px;" ng-model="description" class="ng-pristine ng-valid ng-empty ng-touched" aria-invalid="false" ng-disabled="true"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_12 headerBox">
+                <p>Obat</p>
+            </div>
+            <div class="clear"></div>
+            <div class="grid_12 borderBox">                
+                <kendo-grid id="kGrid" data-source="dataDaftarObat" options="columnDaftarObat"
+                    k-pageable="'true'" k-sortable="'true'" k-resizable="'true'" k-selectable="'row'"
+                    k-ng-model="dataObatSelected" ng-click="klikGridObat(dataObatSelected)"></kendo-grid>
+
+            </div>
+            </div>
+            <div class="grid_12">
+                <div class="k-edit-buttons  k-state-default pull-right" style="margin-top:20px">                
+                    <kendo-button icon="'k-icon k-cancel'" ng-click='tutup()'>Tutup</kendo-button>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,169 @@
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+        background-color: #e8edff;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+    }
+
+    .tg .tg-yw4l {
+        vertical-align: top;
+    }
+
+    .tg .nilai {
+        vertical-align: middle;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .tg .jawaban {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .header {
+        font-size: 120%;
+        font-weight: 700;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 11pt;
+        font-weight: 700;
+        margin-bottom: 20px
+    }
+
+    .rowstyle {
+        border-bottom: 1px dashed lightblue
+    }
+
+    img.painScale {
+        display: inline-block;
+        margin: 2% auto;
+    }
+
+    .headingPainScale {
+        font-size: 150%;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 10%;
+    }
+
+    .k-slider {
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        display: inline-block;
+    }
+
+    .palKiri {
+        text-align: left;
+        vertical-align: middle
+    }
+
+    .palTengah {
+        text-align: center;
+        vertical-align: middle
+    }
+
+    .palKanan {
+        text-align: right;
+        vertical-align: middle
+    }
+</style>
+
+
+<div class="grid_12">
+
+
+    <!-- panel Skrining Nyeri Anak/Dewasa -->
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate>Skala Nyeri</div>
+        </div>
+        <!-- <div style="background-color: #10C4B2; height: 25px; margin-top: 5p; text-align: left; border: 1px solid; border-color: #10C4B2; padding: 10px 0 10px 10px;"
+            class="grid_12">
+            <div class="grid_12">
+                <span style="font-size: 18px; color: white; padding: 5px;">Skala Nyeri</span>
+            </div>
+        </div> -->
+        <br />
+        <div class="grid_6">
+
+            <div class="grid_12" style="margin-top:10%">
+
+                <div ng-repeat="list in listNyeriAnak | orderBy:'id'">
+                    <div ng-repeat="opsi in list.detail | orderBy:'id'" ng-init="listIndex = $index + 1">
+                        <div class="grid_2" style="text-align: center; vertical-align: middle;">
+                            <img class="normalTidakNormal" src="stylesheets/skalanyeri/{{listIndex}}.png"
+                                ng-model="item.skorNyeri" ng-click="getSkalaNyeri(list, opsi)">
+                            <!-- <input type="radio" ng-model="item.skorNyeri" ng-value="opsi.id"
+                                ng-click="getSkalaNyeri(list, opsi)"> -->
+                            <div class="grid_12">
+                                <label for="{{opsi.descNilai}}"><b>{{opsi.descNilai}}</b></label>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid_4" ng-repeat="ket in listKetNyeri ">
+                <label><b>{{ket.nama}}</b></label>
+            </div>
+        </div>
+        <div class="grid_6">
+            <div class="grid_6" style="margin-top:10%">
+                <div class="grid_12">
+                    <label c-label item="item">Skala Nyeri</label>
+                </div>
+                <div class="clear"></div>
+
+                <div class="grid_12">
+                    <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[1096]" />
+                </div>
+            </div>
+        </div>
+        <div class="grid_12 rowstyle" style="margin-bottom:20px">&nbsp;</div>
+
+        <div class="grid_12" ng-repeat="ket in listKeterangan ">
+            <div class="grid_1">{{ket.descNilai}} </div>
+            <div class="grid_11" style="margin-left:-5px"> : {{ket.nama}}</div>
+        </div>
+    </div>
+
+
+    <br />
+    <br />
+    <div class="grid_12">
+        <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+
+    </div>

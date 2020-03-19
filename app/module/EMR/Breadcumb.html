@@ -1,0 +1,30 @@
+<div class="panel panel-default container_12">
+    <ul class="breadcrumbs"">
+        <li ng-repeat="item in listBreadCumb">{{item.name}}</li>
+    </ul>
+</div>
+<style type="text/css">
+    ul.breadcrumbs {
+        padding: 10px 16px;
+        list-style: none;
+        background-color: #41abf2;
+    }
+
+    ul.breadcrumbs li {
+        display: inline;
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    ul.breadcrumbs li+li:before {
+        padding: 8px;
+        color: #ffffff;
+        content: "\f054";
+        font-family: FontAwesome;
+    }
+
+    ul.breadcrumbs li a {
+
+        text-decoration: none;
+    }
+</style>

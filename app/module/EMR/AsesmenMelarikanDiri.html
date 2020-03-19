@@ -1,0 +1,287 @@
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+        background-color: #e8edff;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+    }
+
+    .tg .tg-yw4l {
+        vertical-align: top
+    }
+
+
+    .rowstyle {
+        border-bottom: 1px dashed lightblue
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 120%;
+        font-weight: 700;
+        margin-bottom: 20px
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #777777;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+    /* table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 40px;
+
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    } */
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate> Asesmen Melarikan Diri </div>
+        </div>
+        <div class="grid_6">
+
+
+            <div class="grid_12 header">
+
+                <div class="grid_4" style="border-bottom:1px solid blue;">
+                    Melarikan Diri
+                </div>
+                <div class="grid_8" style="border-bottom:1px solid blue;">
+                    <b>-</b>
+                </div>
+
+            </div>
+            <div class="grid_12 header">
+
+                <div class="grid_6" style="border-bottom:1px solid blue;">
+                    <b style="font-weight: bold;">Faktor Statik (riwayat)</b>
+                </div>
+                <div class="grid_6" style="border-bottom:1px solid blue;">
+                    <b>-</b>
+                </div>
+
+            </div>
+            <div ng-repeat="tanya in listDatas | orderBy:'id'">
+
+                <div class="grid_8">
+                    <!-- <div class="grid_1" style="text-align:center">
+                        <label>{{tanya.id}}</label>
+                    </div> -->
+                    <div class="grid_6">
+                        <label>
+                            <b>{{tanya.nama}}</b>
+                        </label>
+                    </div>
+                </div>
+                <div class="grid_4">
+                    <div class="grid_12" ng-repeat="jawab in tanya.detail | orderBy:'id'" ng-init="jawabIndex = $index">
+                        <div ng-switch on="jawabIndex">
+                            <!-- <div ng-switch-when="0"> -->
+                            <div ng-switch-default>
+
+
+                                <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                    ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                    &nbsp;{{jawab.nama}}</label>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid_12 rowstyle">&nbsp;</div>
+            <div class="grid_12 footer" style="border-top:1px solid lightblue">
+                <div class="grid_6">Jumlah Skor</div>
+                <div class="grid_6">{{totalSkor}}</div>
+            </div>
+
+        </div>
+        <div class="grid_6">
+
+
+            <div class="grid_12 header">
+
+                <div class="grid_4" style="border-bottom:1px solid blue;">
+                    Melarikan Diri
+                </div>
+                <div class="grid_8" style="border-bottom:1px solid blue;">
+                    <b>-</b>
+                </div>
+
+            </div>
+            <div class="grid_12 header">
+
+                <div class="grid_6" style="border-bottom:1px solid blue;">
+                    <b style="font-weight: bold;">Faktor Dinamis (saat ini)</b>
+                </div>
+                <div class="grid_6" style="border-bottom:1px solid blue;">
+                    <b>-</b>
+                </div>
+
+            </div>
+            <div ng-repeat="tanya in listData2| orderBy:'id'">
+
+                <div class="grid_8">
+                    <!-- <div class="grid_1" style="text-align:center">
+                            <label>{{tanya.id}}</label>
+                        </div> -->
+                    <div class="grid_6">
+                        <label>
+                            <b>{{tanya.nama}}</b>
+                        </label>
+                    </div>
+                </div>
+                <div class="grid_4">
+                    <div class="grid_12" ng-repeat="jawab in tanya.detail | orderBy:'id'" ng-init="jawabIndex = $index">
+                        <div ng-switch on="jawabIndex">
+                            <!-- <div ng-switch-when=""> -->
+                            <div ng-switch-default>
+
+
+                                <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                    ng-model="item.obj[jawab.id]" ng-click="getSkor2(jawab)">
+                                <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                    &nbsp;{{jawab.nama}}</label>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid_12 rowstyle">&nbsp;</div>
+            <div class="grid_12 footer" style="border-top:1px solid lightblue">
+                <div class="grid_6">Jumlah Skor</div>
+                <div class="grid_6">{{totalSkor2}}</div>
+            </div>
+
+
+        </div>
+        <div class="grid_12 footer" style="border-top:1px solid lightblue;margin-top: -20px;">
+            <div class="grid_6">
+                <div class="grid_6" style="margin-top: 10px;">Total Skor Risiko Melarikan Diri : </div>
+                <div class="grid_5">
+                    <input class="k-textbox" ng-model="item.obj[3152]" type="text">
+                </div>
+                <div class="grid_1" style="margin-top: 10px;">Level</div>
+            </div>
+            <div class="grid_6" style="margin-top: 10px;">
+                <div class="grid_4" ng-repeat="jawab in listHasil | orderBy:'id'" ng-init="jawabIndex = $index">
+                    <div ng-switch on="jawabIndex">
+                        <!-- <div ng-switch-when=""> -->
+                        <div ng-switch-default>
+
+                            <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                ng-model="item.obj[jawab.id]">
+                            <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                &nbsp;{{jawab.nama}}</label>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid_12" style="margin-top: 20px">
+            <table style="width:100%;">
+                <tr>
+                    <th style="width:20px"></th>
+                    <th style="width:20px">Risiko</th>
+                    <th> Manajemen Plan</th>
+                </tr>
+                <tr>
+                    <td rowspan="10">Skoring</td>
+                    <td rowspan="3">Rendah</td>
+                    <td> 1. Rawat Jalan dan pemberian terapi</td>
+                </tr>
+                <tr>
+                    <td> 2. Edukasi mengenal tanda-tanda perburukan dan segera kontrol</td>
+                </tr>
+                <tr>
+                    <td> 3. Psikoterapi</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Sedang</td>
+                    <td> 1. Pertimbangan Rawat Inap</td>
+                </tr>
+                <tr>
+                    <td> 2. Pemakaian Gelang risiko</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">Berat</td>
+                    <td> 1. Pemakaian Gelang risiko </td>
+                </tr>
+                <tr>
+                    <td> 2. Lapor DPJP</td>
+                </tr>
+                <tr>
+                    <td> 3. Rawat inap dengan terapi dan perawatan Intensif</td>
+                </tr>
+                <tr>
+                    <td> 4. Ruang isolasi/ Restraint</td>
+                </tr>
+                <tr>
+                    <td> 5. Observasi Ketat</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+<div class="grid_12">
+    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+
+</div>

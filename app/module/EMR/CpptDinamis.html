@@ -1,0 +1,133 @@
+<style type="text/css">
+    .style-center {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .style-right {
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+    }
+
+    .style-left {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .k-treeview .k-item {
+        background-color: #f9f9f9 !important;
+    }
+
+    .k-checkbox-label:before {
+        margin: 1px 0px 0px 6px;
+    }
+</style>
+
+<div ng-show="dataVOloaded">
+    <div class="panel panel-default container_12">
+        <div class="panel-heading" c-translate>CPPT</div>
+        <div class="panel-body">
+            <div class="grid_12">
+
+                <div ng-cloak>
+                    <md-content>
+                        <md-tabs md-dynamic-height md-border-bottom md-selected="myVar">
+
+                            <md-tab label="Riwayat Pengkajian" ng-if="showRiwayatEMR === false">
+                                <md-content class="md-padding">
+
+                                    <div class="grid_12">
+                                        <!--  <div class="grid_12">
+                                    <div kendo-grid k-data-source="sourcePAP" k-selectable="'row'" options="mainGridOptions" k-ng-model="current"
+                                        ng-click="kl(current)"></div>
+                                </div> -->
+                                        <div class="grid_12 borderBox">
+                                            <kendo-grid id="kGrid" data-source="dataDaftar" options="columnDaftar"
+                                                k-selectable="'row'" k-sortable="'true'" k-resizable="'true'"
+                                                k-ng-model="dataSelected" ng-click="klikGrid(dataSelected)">
+                                            </kendo-grid>
+
+                                        </div>
+                                        <div class="grid_12">
+                                            <div class="grid_2"></div>
+                                            <div class="grid_2">
+                                                <button class="btnTemplate1" style="margin-left: 0;"
+                                                    ng-click="verif()"><i class="fa fa-edit"></i>Verif DPJP</button>
+                                              
+                                            </div>
+                                            <div class="grid_2">
+                                                <button class="btnTemplate1" style="margin-left: 0;"
+                                                    ng-click="notif()"><i class="fa fa-edit"></i>Notifikasi DPJP </button>
+                                              
+                                            </div>
+                                            <div class="grid_2">
+                                                <button class="btnTemplate1" style="margin-left: 0;"
+                                                    ng-click="Lihat()"><i class="fa fa-search"></i>Lihat</button>
+                                              
+                                            </div>
+                                            <div class="grid_2">
+                                                <button class="btnTemplate1" style="margin-left: 0;"
+                                                    ng-click="create()"><i class="fa fa-plus-circle"></i>Buat
+                                                    Baru</button>
+                                                <!-- <button class="c-button" ng-click="create()" style="font-size:20px">Buat Baru</button> -->
+                                            </div>
+                                            <div class="grid_2">
+                                                <button class="btnTemplate1 error" style="margin-left: 0;"
+                                                    ng-click="hapus()"><i class="fa fa-trash"></i>Hapus
+                                                    </button>
+                                                <!-- <button class="c-button" ng-click="create()" style="font-size:20px">Buat Baru</button> -->
+                                            </div>
+                                            
+                                            <!-- <div class="grid_2">
+                                                    <button class="btnTemplate1" style="margin-left: 0;"
+                                                        ng-click="init  ()"><i class="fa fa-refresh"></i>Refresh
+                                                        </button>
+                                                   
+                                                </div> -->
+                                        </div>
+                                    </div>
+                                </md-content>
+                            </md-tab>
+                            <md-tab label="Pengkajian Detail" ng-if="showRiwayatEMR === true">
+                                <md-content class="md-padding">
+                                    <div class="grid_12">
+                                        <!-- <div class="grid_3">
+                                            <div class="grid_12">
+                                                <div class="grid_12">
+                                                    <div id="treeview" kendo-tree-view="tree"
+                                                        k-data-source="treeSourceBedah"
+                                                        options="mainTreeViewBedahOption" ng-model="treeView"
+                                                        ng-click="klikBedah(tree)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        <div class="grid_12">
+                                            <div ui-view></div>
+                                        </div>
+                                    </div>
+                                </md-content>
+                            </md-tab>
+                        </md-tabs>
+                    </md-content>
+                </div>
+            </div>
+
+            <div kendo-window="winDialogss" k-title="'Pilih Dokter'" k-width="400" k-height="120" k-visible="false"
+            k-on-open="win2visible = true" k-on-close="win2visible = false">
+            <label c-label item="item " c-label-text="Dokter "></label>
+            <input style="width: 100%; " kendo-combo-box k-ng-model="item.pilihDokter" k-data-text-field="'namalengkap'"
+                k-filter=" 'contains' " k-data-value-field=" 'id' " k-auto-bind="false " k-data-source="listDokter" />
+            <div class="clear">
+                <button class="k-button" ng-click="simpanDokter(item, items.pilihDokter)"
+                    style="float:right;margin-top:4%">Simpan</button>
+            </div>
+
+
+        </div>
+        <div class="grid_12">
+            <div ng-include='"../app/template/Shared/TemplateLoading"'></div>
+        </div>

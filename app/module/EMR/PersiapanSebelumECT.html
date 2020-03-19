@@ -1,0 +1,144 @@
+<style type="text/css">
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid #228be6;
+    }
+
+    .k-slider-horizontal {
+        display: inline-block;
+        float: left;
+        width: 450px;
+
+        height: 26px;
+
+
+
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    .k-slider {
+
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        display: inline-block;
+    }
+
+    .activeBtn {
+        background-color: #10c4b2;
+        color: #ffffff;
+    }
+</style>
+
+<div class="grid_12">
+    <div class="panel panel-default container_12">
+        <div class="panel-heading" c-translate> Persiapan Sebelum Tindakan ECT</div>
+    </div>
+
+
+    <div class="grid_12">
+
+        <fieldset style="margin-top: 10px; ">
+            <!-- <legend><b>Tanda Vital</b></legend> -->
+            <div class="grid_12" style="margin-top: 20px">
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th rowspan="3" style="text-align: center;width: 10px;"> No </th>
+                        <th rowspan="3" style="text-align: center;"> Pengecekan </th>
+                        <th colspan="7" style="text-align: center;"> Dilakukan </th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" style="text-align: center;"> <input style="width: 100%" k-ng-model="item.obj[109056]" kendo-datetimepicker
+                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" /> </th>
+                        <th colspan="2" style=" text-align: center;"> <input style="width: 100%" k-ng-model="item.obj[109057]" kendo-datetimepicker
+                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" /> </th>
+                        <th colspan="2" style="text-align: center;"> <input style="width: 100%" k-ng-model="item.obj[109058]" kendo-datetimepicker
+                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" /> </th>
+                        <th rowspan="2" style="text-align: center;"> Keterangan </th>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;"> Ya </th>
+                        <th style="text-align: center;"> Tidak </th>
+                        <th style="text-align: center;"> Ya </th>
+                        <th style="text-align: center;"> Tidak </th>
+                        <th style="text-align: center;"> Ya </th>
+                        <th style="text-align: center;"> Tidak </th>
+                    </tr>
+
+                    <tr ng-repeat="list in listData1 | orderBy:'id'" ng-init="jawabIndex = $index">
+                        <td style="width: 10px;{{list.style}}">{{list.reportdisplay}}</td>
+                        <td style="width: 200px;{{list.style}}">{{list.namaexternal}}</td>
+                        <td style="text-align: center;{{list.style}}" ng-repeat="jawab in list.details">
+                            <div class="grid_12">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-blur="getSkor(jawab)" ng-model="item.obj[jawab.id]"
+                                            type="text">
+                                    </div>
+                                    <div ng-switch-when="label">
+                                        <label class="k-label"> {{jawab.caption}}</label>
+                                    </div>
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="list in listData2 | orderBy:'id'" ng-init="jawabIndex = $index">
+                        <td colspan="2" >{{list.namaexternal}}</td>
+                        <td style="text-align: center;{{list.style}}" ng-repeat="jawab in list.details">
+                            <div class="grid_12">
+                                <div ng-switch on="jawab.type">
+                                    <div ng-switch-when="textbox">
+                                        <input class="k-textbox" ng-blur="getSkor(jawab)" ng-model="item.obj[jawab.id]"
+                                            type="text">
+                                    </div>
+                                    <div ng-switch-when="label">
+                                        <label class="k-label"> {{jawab.caption}}</label>
+                                    </div>
+                                    <div ng-switch-when="checkbox">
+                                        <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                            ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                        <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+
+                                        </label>
+                                    </div>
+                                    <div ng-switch-when="textarea">
+                                        <textarea c-text-area type="input" filter="'string'" style=" height: 300px;"
+                                            class="k-textbox" ng-model="item.obj[jawab.id]" placeholder=""></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                </table>
+
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+
+<div class="grid_12">
+    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+</div>

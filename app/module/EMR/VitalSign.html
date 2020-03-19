@@ -1,0 +1,191 @@
+<style type="text/css">
+    .style-center {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .style-right {
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+    }
+
+    .style-left {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .k-treeview .k-item {
+        background-color: #f9f9f9 !important;
+    }
+
+    .k-checkbox-label:before {
+        margin: 1px 0px 0px 6px;
+    }
+</style>
+
+<div ng-show="dataVOloaded">
+    <div class="panel panel-default container_12">
+        <div class="panel-heading" c-translate>Vital Sign</div>
+        <div class="panel-body">
+            <div class="grid_12">
+           
+                <div ng-cloak>
+                    <md-content>
+                        <md-tabs md-dynamic-height md-border-bottom md-selected="myVar">
+
+                            <md-tab label="Pengkajian " ng-if="showRiwayatEMR === false">
+                                <md-content class="md-padding">
+                                      
+                                    <div class="grid_12">
+                                        <div class="grid_3">
+                                            <div class="grid_12" style="margin-bottom:5px">
+                                                <label c-label item="item" c-label-text="tekananDarah"></label>
+                                            </div>
+                                            <div class="grid_12 parentKeteranganFieldTambahan">
+                                                <input c-text-box type="input" filter="'char'" class="k-textbox"
+                                                    ng-model="item.obj[4241]" />
+                                                    <label class="keteranganFieldTambahan"
+                                                    style="margin-top: 5px;margin-right: 30px">mmHg</label>
+                                            </div>
+                                        </div>
+                                        <div class="grid_3">
+                                            <div class="grid_12" style="margin-bottom:5px">
+                                                <label c-label item="item" c-label-text="tinggiBadan"></label>
+                                            </div>
+                                            <div class="grid_12 parentKeteranganFieldTambahan">
+                                                <input c-text-box type="text" filter="'char'" class="k-textbox"
+                                                    ng-model="item.obj[4242]" />
+                                                    <label class="keteranganFieldTambahan"
+                                                    style="margin-top: 5px;margin-right: 30px">Cm</label>
+                                            </div>
+                                        </div>
+                                        <div class="grid_3">
+                                            <div class="grid_12" style="margin-bottom:5px">
+                                                <label c-label item="item" c-label-text="beratBadan"></label>
+                                            </div>
+                                            <div class="grid_12 parentKeteranganFieldTambahan">
+                                                <input c-text-box type="text" filter="'char'" class="k-textbox"
+                                                    ng-model="item.obj[4243]" />
+                                                    <label class="keteranganFieldTambahan"
+                                                    style="margin-top: 5px;margin-right: 30px">Kg</label>
+                                            </div>
+                                        </div>
+                                        <div class="grid_3">
+                                            <div class="grid_12" style="margin-bottom:5px">
+                                                <label c-label item="item" c-label-text="Suhu"></label>
+                                            </div>
+                                            <div class="grid_12 parentKeteranganFieldTambahan">
+                                                <input c-text-box type="text" filter="" class="k-textbox"
+                                                    ng-model="item.obj[4244]" />
+                                                <label class="keteranganFieldTambahan"
+                                                    style="margin-top: 5px;margin-right: 30px">°C</label>
+                                            </div>
+                                        </div>
+                                        <div class="grid_3">
+                                            <div class="grid_12" style="margin-bottom:5px">
+                                                <label c-label item="item" c-label-text="Nadi"></label>
+                                            </div>
+                                            <div class="grid_12 parentKeteranganFieldTambahan">
+                                                <input c-text-box type="text" filter="" class="k-textbox"
+                                                    ng-model="item.obj[4245]" />
+
+                                                <label class="keteranganFieldTambahan"
+                                                    style="margin-top: 5px;margin-right: 30px">x/menit</label>
+                                            </div>
+                                        </div>
+                                        <div class="grid_3">
+                                            <div class="grid_12" style="margin-bottom:5px">
+                                                <label c-label item="item" c-label-text="Pernapasan"></label>
+                                            </div>
+                                            <div class="grid_12 parentKeteranganFieldTambahan">
+                                                <input c-text-box type="text" filter="" class="k-textbox"
+                                                    ng-model="item.obj[4246]" />
+
+                                                <label class="keteranganFieldTambahan"
+                                                    style="margin-top: 5px;margin-right: 30px">x/menit</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="grid_12">
+                                        <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+                                    </div>
+                                </md-content>
+                            </md-tab>
+                            <md-tab label="Riwayat" ng-if="showRiwayatEMR === true">
+                                <md-content class="md-padding">
+                                      
+                                    <div class="grid_12">
+
+                                        <div class="grid_12 borderBox">
+                                            <kendo-grid id="kGrid" data-source="dataDaftar" options="columnDaftar"
+                                                k-selectable="'row'" k-sortable="'true'" k-resizable="'true'"
+                                                k-ng-model="dataSelected" ng-click="klikGrid(dataSelected)">
+                                            </kendo-grid>
+
+                                        </div>
+                                        <div class="grid_12">
+                                            <div class="grid_4"></div>
+                                            <div class="grid_2">
+                                                <button class="btnTemplate1" style="margin-left: 0;"
+                                                    ng-click="Lihat()"><i class="fa fa-search"></i>Lihat</button>
+                                                <!-- <button class="c-button" ng-click="Lihat()" style="font-size:20px">Lihat</button> -->
+                                            </div>
+                                            <div class="grid_2">
+                                                <button class="btnTemplate1" style="margin-left: 0;"
+                                                    ng-click="create()"><i class="fa fa-plus-circle"></i>Buat
+                                                    Baru</button>
+                                                <!-- <button class="c-button" ng-click="create()" style="font-size:20px">Buat Baru</button> -->
+                                            </div>
+                                            <div class="grid_2">
+                                                <button class="btnTemplate1 error" style="margin-left: 0;"
+                                                    ng-click="hapus()"><i class="fa fa-trash"></i>Hapus
+                                                    </button>
+                                                <!-- <button class="c-button" ng-click="create()" style="font-size:20px">Buat Baru</button> -->
+                                            </div>
+                                            <div class="grid_2">
+                                                    <button class="btnTemplate1 cancel" ng-click="kembaliIsi()"><i class="fa fa-arrow-left"></i>Kembali</button>
+                                                </div>
+                                            <!-- <div class="grid_2">
+                                                            <button class="btnTemplate1" style="margin-left: 0;"
+                                                                ng-click="init  ()"><i class="fa fa-refresh"></i>Refresh
+                                                                </button>
+                                                           
+                                                        </div> -->
+                                        </div>
+                                    </div>
+                                </md-content>
+                                <!-- <md-content class="md-padding">
+                                    <div class="grid_12">
+                                        <div class="grid_3">
+                                            <div class="grid_12">
+                                                <div class="grid_12">
+                                                    <div id="treeview" kendo-tree-view="tree"
+                                                        k-data-source="treeSourceBedah"
+                                                        options="mainTreeViewBedahOption" ng-model="treeView"
+                                                        ng-click="klikBedah(tree)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid_9">
+                                            <div ui-view></div>
+                                        </div>
+                                    </div>
+                                </md-content> -->
+                            </md-tab>
+                        </md-tabs>
+                    </md-content>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="grid_12">
+                <div ng-include='"../app/template/Shared/TemplateLoading"'></div>
+        </div>

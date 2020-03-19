@@ -1,0 +1,704 @@
+{
+    "path": [
+        {
+            "nameDep": "MapSubSistemCtrl",
+            "urlDep": "module/SysAdmin/MapSubSistemCtrl"
+        },
+        {
+            "nameDep": "SettingLoginUserCtrl",
+            "urlDep": "module/SysAdmin/SettingLoginUserCtrl"
+        },
+        {
+            "nameDep": "TarifLayananCtrl",
+            "urlDep": "module/Humas/TarifLayananCtrl"
+        },
+        {
+            "nameDep": "KetersediaanTempatTidurCtrl",
+            "urlDep": "module/Humas/KetersediaanTempatTidurCtrl"
+        },
+        {
+            "nameDep": "InformasiJadwalDokterCtrl",
+            "urlDep": "module/Humas/InformasiJadwalDokterCtrl"
+        },
+        {
+            "nameDep": "InformasiJadwalPelayananDokterCtrl",
+            "urlDep": "module/Humas/InformasiJadwalPelayananDokterCtrl"
+        },
+        {
+            "nameDep": "JadwalPraktekDokterBulananCtrl",
+            "urlDep": "module/Humas/JadwalPraktekDokterBulananCtrl"
+        },
+        {
+            "nameDep": "DaftarInformasiPasienRegistrasiCtrl",
+            "urlDep": "module/Humas/DaftarInformasiPasienRegistrasiCtrl"
+        },
+        {
+            "nameDep": "DaftarInformasiPasienPulangCtrl",
+            "urlDep": "module/Humas/DaftarInformasiPasienPulangCtrl"
+        },
+        {
+            "nameDep": "InformasiDataPasienCtrl",
+            "urlDep": "module/Humas/InformasiDataPasienCtrl"
+        },
+        {
+            "nameDep": "DaftarInformasiPasienDalamPerawatanCtrl",
+            "urlDep": "module/Humas/DaftarInformasiPasienDalamPerawatanCtrl"
+        },
+        {
+            "nameDep": "ResepElektronikCtrl",
+            "urlDep": "module/Farmasi/ResepElektronikCtrl"
+        },
+        {
+            "nameDep": "DaftarInformasiPasienReservasiOnlineCtrl",
+            "urlDep": "module/Humas/DaftarInformasiPasienReservasiOnlineCtrl"
+        },
+        {
+            "nameDep": "KeluhanPelangganCtrl",
+            "urlDep": "module/Humas/KeluhanPelangganCtrl"
+        },
+        {
+            "nameDep": "DaftarKeluhanPelangganCtrl",
+            "urlDep": "module/Humas/DaftarKeluhanPelangganCtrl"          
+        },
+        {
+            "nameDep": "DaftarPasienApotikCtrl",
+            "urlDep": "module/Farmasi/DaftarPasienApotikCtrl"
+        } ,
+        {
+            "nameDep": "TransaksiPelayananApotikCtrl",
+            "urlDep": "module/Farmasi/TransaksiPelayananApotikCtrl"
+        },
+        {
+            "nameDep": "InputResepApotikCtrl",
+            "urlDep": "module/Farmasi/InputResepApotikCtrl"
+        },
+        {
+            "nameDep": "InputResepApotikReturCtrl",
+            "urlDep": "module/Farmasi/InputResepApotikReturCtrl"
+        },
+        {
+            "nameDep": "PaketObatPasienCtrl",
+            "urlDep": "module/Farmasi/PaketObatPasienCtrl"     
+        },
+        {
+            "nameDep": "DaftarPenangananKeluhanPelangganCtrl",
+            "urlDep": "module/Humas/DaftarPenangananKeluhanPelangganCtrl"
+        },
+        {
+            "nameDep": "PenangananKeluhanPelangganCtrl",
+            "urlDep": "module/Humas/PenangananKeluhanPelangganCtrl"
+        },
+        {
+            "nameDep": "DaftarPasienApotikRICtrl",
+            "urlDep": "module/Farmasi/DaftarPasienApotikRICtrl"
+        },
+        {
+            "nameDep": "DaftarResepCtrl",
+            "urlDep": "module/Farmasi/DaftarResepCtrl"
+        },
+        {
+            "nameDep": "DaftarReturObatCtrl",
+            "urlDep": "module/Farmasi/DaftarReturObatCtrl"    
+        },
+        {
+            "nameDep": "StokRuanganCtrl",
+            "urlDep": "module/Logistik/StokRuanganCtrl"
+        },
+        {
+            "nameDep": "KartuStokCtrl",
+            "urlDep": "module/Logistik/KartuStokCtrl"
+        },
+        {
+            "nameDep": "MonitoringStokRuanganCtrl",
+            "urlDep": "module/Logistik/MonitoringStokRuanganCtrl"
+        },
+        {
+            "nameDep": "StokOpnameCtrl",
+            "urlDep": "module/Logistik/StokOpnameCtrl"
+        },
+        {
+            "nameDep": "DaftarMonitoringUsulanCtrl",
+            "urlDep": "module/Logistik/DaftarMonitoringUsulanCtrl"
+        },
+        {
+            "nameDep": "DaftarUsulanPermintaanBarangCtrl",
+            "urlDep": "module/Logistik/DaftarUsulanPermintaanBarangCtrl"
+        },
+        {
+            "nameDep": "RencanaUsulanPermintaanBarangCtrl",
+            "urlDep": "module/Logistik/RencanaUsulanPermintaanBarangCtrl"
+        },
+        {
+            "nameDep": "DaftarRencanaUsulanPermintaanBarangCtrl",
+            "urlDep": "module/Logistik/DaftarRencanaUsulanPermintaanBarangCtrl"
+        },
+        {
+            "nameDep": "UsulanPermintaanBarangJasaRuanganCtrl",
+            "urlDep": "module/Logistik/UsulanPermintaanBarangJasaRuanganCtrl"
+        },
+        {
+            "nameDep": "DaftarPermintaanBarangCtrl",
+            "urlDep": "module/Logistik/DaftarPermintaanBarangCtrl"
+        },
+        {
+            "nameDep": "DaftarPemesananBarangCtrl",
+            "urlDep": "module/Logistik/DaftarPemesananBarangCtrl"
+        },
+        {
+            "nameDep": "OrderBarangSPPBCtrl",
+            "urlDep": "module/Logistik/OrderBarangSPPBCtrl"
+        },
+        {
+            "nameDep": "PenerimaanBarangSuplierCtrl",
+            "urlDep": "module/Logistik/PenerimaanBarangSuplierCtrl"
+        },
+        {
+            "nameDep": "DetailDaftarPemesananBarangCtrl",
+            "urlDep": "module/Logistik/DetailDaftarPemesananBarangCtrl"
+        },
+        {
+            "nameDep": "DaftarSPKCtrl",
+            "urlDep": "module/Logistik/DaftarSPKCtrl"
+        },
+        {
+            "nameDep": "InputSPKCtrl",
+            "urlDep": "module/Logistik/InputSPKCtrl"
+        },
+        {
+            "nameDep": "DaftarPenerimaanBarangSuplierCtrl",
+            "urlDep": "module/Logistik/DaftarPenerimaanBarangSuplierCtrl"
+        },
+        {
+            "nameDep": "DaftarPenerimaanBarangSuplierPerUnitCtrl",
+            "urlDep": "module/Logistik/DaftarPenerimaanBarangSuplierPerUnitCtrl"
+        },
+        {
+            "nameDep": "DaftarPemakaianStokRuanganCtrl",
+            "urlDep": "module/Logistik/DaftarPemakaianStokRuanganCtrl"
+        },
+        {
+            "nameDep": "PemakaianStokRuanganCtrl",
+            "urlDep": "module/Logistik/PemakaianStokRuanganCtrl"
+        },
+        {
+            "nameDep": "MasterProdukCtrl",
+            "urlDep": "module/SysAdmin/MasterProdukCtrl"
+        },
+        {
+            "nameDep": "InputProdukCtrl",
+            "urlDep": "module/SysAdmin/InputProdukCtrl"
+        },
+        {
+            "nameDep": "KelompokProdukBPJSCtrl",
+            "urlDep": "module/SysAdmin/KelompokProdukBPJSCtrl"
+        },
+        {
+            "nameDep": "KonversiSatuanCtrl",
+            "urlDep": "module/SysAdmin/KonversiSatuanCtrl"
+        },
+        {
+            "nameDep": "MasterRekananCtrl",
+            "urlDep": "module/SysAdmin/MasterRekananCtrl"
+        },
+        {
+            "nameDep": "RekananEditCtrl",
+            "urlDep": "module/SysAdmin/RekananEditCtrl"
+        },
+        {
+            "nameDep": "OrderBarangLogistikCtrl",
+            "urlDep": "module/Logistik/OrderBarangLogistikCtrl"
+        },
+        {
+            "nameDep": "DaftarOrderBarangCtrl",
+            "urlDep": "module/Logistik/DaftarOrderBarangCtrl"
+        },
+        {
+            "nameDep": "KirimBarangLogistikCtrl",
+            "urlDep": "module/Logistik/KirimBarangLogistikCtrl"
+        },        
+        {
+            "nameDep": "DaftarDistribusiBarangCtrl",
+            "urlDep": "module/Logistik/DaftarDistribusiBarangCtrl"
+        },
+        {
+            "nameDep": "DaftarDistribusiBarangPerUnitCtrl",
+            "urlDep": "module/Logistik/DaftarDistribusiBarangPerUnitCtrl"
+        },
+        {
+            "nameDep": "DaftarBarangMutasiKadaluarsaCtrl",
+            "urlDep": "module/Logistik/DaftarBarangMutasiKadaluarsaCtrl"
+        },
+        {
+            "nameDep": "DaftarAmprahanHppCtrl",
+            "urlDep": "module/Logistik/DaftarAmprahanHppCtrl"
+        },
+        {
+            "nameDep": "MasterBarangInvestasiCtrl",
+            "urlDep": "module/Logistik/MasterBarangInvestasiCtrl"
+        },
+        {
+            "nameDep": "DaftarBarangInvestasiCtrl",
+            "urlDep": "module/Logistik/DaftarBarangInvestasiCtrl"
+        },
+        {
+            "nameDep": "KirimBarangAsetCtrl",
+            "urlDep": "module/Logistik/KirimBarangAsetCtrl"
+        },
+        {
+            "nameDep": "DaftarDistribusiBarangReturCtrl",
+            "urlDep": "module/Logistik/DaftarDistribusiBarangReturCtrl"
+        },
+        {
+            "nameDep": "KirimBarangLogistikReturCtrl",
+            "urlDep": "module/Logistik/KirimBarangLogistikReturCtrl"
+        },
+        {
+            "nameDep": "DaftarReturDistribusiBarangCtrl",
+            "urlDep": "module/Logistik/DaftarReturDistribusiBarangCtrl"
+        },
+        {
+            "nameDep": "DaftarPenerimaanBarangSuplierReturCtrl",
+            "urlDep": "module/Logistik/DaftarPenerimaanBarangSuplierReturCtrl"
+        },
+        {
+            "nameDep": "DaftarReturPenerimaanBarangCtrl",
+            "urlDep": "module/Logistik/DaftarReturPenerimaanBarangCtrl"
+        },
+        {
+            "nameDep": "ReturPenerimaanBarangSuplierCtrl",
+            "urlDep": "module/Logistik/ReturPenerimaanBarangSuplierCtrl"
+        },
+        {
+            "nameDep": "LaporanPersediaanCtrl",
+            "urlDep": "module/Logistik/LaporanPersediaanCtrl"
+        },
+        {
+            "nameDep": "SaldoBarangDetailCtrl",
+            "urlDep": "module/Logistik/SaldoBarangDetailCtrl"
+        },   
+
+        {
+            "nameDep": "InputResepApotikNonLayananCtrl",
+            "urlDep": "module/Farmasi/InputResepApotikNonLayananCtrl"
+        },
+        {
+            "nameDep": "DaftarResepBebasCtrl",
+            "urlDep": "module/Farmasi/DaftarResepBebasCtrl"
+        },
+        {
+            "nameDep": "DaftarPaketObatPasienRuanganCtrl",
+            "urlDep": "module/Farmasi/DaftarPaketObatPasienRuanganCtrl"
+        },
+        {
+            "nameDep": "SasaranMutuCtrl",
+            "urlDep": "module/Farmasi/SasaranMutuCtrl"
+        },
+        {
+            "nameDep": "Consis_DCtrl",
+            "urlDep": "module/Farmasi/Bridging/Consis_DCtrl"
+        },
+        {
+            "nameDep": "LaporanPenjualanObatCtrl",
+            "urlDep": "module/Farmasi/LaporanFarmasi/LaporanPenjualanObatCtrl"
+        },
+        {
+            "nameDep": "LaporanAktivitasUserCtrl",
+            "urlDep": "module/SysAdmin/LaporanSysadmin/LaporanAktivitasUserCtrl"
+        },
+        {
+            "nameDep": "MapRuanganToJenisRuanganCtrl",
+            "urlDep": "module/SysAdmin/MapRuanganToJenisRuanganCtrl"
+        },
+        {
+            "nameDep": "DaftarLoggingUserCtrl",
+            "urlDep": "module/SysAdmin/DaftarLoggingUserCtrl"
+        },
+        {
+            "nameDep": "ModulAplikasiCtrl",
+            "urlDep": "module/SysAdmin/ModulAplikasiCtrl"
+        },
+        {
+            "nameDep": "ObjekModulAplikasiCtrl",
+            "urlDep": "module/SysAdmin/ObjekModulAplikasiCtrl"
+        },
+        {
+            "nameDep": "SettingFixedCtrl",
+            "urlDep": "module/SysAdmin/SettingFixedCtrl"
+        },
+        {
+            "nameDep": "SettingDataFixedDinamisCtrl",
+            "urlDep": "module/SysAdmin/SettingDataFixedDinamisCtrl"
+        },
+        {
+            "nameDep": "MasterTableCtrl",
+            "urlDep": "module/SysAdmin/MasterTableCtrl"
+        },
+        {
+            "nameDep": "HargaNettoProdukByKelasCtrl",
+            "urlDep": "module/SysAdmin/HargaNettoProdukByKelasCtrl"
+        },
+        {
+            "nameDep": "HargaNettoProdukByKelasEditCtrl",
+            "urlDep": "module/SysAdmin/HargaNettoProdukByKelasEditCtrl"
+        },
+        {
+            "nameDep": "DaftarMapRuanganToProdukCtrl",
+            "urlDep": "module/SysAdmin/DaftarMapRuanganToProdukCtrl"
+        },
+        {
+            "nameDep": "MapRuanganToProdukCtrl",
+            "urlDep": "module/SysAdmin/MapRuanganToProdukCtrl"
+        },
+        {
+            "nameDep": "SlottingOnlineCtrl",
+            "urlDep": "module/SysAdmin/SlottingOnlineCtrl"
+        },
+        {
+            "nameDep": "ViewBedCtrl",
+            "urlDep": "module/SysAdmin/ViewBedCtrl"
+        },
+        {
+            "nameDep": "UbahPasswordCtrl",
+            "urlDep": "module/SysAdmin/UbahPasswordCtrl"
+        },
+        {
+            "nameDep": "DiagnosaKeperawatanRevCtrl",
+            "urlDep": "module/SysAdmin/DiagnosaKeperawatanRevCtrl"
+        },
+        {
+            "nameDep": "MapPaketToProdukCtrl",
+            "urlDep": "module/SysAdmin/MapPaketToProdukCtrl"
+        },
+        {
+            "nameDep": "DaftarBarangExpiredCtrl",
+            "urlDep": "module/Logistik/DaftarBarangExpiredCtrl"
+        },
+        {
+            "nameDep": "DaftarBarangKadaluarsaCtrl",
+            "urlDep": "module/Logistik/DaftarBarangKadaluarsaCtrl"
+        },
+        {
+            "nameDep": "DaftarOrderAmbulanCtrl",
+            "urlDep": "module/Ambulance/DaftarOrderAmbulanCtrl"
+        },
+        {
+            "nameDep": "JenisDietRevCtrl",
+            "urlDep": "module/SysAdmin/JenisDietRevCtrl"
+        },
+        {
+            "nameDep": "JenisWaktuRevCtrl",
+            "urlDep": "module/SysAdmin/JenisWaktuRevCtrl"
+        },
+        {
+            "nameDep": "KategoryDietRevCtrl",
+            "urlDep": "module/SysAdmin/KategoryDietRevCtrl"
+        },
+        {
+            "nameDep": "MasterSiklusGiziRevCtrl",
+            "urlDep": "module/SysAdmin/MasterSiklusGiziRevCtrl"
+        },
+        {
+            "nameDep": "InputResepApotikNonLayananReturCtrl",
+            "urlDep": "module/Farmasi/InputResepApotikNonLayananReturCtrl"
+        },
+        {
+            "nameDep": "DaftarRuanganSanitasiCtrl",
+            "urlDep": "module/Sanitasi/DaftarRuanganSanitasiCtrl"
+        },
+        {
+            "nameDep": "DaftarMataAnggaranCtrl",
+            "urlDep": "module/Perencanaan/DaftarMataAnggaranCtrl"        },
+        {
+            "nameDep": "KelompokAnggaranCtrl",
+            "urlDep": "module/Perencanaan/KelompokAnggaranCtrl"
+        },
+        {
+            "nameDep": "KirimBarangLaundryCtrl",
+            "urlDep": "module/Laundry/KirimBarangLaundryCtrl"
+        },
+        {
+            "nameDep": "DaftarKirimLaundryCtrl",
+            "urlDep": "module/Laundry/DaftarKirimLaundryCtrl"
+        },
+        {
+            "nameDep": "OrderBarangLaundryCtrl",
+            "urlDep": "module/Laundry/OrderBarangLaundryCtrl"
+        },
+        {
+            "nameDep": "DaftarOrderLaundryCtrl",
+            "urlDep": "module/Laundry/DaftarOrderLaundryCtrl"
+        },
+        {
+            "nameDep": "DaftarReturObatAlkesPerunitCtrl",
+            "urlDep": "module/Farmasi/LaporanFarmasi/DaftarReturObatAlkesPerunitCtrl"
+        },
+        {
+            "nameDep": "DaftarReturObatAlkesPerunitCtrl",
+            "urlDep": "module/Farmasi/LaporanFarmasi/DaftarReturObatAlkesPerunitCtrl"
+        },
+        {
+            "nameDep": "LaporanReturSuplierCtrl",
+            "urlDep": "module/Logistik/LaporanReturSuplierCtrl"
+        },
+        {
+            "nameDep": "DaftarProduksiObatCtrl",
+            "urlDep": "module/Farmasi/DaftarProduksiObatCtrl"
+        },
+        {
+            "nameDep": "ProduksiObatInputSisaCtrl",
+            "urlDep": "module/Farmasi/ProduksiObatInputSisaCtrl"
+        },
+        {
+            "nameDep": "ProduksiObatCtrl",
+            "urlDep": "module/Farmasi/ProduksiObatCtrl"
+        },
+        {
+            "nameDep": "LaporanProduksiObatCtrl",
+            "urlDep": "module/Farmasi/LaporanFarmasi/LaporanProduksiObatCtrl"
+        },
+        {
+            "nameDep": "PenerimaanLaundryCtrl",
+            "urlDep": "module/Laundry/PenerimaanLaundryCtrl"
+        },
+        {
+            "nameDep": "DaftarTerimaLaundryCtrl",
+            "urlDep": "module/Laundry/DaftarTerimaLaundryCtrl"
+        },
+        {
+            "nameDep": "DaftarPencucianLinenCtrl",
+            "urlDep": "module/Laundry/DaftarPencucianLinenCtrl"
+        },
+        {
+            "nameDep": "DaftarDistribusiLinenCtrl",
+            "urlDep": "module/Laundry/DaftarDistribusiLinenCtrl"
+        },
+        {
+            "nameDep": "RegistrasiLinenCtrl",
+            "urlDep": "module/Laundry/RegistrasiLinenCtrl"
+        },
+        {
+            "nameDep": "InventarisLinenCtrl",
+            "urlDep": "module/Laundry/InventarisLinenCtrl"
+        },
+        {
+            "nameDep": "ManajemenSanitasiCtrl",
+            "urlDep": "module/Sanitasi/ManajemenSanitasiCtrl"
+        },
+        {
+            "nameDep": "DashboardPMKPCtrl",
+            "urlDep": "module/PMKP/DashboardPMKPCtrl"
+        },
+        {
+            "nameDep": "LaporanPenyerahanObatCtrl",
+            "urlDep": "module/Farmasi/LaporanFarmasi/LaporanPenyerahanObatCtrl"
+        },
+        {
+            "nameDep": "MasterIndikatorCtrl",
+            "urlDep": "module/PMKP/MasterIndikatorCtrl"
+        },
+        {
+            "nameDep": "MasterJenisIndikatorCtrl",
+            "urlDep": "module/PMKP/MasterJenisIndikatorCtrl"
+        },
+        {
+            "nameDep": "TargetIndikatorCtrl",
+            "urlDep": "module/PMKP/TargetIndikatorCtrl"
+        },
+        {
+            "nameDep": "CapaianIndikatorCtrl",
+            "urlDep": "module/PMKP/CapaianIndikatorCtrl"
+        },
+        {
+            "nameDep": "DaftarInformasiPasienDalamPerawatanKeswamasCtrl",
+            "urlDep": "module/Humas/DaftarInformasiPasienDalamPerawatanKeswamasCtrl"
+        },
+		{
+            "nameDep": "DaftarDokterPemberiLayananPoliklinikCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/DaftarDokterPemberiLayananPoliklinikCtrl"
+        },
+        {
+            "nameDep": "DaftarDokterPemberiLayananRanapCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/DaftarDokterPemberiLayananRanapCtrl"
+        },
+        {
+            "nameDep": "DaftarDokterPenanggungJawabRanapCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/DaftarDokterPenanggungJawabRanapCtrl"
+        },
+        {
+            "nameDep": "DaftarJamVisiteDokterRanapCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/DaftarJamVisiteDokterRanapCtrl"
+        },
+        {
+            "nameDep": "DaftarKematianPasienRanapCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/DaftarKematianPasienRanapCtrl"
+        },
+        {
+            "nameDep": "DaftarKejadianPulangPaksaCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/DaftarKejadianPulangPaksaCtrl"
+        },
+        {
+            "nameDep": "DaftarLaporanLamaHariPerawatanPasienCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/DaftarLaporanLamaHariPerawatanPasienCtrl"
+        },
+        {
+            "nameDep": "DaftarLaporanPerawatDiplomaCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/DaftarLaporanPerawatDiplomaCtrl"
+        },
+        {
+            "nameDep": "DaftarKematianPasienIgdCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/DaftarKematianPasienIgdCtrl"
+        },
+        {
+            "nameDep": "SensusPengukuranMutuCtrl",
+            "urlDep": "module/PMKP/SensusPengukuranMutuCtrl"
+        },
+        {
+            "nameDep": "RekapSensusHarianMutuCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/RekapSensusHarianMutuCtrl"
+        },
+        {
+            "nameDep": "MutuKeselamatanCtrl",
+            "urlDep": "module/PMKP/MutuKeselamatanCtrl"
+        },
+        {
+            "nameDep": "MutuKeselamatanDetailCtrl",
+            "urlDep": "module/PMKP/MutuKeselamatanDetailCtrl"
+        },
+        {
+            "nameDep": "LembarKerjaInvestigasiSederhanaCtrl",
+            "urlDep": "module/PMKP/LembarKerjaInvestigasiSederhanaCtrl"
+        },
+        {
+            "nameDep": "DaftarLembarKerjaInvestigasiCtrl",
+            "urlDep": "module/PMKP/DaftarLembarKerjaInvestigasiCtrl"
+        },
+        {
+            "nameDep": "InsidenInternalCtrl",
+            "urlDep": "module/PMKP/InsidenInternalCtrl"
+        },
+        {
+            "nameDep": "SensusHarianInsidenKeselamatanPasienCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/SensusHarianInsidenKeselamatanPasienCtrl"
+        },
+        {
+            "nameDep": "SensusKeselamatanPasienCtrl",
+            "urlDep": "module/PMKP/SensusKeselamatanPasienCtrl"
+        },
+        {
+            "nameDep": "SensusKeselamatanPasienCtrl",
+            "urlDep": "module/PMKP/SensusKeselamatanPasienCtrl"
+        },
+        {
+            "nameDep": "SensusBulananInsidenKeselamatanPasienCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/SensusBulananInsidenKeselamatanPasienCtrl"
+        },
+        {
+            "nameDep": "RiskRegisterCtrl",
+            "urlDep": "module/PMKP/RiskRegisterCtrl"
+        },
+        {
+            "nameDep": "DaftarLaporanInsidenInternalCtrl",
+            "urlDep": "module/PMKP/DaftarLaporanInsidenInternalCtrl"
+        },
+        {
+            "nameDep": "DaftarOrderMaintenanceCtrl",
+            "urlDep": "module/IPSRS/DaftarOrderMaintenanceCtrl"
+        } ,
+        {
+            "nameDep": "PermintaanPerbaikandariRuanganCtrl",
+            "urlDep": "module/IPSRS/PermintaanPerbaikandariRuanganCtrl"
+        },
+        {
+            "nameDep": "PemakaianBarangLogistikCtrl",
+            "urlDep": "module/IPSRS/PemakaianBarangLogistikCtrl"
+        },
+        {
+            "nameDep": "DaftarStokOpnameCtrl",
+            "urlDep": "module/Logistik/DaftarStokOpnameCtrl"
+        },
+        {
+            "nameDep": "IdentifikasiRisikoCtrl",
+            "urlDep": "module/PMKP/IdentifikasiRisikoCtrl"
+        },
+        {
+            "nameDep": "DaftarIdentifikasiRisikoCtrl",
+            "urlDep": "module/PMKP/DaftarIdentifikasiRisikoCtrl"
+        },
+        {
+            "nameDep": "DaftarRiskRegisterCtrl",
+            "urlDep": "module/PMKP/DaftarRiskRegisterCtrl"
+        },
+        {
+            "nameDep": "InformasiJadwalKalibrasiCtrl",
+            "urlDep": "module/IPSRS/InformasiJadwalKalibrasiCtrl"
+        },
+        {
+            "nameDep": "InformasiJadwalPemeliharaanCtrl",
+            "urlDep": "module/IPSRS/InformasiJadwalPemeliharaanCtrl"
+        },
+        {
+            "nameDep": "KartuPemeliharaanCtrl",
+            "urlDep": "module/IPSRS/KartuPemeliharaanCtrl"
+        },
+        {
+            "nameDep": "laporanPenerimaanLinenCtrl",
+            "urlDep": "module/Laundry/LaporanLaundry/laporanPenerimaanLinenCtrl"
+        },
+        {
+            "nameDep": "laporanPenerimaanLinenCtrl",
+            "urlDep": "module/Laundry/LaporanLaundry/laporanPenerimaanLinenCtrl"
+        },
+        {
+            "nameDep": "LaporanDistribusiLinenCtrl",
+            "urlDep": "module/Laundry/LaporanLaundry/LaporanDistribusiLinenCtrl"
+        },
+        {
+            "nameDep": "LaporanPencucianLinenUlangCtrl",
+            "urlDep": "module/Laundry/LaporanLaundry/LaporanPencucianLinenUlangCtrl"
+        },
+        {
+            "nameDep": "LaporanPencucianLinenCtrl",
+            "urlDep": "module/Laundry/LaporanLaundry/LaporanPencucianLinenCtrl"
+		},
+        {
+            "nameDep": "SlottingLiburCtrl",
+            "urlDep": "module/SysAdmin/SlottingLiburCtrl"
+        },
+        {
+            "nameDep": "LaporanInsidenKeselamatanCtrl",
+            "urlDep": "module/PMKP/LaporanPmkp/LaporanInsidenKeselamatanCtrl"
+		},
+        {
+            "nameDep": "LaporanRekapitulasiPelayananCtrl",
+            "urlDep": "module/Farmasi/LaporanFarmasi/LaporanRekapitulasiPelayananCtrl"
+        },
+        {
+            "nameDep": "SensusHarianMutuCtrl",
+            "urlDep": "module/PMKP/SensusHarianMutuCtrl"
+        },
+        {
+            "nameDep": "SettingProfileCtrl",
+            "urlDep": "module/SysAdmin/SettingProfileCtrl"
+        },
+        {
+            "nameDep": "DataProfileCtrl",
+            "urlDep": "module/SysAdmin/DataProfileCtrl"
+        },
+        {
+            "nameDep": "MapKelompokTransaksiToBkuCtrl",
+            "urlDep": "module/SysAdmin/MapKelompokTransaksiToBkuCtrl"
+        },
+        {
+            "nameDep": "MasterKelompokTransaksiCtrl",
+            "urlDep": "module/SysAdmin/MasterKelompokTransaksiCtrl"
+        },
+        {
+            "nameDep": "StokBarangMinimumCtrl",
+            "urlDep": "module/Logistik/StokBarangMinimumCtrl"
+        },
+        {
+            "nameDep": "DaftarSurveyKepuasanCtrl",
+            "urlDep": "module/Humas/DaftarSurveyKepuasanCtrl"
+        }
+    ]
+}

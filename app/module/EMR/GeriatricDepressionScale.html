@@ -1,0 +1,388 @@
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+        background-color: #e8edff;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+    }
+
+    .tg .tg-yw4l {
+        vertical-align: top
+    }
+
+
+    .rowstyle {
+        border-bottom: 1px dashed lightblue
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 120%;
+        font-weight: 700;
+        margin-bottom: 20px
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    /* table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 40px;
+
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    } */
+    legend b {
+        color: #41abf2;
+    }
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate> Geriatric Depression Scale (LONG VERSION) </div>
+        </div>
+        <div style="margin-top:10px">
+            <!-- POSTIF -->
+            <div class="grid_12">
+                <fieldset style="margin-top: 10px; ">
+                    <p>Pilihlah jawaban yang paling tepat untuk menggambarkan perasaan anda selama satu minggu terakhir. Berilah tanda centang (√) pada kolom <b>"Ya</b> atau <b>Tidak".</b></p>
+            <div class="grid_12">
+                <fieldset style="margin-top: 10px; ">
+                    <div class="grid_12" style="margin-top: 20px">
+                        <table style="width:100%;color: #4c5356;">
+                            <tr style="text-align: center;">
+                                <th >No</th>
+                                <th style="text-align: center;">Pernyataan</th>
+                                <th style="text-align: center;">Ya</th>
+                                <th style="text-align: center;">Tidak</th>
+                                
+
+                                <!-- <th style="width:40px;font-weight: bold;text-align: center">SKOR</th>
+                                <th style="font-weight: bold;text-align: center">PARAMETER</th> -->
+                            </tr>
+
+                            <tr ng-repeat="list in listData3| orderBy:'id'" ng-init="jawabIndex = $index">
+                                <td>{{list.namaexternal}}</td>
+                                <td>{{list.caption}}</td>
+                                <td style="text-align: center;" ng-repeat="jawab in list.details">
+                                    <div class="grid_12">
+                                        <div ng-switch on="jawabIndex">
+
+                                            <div ng-switch-default>
+                                                <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                                    ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                                <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                                    &nbsp;{{jawab.nama}}</label>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+
+
+                        </table>
+
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!-- SKALA -->
+
+            <div class="grid_3" style="margin-top:10px">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Total Skor"></label>
+                </div>
+                <div class="grid_12">
+                    <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[10310]" />
+                </div>
+
+            </div>
+            <div class="grid_12">
+            <fieldset>
+                <div class="grid_4">
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>Ya</th>
+                        <th>Tidak</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+                </div>
+                <div class="grid_4">
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>Ya</th>
+                        <th>Tidak</th>
+                    </tr>
+                    <tr>
+                        <td>11.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>12.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>13.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>14.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>15.</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>16.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>17.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>18.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>19.</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>20.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+                </div>
+                <div class="grid_4">
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>Ya</th>
+                        <th>Tidak</th>
+                    </tr>
+                    <tr>
+                        <td>21.</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>22.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>23.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>24.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>25.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>26.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>27.</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>28.</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>29.</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>30.</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                </div>
+            </fieldset>
+            </div>
+
+            <div class="grid_12">
+                <div class="grid_8"></div>
+                <div class="grid_4">
+                    <fieldset style="margin-top:10px;border-radius: 10px;height: 220px;">
+                        <div style="padding: 20px;">
+                            <div class="grid_12">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Tanggal dan Jam"></label>
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%" k-ng-model="item.obj[101993]" kendo-datetimepicker
+                                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'"
+                                        parsedate="yyyy-MM-dd HH:mm" />
+
+                                </div>
+                            </div>
+                            <div class="grid_12" style="margin-top:10px">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Dokter Residen"></label>
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[101994]"
+                                        k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                                        k-auto-bind="false" k-data-source="listPegawai" />
+
+                                </div>
+                            </div>
+                            <div class="grid_12" style="margin-top:10px">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Dokter DPJP"></label>
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[101995]"
+                                        k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                                        k-auto-bind="false" k-data-source="listPegawai" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<br />
+<div class="grid_12">
+    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+
+</div>

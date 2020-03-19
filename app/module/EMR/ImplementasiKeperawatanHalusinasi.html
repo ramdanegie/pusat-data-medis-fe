@@ -1,0 +1,198 @@
+<style type="text/css">
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid #228be6;
+    }
+
+    .k-slider-horizontal {
+        display: inline-block;
+        float: left;
+        width: 450px;
+
+        height: 26px;
+
+
+
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    .k-slider {
+
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        display: inline-block;
+    }
+
+    .activeBtn {
+        background-color: #10c4b2;
+        color: #ffffff;
+    }
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate> Impelementasi Keperawatan Halusinasi</div>
+        </div>
+
+        <div class="grid_12">
+            <fieldset style="margin-top: 10px; ">
+                <legend><b>PASIEN</b></legend>
+                <div class="grid_12" style="margin-top: 20px">
+
+                    <table style="width:100%;color: #4c5356;">
+                        <tr style="text-align: center;">
+
+                            <th style="text-align: center;width: 200px;">Tgl/Jam Ruang</th>
+                            <th style="text-align: center;">SP</th>
+                            <th style="text-align: center;">PASIEN</th>
+                            <th style="text-align: center;width: 200px;">TTD & Nama Terang
+                            </th>
+                            <!-- <th style="width:40px;font-weight: bold;text-align: center">SKOR</th>
+                        <th style="font-weight: bold;text-align: center">PARAMETER</th> -->
+                        </tr>
+
+                        <tr ng-repeat="list in listData1 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td>
+                                <div class="grid_12">
+                                    <input style="width: 100%" k-ng-model="item.obj[20576 + jawabIndex]"
+                                        kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'"
+                                        parsedate="yyyy-MM-dd HH:mm" />
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%;" kendo-combo-box
+                                        k-ng-model="item.obj[20566 + jawabIndex]" k-data-text-field="'text'"
+                                        k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false"
+                                        k-data-source="listRuangan" />
+                                </div>
+
+                            </td>
+                            <td>{{list.namaexternal}}</td>
+                            <td>
+                                <div class="grid_12" style="margin-top:10px" ng-repeat="jawab in list.details">
+                                    <div ng-switch on="jawab.type">
+                                        <div ng-switch-when="checkbox">
+                                            <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                                ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                                &nbsp;{{jawab.caption}}
+                                            </label>
+                                        </div>
+                                        <div ng-switch-when="textbox">
+                                            <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                                ng-value="{{jawab.value}}">
+                                            <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                                <!-- &nbsp;{{jawab.nama}} -->
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="grid_12">
+                                    <input style="width: 100%;" kendo-combo-box
+                                        k-ng-model="item.obj[20571 +jawabIndex ]" k-data-text-field="'text'"
+                                        k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false"
+                                        k-data-source="listPegawai" />
+                                    <!-- <input class="k-textbox" ng-model="item.obj[20502 + jawabIndex]" type="text"> -->
+                                </div>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </fieldset>
+            <fieldset style="margin-top: 10px;">
+                <legend><b>KELUARGA</b></legend>
+                <div class="grid_12" style="margin-top: 20px">
+
+                    <table style="width:100%;color: #4c5356;">
+                        <tr style="text-align: center;">
+
+                            <th style="text-align: center;width: 200px;">Tgl/Jam Ruang</th>
+                            <th style="text-align: center;">SP</th>
+                            <th style="text-align: center;">KELUARGA</th>
+                            <th style="text-align: center; width: 200px;">TTD & Nama Terang
+                            </th>
+                            <!-- <th style="width:40px;font-weight: bold;text-align: center">SKOR</th>
+                                    <th style="font-weight: bold;text-align: center">PARAMETER</th> -->
+                        </tr>
+
+                        <tr ng-repeat="list in listData2 | orderBy:'id'" ng-init="jawabIndex = $index">
+                            <td>
+                                <div class="grid_12">
+                                    <input style="width: 100%" k-ng-model="item.obj[20586 + jawabIndex ]"
+                                        kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'"
+                                        parsedate="yyyy-MM-dd HH:mm" />
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%;" kendo-combo-box
+                                        k-ng-model="item.obj[20581 +jawabIndex ]" k-data-text-field="'text'"
+                                        k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false"
+                                        k-data-source="listRuangan" />
+                                </div>
+                            </td>
+                            <td>{{list.namaexternal}}</td>
+
+                            <td>
+                                <div class="grid_12" style="margin-top:10px" ng-repeat="jawab in list.details">
+                                    <div ng-switch on="jawab.type">
+                                        <div ng-switch-when="checkbox">
+                                            <input type="checkbox" class="k-checkbox" id="item.obj{{jawab.id}}"
+                                                ng-model="item.obj[jawab.id]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj{{jawab.id}}">
+                                                &nbsp;{{jawab.caption}}
+                                            </label>
+                                        </div>
+                                        <div ng-switch-when="textbox">
+                                            <input class="k-textbox" ng-model="item.obj[jawab.id]" type="text"
+                                                ng-value="{{jawab.value}}">
+                                            <label class="k-textbox-label" for="item.obj{{jawab.id}}">
+                                                <!-- &nbsp;{{jawab.nama}} -->
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="grid_12">
+                                    <input style="width: 100%;" kendo-combo-box
+                                        k-ng-model="item.obj[20590 + jawabIndex ]" k-data-text-field="'text'"
+                                        k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false"
+                                        k-data-source="listPegawai" />
+                                    <!-- <input class="k-textbox" ng-model="item.obj[20507 + jawabIndex]" type="text"> -->
+                                </div>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+            </fieldset>
+        </div>
+
+
+        <div class="grid_12">
+            <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+        </div>
+    </div>
+</div>

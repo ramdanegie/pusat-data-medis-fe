@@ -1,0 +1,116 @@
+{
+  "path": [
+    {
+      "nameDep": "WelcomeCtrl",
+      "urlDep": "javascripts/Controllers/WelcomeCtrl"
+    },
+    {
+      "nameDep": "RekamMedisCtrl",
+      "urlDep": "module/EMR/RekamMedisCtrl"
+    },
+    {
+      "nameDep": "angular",
+      "urlDep": "javascripts/angular.min"
+    },
+    {
+      "nameDep": "AngularUIRouter",
+      "urlDep": "javascripts/angular-ui-router"
+    },
+    {
+      "nameDep": "AngularAnimate",
+      "urlDep": "javascripts/angular-animate.min"
+    },
+    {
+      "nameDep": "routing",
+      "urlDep": "javascripts/routing"
+    },
+    {
+      "nameDep": "config",
+      "urlDep": "javascripts/config"
+    },
+    {
+      "nameDep": "initialize",
+      "urlDep": "javascripts/module"
+    },
+    {
+      "nameDep": "mask",
+      "urlDep": "javascripts/jquery-mask"
+    },
+    {
+      "nameDep": "main",
+      "urlDep": "javascripts/main"
+    },
+    {
+      "nameDep": "Helper",
+      "urlDep": "javascripts/Helper"
+    },
+    {
+      "nameDep": "MedifirstService",
+      "urlDep": "javascripts/Services/MedifirstService"
+    },
+    {
+      "nameDep": "Configuration",
+      "urlDep": "javascripts/Setting"
+    },
+    {
+      "nameDep": "header",
+      "urlDep": "template/header/header_controller"
+    },
+    {
+      "nameDep": "Service",
+      "urlDep": "javascripts/Services/Service"
+    },
+    {
+      "nameDep": "ComponentDirective",
+      "urlDep": "javascripts/directive/componentDirective"
+    },
+    {
+      "nameDep": "HeaderService",
+      "urlDep": "javascripts/Services/HeaderService"
+    },
+    {
+      "nameDep": "Controller",
+      "urlDep": "javascripts/Controller"
+    },
+    {
+      "nameDep": "AngularRoute",
+      "urlDep": "javascripts/angular-route.min"
+    },
+    {
+      "nameDep": "OcLazyLoad",
+      "urlDep": "javascripts/ocLazyLoad"
+    },
+    {
+      "nameDep": "EventRouteState",
+      "urlDep": "javascripts/Services/EventRouteState"
+    },
+    {
+      "nameDep": "HttpService",
+      "urlDep": "javascripts/Services/HttpServices"
+    },
+    {
+      "nameDep": "core",
+      "urlDep": "javascripts/core"
+    },
+    {
+      "nameDep": "KendoUI",
+      "urlDep": "javascripts/kendo.all.min"
+    },
+    {
+      "nameDep": "LoginService",
+      "urlDep": "javascripts/Services/LoginService"
+    },
+    {
+      "nameDep": "AngularFilter",
+      "urlDep": "javascripts/angular-filter"
+    },
+    {
+      "nameDep": "AngularAria",
+      "urlDep": "javascripts/angular-aria.min"
+    },
+    {
+      "nameDep": "ApiService",
+      "urlDep": "javascripts/Services/ApiService"
+    }
+  ]
+}

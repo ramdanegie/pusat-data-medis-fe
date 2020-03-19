@@ -1,0 +1,351 @@
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+        background-color: #e8edff;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+    }
+
+    .tg .tg-yw4l {
+        vertical-align: top
+    }
+
+
+    .rowstyle {
+        border-bottom: 1px dashed lightblue
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 120%;
+        font-weight: 700;
+        margin-bottom: 20px
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    /* table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 40px;
+
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    } */
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate> Tindakan Anestesi Umum</div>
+        </div>
+        
+
+
+            <div class="grid_12" style="margin-top: 20px">
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th style="width:30px;font-weight: bold;text-align: center;">NO</th>
+                        <th style="width:150px;font-weight: bold;text-align: center">Jenis Informasi</th>
+                        <th style="font-weight: bold;text-align: center">Isi Informasi</th>
+                        <th style="font-weight: bold;text-align: center">Verifikasi</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Diagnosis</td>
+                        <td><div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[7102]" />
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[7089]"
+                                                ng-model="item.obj[7089]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7089]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Dasar Diagnosis</td>
+                        <td>Anamnesis, Pemeriksaan Fisik, dan Psikiatri </td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[7090]"
+                                                ng-model="item.obj[7090]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7090]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                     <tr>
+                        <td>3</td>
+                        <td>Tindakan</td>
+                        <td>Anestesi Umum</td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[7091]"
+                                                ng-model="item.obj[7091]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7091]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Indikasi Tindakan</td>
+                        <td>Pasien yang membutuhkan anestesi selama tindakan MECTA (untuk mengurangi resiko yang timbul akibat kejang, misalny nyeri otot</td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[7092]"
+                                                ng-model="item.obj[7092]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7092]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Tata Cara</td>
+                        <td>Membuat pasien tidak sadar selama tindakan/operasi dengan cara memasukkan obat anestesi melalui pembuluh darah balik</td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[7093]"
+                                                ng-model="item.obj[7093]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7093]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Tujuan</td>
+                        <td><div><input type="checkbox" class="k-checkbox" id="item.obj[7094]"
+                                                ng-model="item.obj[7094]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7094]">
+                                                menghilangkan rasa nyeri selama tindakan dilakukan.</label></div>
+                            <div> <input type="checkbox" class="k-checkbox" id="item.obj[7095]"
+                                                ng-model="item.obj[7095]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7095]">
+                                                pemberian premedikasi keadaan pasien sebelum tindaka,untuk memberikan kenyamanan.</label></div></td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[7096]"
+                                                ng-model="item.obj[7096]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7096]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Risiko</td>
+                        <td>Alergi/hipersensitif terhadap obat, mulai derajat ringan sampai berat, mulai/muntah pusing nyeri dada, inkontenisia urine, tekanan darah meningkat
+                        </td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[7097]"
+                                                ng-model="item.obj[7097]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7097]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Komplikasi</td>
+                        <td>Alergi(misal: serangan asthma)delirium, waktu pulih lama, cidera dilokasi penyuntikan, infeksi, gangguan pernafasan</td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[7098]"
+                                                ng-model="item.obj[7098]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7098]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Prognosis</td>
+                        <td>-</td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[7099]"
+                                                ng-model="item.obj[7099]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7099]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Alternatif & Risiko</td>
+                        <td>-</td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[7100]"
+                                                ng-model="item.obj[7100]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7100]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Lain-lain</td>
+                        <td><div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[7103]" />
+                    </div></td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[7101]"
+                                                ng-model="item.obj[7101]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[7101]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+
+</table></div>
+<div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Surakarta"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%" k-ng-model="item.obj[7104]" kendo-datetimepicker 
+                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                </div>
+            </div>
+             <div style="margin-top:10px">
+            <div class="grid_12" style="margin-top:30px">
+                <fieldset>
+                    <legend><b>Pemberi Informasi</b></legend>
+                    <label c-label item="item" c-label-text="Dengan ini menyatakan bahwa saya telah menerangkan hal-hal diatas secara benar dan jelas serta memberikan kesempatan untuk bertanya dan berdiskusi"></label>
+
+            <div class="grid_3">
+                <!-- <div clas="grid_12">
+                    <label c-label item="item" c-label-text=""></label></div> -->
+                    <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[7105]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="item.objcbo[7105]" /></div>
+                  
+                </div>  </fieldset>
+            <div class="grid_12" style="margin-top:20px">
+                <fieldset><legend><b>Penerima Informasi</b></legend>
+                    <label c-label item="item" c-label-text="Dengan ini menyatakan bahwa saya telah menerima informasi sebagaimanaa diatas yang diberi tanda (V) dikolom kanannya, dan telah memahaminya"></label>
+            <div class="grid_3">
+                <!-- <div class="grid_12">
+                    <label c-label item="item" c-label-text=""></label></div> -->
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[7106]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="item.objcbo[7106]" /></div> 
+                    
+            </div></fieldset>
+                
+            </div> 
+
+        <!-- <div style="margin-top:10px">
+            
+            
+            <div class="grid_12" style="margin-top:50px">
+                    <label c-label item="item" c-label-text="Dengan ini menyatakan bahwa saya telah menerangkan hal-hal diatas secara benar dan jelas serta memberikan kesempatan untuk bertanya dan berdiskusi"></label>
+            </div>
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Pemberi Informasi"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[7070]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="item.objcbo[7070]" />
+                </div>
+                
+            </div>
+            <div class="grid_12" style="margin-top:20px">
+                    <label c-label item="item" c-label-text="Dengan ini menyatakan bahwa saya telah menerima informasi sebagaimanaa diatas yang diberi tanda (V) dikolom kanannya, dan telah memahaminya"></label>
+            </div>
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Penerima Informasi"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[7071]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="item.objcbo[7071]" />
+                </div>
+                
+            </div>
+                
+            </div>   -->
+            
+
+                <!-- <div class="grid_3" style="margin-top:10px"> 
+                    <div class="grid_12">
+                        <label c-label item="item" c-label-text="Total Skor"></label>
+                    </div>
+                    <div class="grid_12">
+                        <input c-text-box type="input" filter="" class="k-textbox" ng-model="item.obj[4282]" />
+                    </div>
+                </div> -->
+                <!-- <div class="grid_3" style="margin-top:10px">
+                    <div class="grid_12">
+                        <label c-label item="item" c-label-text="Tanggal dan Jam"></label>
+                    </div> -->
+                    <!-- <div class="grid_12">
+                        <input style="width: 100%" k-ng-model="item.obj[4283]" kendo-datetimepicker 
+                            placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br />
+<div class="grid_12">
+    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+
+</div>

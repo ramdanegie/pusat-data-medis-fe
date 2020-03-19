@@ -1,0 +1,708 @@
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+        background-color: #e8edff;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+    }
+
+    .tg .tg-yw4l {
+        vertical-align: top
+    }
+
+
+    .rowstyle {
+        border-bottom: 1px dashed lightblue
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 120%;
+        font-weight: 700;
+        margin-bottom: 20px
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+     fieldset {
+        border-radius: 5px;
+        border: 1px solid #228be6;
+    }
+
+    /* table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 40px;
+
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    } */
+</style>
+
+<div class="grid_12">
+    <div class="grid_12">
+        <div class="panel panel-default container_12" style="margin-bottom: 20px">
+            <div class="panel-heading" c-translate> Seleksi Pasien Instalasi Rehabilitasi Psikososial </div>
+        </div>
+            <div>
+                <div class="grid_12">
+                    <div class="grid_12">
+                            <p>Pendidikan</p>
+                        </div>
+                    <input style="width: 250px;" kendo-combo-box k-ng-model="item.obj[101168]"
+                        k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                        k-auto-bind="false" k-data-source="listMetode" />
+
+                </div>
+                <div class="grid_12">
+                    <div class="grid_12">
+                            <p>Status</p>
+                        </div>
+                    <input style="width: 250px;" kendo-combo-box k-ng-model="item.obj[101169]"
+                        k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                        k-auto-bind="false" k-data-source="listPerkawinan" />
+
+                </div>
+                <div class="grid_12">
+                    <div class="grid_12">
+                            <p>Pekerjaan</p>
+                        </div>
+                    <input style="width: 250px;" kendo-combo-box k-ng-model="item.obj[101170]"
+                        k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                        k-auto-bind="false" k-data-source="listPekerjaan" />
+
+                </div>
+                 <div class="grid_12">
+                    <div class="grid_12">
+                            <p>Bangsal</p>
+                        </div>
+                    <input style="width: 250px;" kendo-combo-box k-ng-model="item.obj[101171]"
+                        k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                        k-auto-bind="false" k-data-source="listRuang" />
+
+                </div>
+                <div class="grid_12" style="margin-left: 5px;margin-top: 0px;margin-bottom: 0px">
+                                        <div class="grid_12">
+                                            <p>Berapa lama dirawat</p>
+                                        </div>
+                                        <div class="grid_8"
+                                            style="margin-top: -15px;margin-bottom: -5px;margin-left: 20px;width: 30%">
+                                            <input class="k-textbox" ng-model="item.obj[101172]" type="text"
+                                                placeholder="{{data.satuan}}" ng-value="{{data.value}}">
+                                        </div>
+                                    </div>
+                
+            </div>
+            <div style="margin-top: 30px">
+            <fieldset >
+                <LEGEND>I. ASESMEN PSIKOLOGIS DAN PSIKIATRI</LEGEND>
+            <div class="grid_12" style="margin-top: 20px">
+                <table style="width:100%;color: #4c5356;">
+                    <tr>
+                        <th colspan="8" style="width:30px;font-weight: bold;text-align: center;">Berikan tanda √ pada kolom, sesuai dengan kondisi pasien keterangan : 1 = sangat kurang, 2 =kurang/rendah, 3 = cukup, 4 = baik/tinggi, 5 = sangat baik/sangat tinggi</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" rowspan="2" style="width:30px;font-weight: bold;text-align: center;">Aspek Psikologis</th>
+                        <th rowspan="2" style="width:150px;font-weight: bold;text-align: center">Guide Penggalian Data</th>
+                        <th colspan ="5" style="font-weight: bold;text-align: center">kategori</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><b>
+                        Fungsi Kognitif</b></td>
+                        <td><p><b>Daya Ingat.</b></p><p>Kemapuan untuk mengingat</p></td>
+                        <td>
+                            <p>1. Nama, Usia ?</p>
+                            <p>2. Pendidikan Terakhir apa?</p>
+                            <p>3. Sudah menikah belum ?</p>
+                            <p>4. Pekerjaan ? </p>
+                            <p>5. Sudah beapa lama dirawat</p>
+                            <p>6. Siapa yang mengantar ?</p>
+                        </td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101110]"
+                                                ng-model="item.obj[101110]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101110]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101111]"
+                                                ng-model="item.obj[101111]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101111]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101112]"
+                                                ng-model="item.obj[101112]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101112]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101113]"
+                                                ng-model="item.obj[101113]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101113]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101114]"
+                                                ng-model="item.obj[101114]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101114]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><b>Daya tangkap.</b></p>
+                            <p>Kemampuan memahami dan menangkap inti permasalahan yang bersifat praktis -konkrit</p>
+                        </td>
+                        <td>Paham/tidak ketika diajak bicara, menjawab seusai pertanyaan/tidak?</td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101115]"
+                                                ng-model="item.obj[101115]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101115]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101116]"
+                                                ng-model="item.obj[101116]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101116]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101117]"
+                                                ng-model="item.obj[101117]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101117]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101118]"
+                                                ng-model="item.obj[101118]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101118]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101119]"
+                                                ng-model="item.obj[101119]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101119]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td><p><b>Konsentrasi</b></p><p>Kemampuan memusatkan perhatian secara penuh</p></td>
+                        <td>Kontak mata, orientasi hari,tempat (observasi dan wawancara)</td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101120]"
+                                                ng-model="item.obj[101120]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101120]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101121]"
+                                                ng-model="item.obj[101121]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101121]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101122]"
+                                                ng-model="item.obj[101122]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101122]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101123]"
+                                                ng-model="item.obj[101123]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101123]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101124]"
+                                                ng-model="item.obj[101124]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101124]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><b>Kepribadian</b></td>
+                        <td><p><b>Pengendalian Emosi.</b></p><p>Kondisi emosi yang tetap atau tidak berlebihan sehingga emosi yang ditampilkan tidak mengganggu aktivitas lainya.</p></td>
+                        <td>
+                            <p>Cara bicara atau perilakunya tenang/gelisah/agresif/pasi,kompulsif(observasi)</p>
+                            
+                        </td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101125]"
+                                                ng-model="item.obj[101125]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101125]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101126]"
+                                                ng-model="item.obj[101126]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101126]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101127]"
+                                                ng-model="item.obj[101127]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101127]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101128]"
+                                                ng-model="item.obj[101128]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101128]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101129]"
+                                                ng-model="item.obj[101129]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101129]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td><p><b>Kemandirian.</b></p><p>Dorongan untuk mandiri dalam mengerjakan sesuatu (ADL)</p></td>
+                        <td><p>1. Sudah mandi belum ? sendiri/disuruh, sehari mandi berapa kali?</p>
+                            <p>2. Sudah makan belum? ambil sendiri/diambilkan?</p>
+                            <p>3. Kalau BAB/BAK dimana ?</p></td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101130]"
+                                                ng-model="item.obj[101130]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101130]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101131]"
+                                                ng-model="item.obj[101131]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101131]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101132]"
+                                                ng-model="item.obj[101132]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101132]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101133]"
+                                                ng-model="item.obj[101133]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101133]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101134]"
+                                                ng-model="item.obj[101134]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101134]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td><p><b>Kepercayaan diri.</b></p><p>Keyakinan kuat terhadap kemampuan diri sendiri</p></td>
+                        <td><p>1. Ketrampilan/kemampuan apa yang dimiliki?</p>
+                            <p>2. Tenang/gugup saat berbicara,malu-malu, menunduk (observasi)?</p>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101135]"
+                                                ng-model="item.obj[101135]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101135]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101136]"
+                                                ng-model="item.obj[101136]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101136]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101137]"
+                                                ng-model="item.obj[101137]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101137]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101138]"
+                                                ng-model="item.obj[101138]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101138]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101139]"
+                                                ng-model="item.obj[101139]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101139]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4"><b>Fungsi Sosial</b></td>
+                        <td><p><b>Minat Soasial.</b></p><p>Kemampuan untuk membina hubungan sosial secara luas</p></td>
+                        <td>
+                            <p>1. Sudah kenal engan teman-teman dibangsal? Siapa saja namanya?</p>
+                            <p>2. Bersedia ikut kegiatan di rehab?</p>
+                            
+                        </td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101140]"
+                                                ng-model="item.obj[101140]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101140]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101141]"
+                                                ng-model="item.obj[101141]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101141]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101142]"
+                                                ng-model="item.obj[101142]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101142]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101143]"
+                                                ng-model="item.obj[101143]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101143]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101144]"
+                                                ng-model="item.obj[101144]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101144]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td><p><b>Kemampuan adaptasi.</b></p><p>Kemampuan untuk menyesuaikan diri terhadap lingkuangan</p></td>
+                        <td><p>Misalkan teman kamu berkumpul/mengobrol/berkegiatan apa yang kamu lakukan? ikut atau diam saja ?</p></td>
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101145]"
+                                                ng-model="item.obj[101145]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101145]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101146]"
+                                                ng-model="item.obj[101146]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101146]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101147]"
+                                                ng-model="item.obj[101147]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101147]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101148]"
+                                                ng-model="item.obj[101148]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101148]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101149]"
+                                                ng-model="item.obj[101149]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101149]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td><p><b>Kerja sama.</b></p><p>Kemampuan bekerja sama dengan orang lain secara efektif</p></td>
+                        <td><p> Kooperatif/tidak, saat ditanya mau jawab/tidak (observasi)</p>
+                            
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101150]"
+                                                ng-model="item.obj[101150]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101150]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101151]"
+                                                ng-model="item.obj[101151]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101151]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101152]"
+                                                ng-model="item.obj[101152]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101152]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101153]"
+                                                ng-model="item.obj[101153]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101153]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101154]"
+                                                ng-model="item.obj[101154]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101154]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                     <tr>
+                        <td><p><b>Komunikasi.</b></p><p>Kemampuan mengekspresikan pendapat</p></td>
+                        <td><p> Mau menjawab pertanyaan/tidak, nyambung/kacau,bisa dipahami/tidak(observasi)</p>
+                            
+                        <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101155]"
+                                                ng-model="item.obj[101155]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101155]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101156]"
+                                                ng-model="item.obj[101156]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101156]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101157]"
+                                                ng-model="item.obj[101157]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101157]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101158]"
+                                                ng-model="item.obj[101158]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101158]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    <td><div class="grid_12">
+                     
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[101159]"
+                                                ng-model="item.obj[101159]" ng-click="getSkor(jawab)">
+                                            <label class="k-checkbox-label" for="item.obj[101159]">
+                                                &nbsp;</label>
+
+                    </div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="8"><p><b>Catatan Khusus :</b></p>
+                                        <p>(misal ada tidak nya halusinani/waham, ketrampilan/kemampuan yang dimiliki/ kegiatan yang disukai pengalaman kerja,dsb)</p>
+                                        <div class="grid_8"
+                                            style="margin-top: -10px;margin-bottom: 5px;margin-left: 25px">
+                                            <textarea c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                ng-model="item.obj[101160]" />
+                                            </div>    
+                        </td>
+                    </tr>
+
+</table></div></fieldset></div>
+
+        <fieldset style="margin-top: 10px">
+            <legend>REKOMENDASI</legend>
+            <P>Centang (√) hasil seleksi dang tulis minat latihan kerja</P>
+            <div style="width: 70%;text-align: center;" >
+            <table>
+                <tr>
+                    <td><p>TMK (Tidak Memenuhi Kriteria) skor 10-23</p><div style="text-align: center;"> <input type="checkbox" class="k-checkbox" id="item.obj[101161]"
+                                                ng-model="item.obj[101161]" ng-click="getSkor[101161]">
+                                            <label class="k-checkbox-label" for="item.obj[101161]">
+                                                &nbsp;</label></div>
+                    </td>
+                    <td><p>CMK (Cukup Memenuhi Kriteria) skor 24-37</p><div style="text-align: center;"> <input type="checkbox" class="k-checkbox" id="item.obj[101162]"
+                                                ng-model="item.obj[101162]" ng-click="getSkor[101162]">
+                                            <label class="k-checkbox-label" for="item.obj[101162]">
+                                                &nbsp;</label></div>
+                    </td>
+                    <td><p>TMK (Memenuhi Kriteria skor 38-50</p><div style="text-align: center;"><input type="checkbox" class="k-checkbox" id="item.obj[101163]"
+                                                ng-model="item.obj[101163]" ng-click="getSkor[101163]">
+                                            <label class="k-checkbox-label" for="item.obj[101163]">
+                                                &nbsp;</label></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="grid_12">
+            <div class="grid_12">
+                <p>Rekomendasi rehab </p>
+            </div>
+            <div class="grid_12" style="margin-bottom: 5px;margin-left: 25px">
+                <textarea c-text-area type="input" filter="'string'" class="k-textbox" style="height: 200px;width: 700px"
+                    ng-model="item.obj[101164]" />
+            </div>
+        </div>
+        <div class="grid_12">
+            <div class="grid_12">
+                <p>Minat</p>
+            </div>
+            <div class="grid_12" style="margin-bottom: 5px;margin-left: 25px">
+                <textarea c-text-area type="input" filter="'string'" class="k-textbox" style="height: 200px;width: 700px"
+                    ng-model="item.obj[101165]" />
+            </div>
+        </div>
+        
+</fieldset>
+<fieldset style="margin-top:10px;border-radius: 10px;height: 220px;">
+    <div style="padding: 20px;">
+        <input style="width: 20%" k-ng-model="item.obj[101166]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+        <div class="grid_12" style="margin-top:10px">
+            <div  class="grid_12">
+                <label  c-label item="item" c-label-text="Psikolog Pemeriksa"></label>
+            </div>
+            <div class="grid_12">
+                <input style="width: 250px;" kendo-combo-box k-ng-model="item.obj[101167]"
+                    k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                    k-auto-bind="false" k-data-source="listPegawai" />
+
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+
+
+<br />
+<div class="grid_12">
+    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+
+</div>

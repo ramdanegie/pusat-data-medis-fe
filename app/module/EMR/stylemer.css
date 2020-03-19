@@ -1,0 +1,212 @@
+.cards {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, .08);
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, .08);
+    border: none;
+    margin-bottom: 30px;
+}
+
+.cards {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    /* width: 80%; */
+    padding: 10px;
+    margin-top: 10px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+.k-treeview .k-in {
+    position: relative;
+}
+
+md-tabs.md-default-theme .md-tab.md-active,
+md-tabs .md-tab.md-active,
+md-tabs.md-default-theme .md-tab.md-active md-icon,
+md-tabs .md-tab.md-active md-icon,
+md-tabs.md-default-theme .md-tab.md-focused,
+md-tabs .md-tab.md-focused,
+md-tabs.md-default-theme .md-tab.md-focused md-icon,
+md-tabs .md-tab.md-focused md-icon {
+    color: rgb(63, 81, 181);
+    background: #deadd361;
+}
+
+.k-treeview span.k-in {
+    /* background-color: #ff2359;
+color: #ffffff; */
+    margin-left: 20px;
+}
+
+.k-grid .k-grid-header .k-header .k-link {
+    height: auto;
+}
+
+.k-grid .k-grid-header .k-header {
+    white-space: normal;
+}
+
+.k-grid .k-grid-header .k-header {
+    text-align: center;
+}
+
+.gemblung {
+    background-color: #ff2359;
+    color: #ffffff;
+}
+
+.c-text-box:disabled {
+    background-color: #e1e6e9;
+}
+
+.k-treeview .k-in:before {
+    /* content: "\f0ca";list */
+    color: #9e9c9cc5;
+    content: "\f0c9";
+    /*bar*/
+    /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: FontAwesome;
+
+    margin-left: -16px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+}
+
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img,
+.img-responsive,
+.thumbnail a>img,
+.thumbnail>img {
+    display: block;
+    max-width: 80%;
+    height: auto;
+}
+
+
+img {
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}
+
+.k-state-selected {
+    color: #4c5356;
+    background-color: #41abf2 !important;
+}
+
+.k-treeview .k-state-hover,
+.k-state-hover:hover {
+    color: #4c5356;
+    background-color: #eaeaea !important;
+
+}
+
+.border-menu {
+    margin-top: 5px;
+    border: 1px solid #c8c8c8;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 0.571em 1em;
+    border-radius: 5px;
+}
+
+.panel-default>.panel-heading {
+    position: relative;
+    z-index: 1;
+    color: white;
+    background-color: #41abf2;
+    font-size: 18px;
+}
+
+textarea[type="input"]:disabled {
+    background: #dddddd;
+}
+
+.k-checkbox:checked+.k-checkbox-label:before {
+    /* background-color: #fff; */
+    border-color: #3dcdbf;
+    color: white;
+    background-color: #3dcdbf;
+}
+
+md-content {
+    display: block;
+    position: relative;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: white;
+}
+.style-center {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.style-right {
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+}
+
+.style-left {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+.k-treeview .k-item {
+    background-color: #f9f9f9 !important;
+}
+
+.k-checkbox-label:before {
+    margin: 1px 0px 0px 6px;
+}
+.tandaan {
+    background-color: #4c5356;
+    color: #ffffff;
+}
+.diplay_none{
+    display: none
+}
+.custom-button {
+margin: 0 0 10px;
+background: none;
+color: black;
+border-radius: 0.8em;
+border: 1px solid;
+background-color: white;
+/* cursor: none; */
+}
+.button-details {
+background: none;
+color: black;
+border-radius: 15px;
+border: 1px solid;
+padding: 2px 7px 2px;
+font-family: inherit;
+line-height: 1.72em;
+text-align: center;
+/* cursor: pointer; */
+text-decoration: none;
+background-color: white;
+display: inline-block;
+min-width: 78px;
+vertical-align: middle;
+margin-top: 5px;
+}
+.button-details:hover {
+color: white;
+border-color:#ff2359 !important;
+background-color: #ff2359 !important;
+
+}

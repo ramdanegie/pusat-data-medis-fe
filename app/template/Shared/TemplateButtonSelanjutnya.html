@@ -1,0 +1,17 @@
+<div class="grid_12" style="float:left">
+    <div>
+        &nbsp;
+    </div>
+    <div class="grid_3" style="float:right">
+        <!-- <c-button ng-show="!isLoading" class="success" style="width: 100%; font-size: 24px; padding:0px, margin:0px;" item="item" size="36" position=" 'right'" is-validate click="Selanjutnya">
+            <span class="title">Selanjutnya</span>
+        </c-button> -->
+        <button  ng-show="!isLoading" kendo-button style="width: 100%" class="success"  ng-click="Selanjutnya()" position="'right'" is-back><i class="fa fa-arrow-right"></i>Selanjutnya</button>
+    </div>
+    <div class="grid_3" style="float:right">
+            <button  ng-show="!isLoading" kendo-button style="width: 100%" class="primary"   position="'right'" is-back><i class="fa fa-arrow-left"></i>Back</button>
+        <!-- <c-button ng-show="!isLoading" style="width: 100%; font-size: 24px; padding:0px, margin:0px;" item="item" size="36" is-back position=" 'right'" class="cancel">
+            <span class="title">Back</span>
+        </c-button> -->
+    </div>
+</div>

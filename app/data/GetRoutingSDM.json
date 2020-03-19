@@ -1,0 +1,802 @@
+[
+  {
+    "name": "DataPegawai",
+    "url": "/RGF0YVBlZ2F3YWk=",
+    "templateurl": "module/SDM/DataPegawai.html",
+    "controller": "DataPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MasterPegawai",
+    "url": "/TWFzdGVyUGVnYXdhaQ==",
+    "templateurl": "module/SDM/MasterPegawai.html",
+    "controller": "MasterPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarUrutKepangkatan",
+    "url": "/RGFmdGFyVXJ1dEtlcGFuZ2thdGFu",
+    "templateurl": "module/SDM/DaftarUrutKepangkatan.html",
+    "controller": "DaftarUrutKepangkatanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MonitoringJadwalKerjaRuangan",
+    "url": "/TW9uaXRvcmluZ0phZHdhbEtlcmphUnVhbmdhbg==",
+    "templateurl": "module/SDM/MonitoringJadwalKerjaRuangan.html",
+    "controller": "MonitoringJadwalKerjaRuanganCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "SipStrExpired",
+    "url": "/U2lwU3RyRXhwaXJlZA==",
+    "templateurl": "module/SDM/SipStrExpired.html",
+    "controller": "SipStrExpiredCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPegawaiPensiunMeninggal",
+    "url": "/RGFmdGFyUGVnYXdhaVBlbnNpdW5NZW5pbmdnYWw=",
+    "templateurl": "module/SDM/DaftarPegawaiPensiunMeninggal.html",
+    "controller": "DaftarPegawaiPensiunMeninggalCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "daftarPensiunPegawai",
+    "url": "/ZGFmdGFyUGVuc2l1blBlZ2F3YWk=",
+    "templateurl": "module/SDM/daftarPensiunPegawai.html",
+    "controller": "daftarPensiunPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "JadwalKerjaPegawai",
+    "url": "/SmFkd2FsS2VyamFQZWdhd2Fp",
+    "templateurl": "module/SDM/JadwalKerjaPegawai.html",
+    "controller": "JadwalKerjaPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MonitoringAbsensi",
+    "url": "/TW9uaXRvcmluZ0Fic2Vuc2k=",
+    "templateurl": "module/SDM/MonitoringAbsensi.html",
+    "controller": "MonitoringAbsensiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MonitoringPengajuanPelatihan",
+    "url": "/TW9uaXRvcmluZ1BlbmdhanVhblBlbGF0aWhhbg==",
+    "templateurl": "module/SDM/Pelatihan/MonitoringPengajuanPelatihan.html",
+    "controller": "MonitoringPengajuanPelatihanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PermintaaanPelatihan",
+    "url": "/UGVybWludGFhYW5QZWxhdGloYW4=",
+    "templateurl": "module/SDM/Pelatihan/PermintaaanPelatihan.html",
+    "controller": "PermintaaanPelatihanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "TambahPengajuanPelatihan",
+    "url": "/VGFtYmFoUGVuZ2FqdWFuUGVsYXRpaGFu",
+    "templateurl": "module/SDM/Pelatihan/TambahPengajuanPelatihan.html",
+    "controller": "TambahPengajuanPelatihanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarUndanganPelatihan",
+    "url": "/RGFmdGFyVW5kYW5nYW5QZWxhdGloYW4=",
+    "templateurl": "module/SDM/Pelatihan/DaftarUndanganPelatihan.html",
+    "controller": "DaftarUndanganPelatihanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarKehadiranPesertaPelatihan",
+    "url": "/RGFmdGFyS2VoYWRpcmFuUGVzZXJ0YVBlbGF0aWhhbg==",
+    "templateurl": "module/SDM/Pelatihan/DaftarKehadiranPesertaPelatihan.html",
+    "controller": "DaftarKehadiranPesertaPelatihanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarRekapitulasiKehadiran",
+    "url": "/RGFmdGFyUmVrYXBpdHVsYXNpS2VoYWRpcmFu",
+    "templateurl": "module/SDM/Pelatihan/DaftarRekapitulasiKehadiran.html",
+    "controller": "DaftarRekapitulasiKehadiranCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PelaksanaanPelatihan",
+    "url": "/UGVsYWtzYW5hYW5QZWxhdGloYW4=",
+    "templateurl": "module/SDM/Pelatihan/PelaksanaanPelatihan.html",
+    "controller": "PelaksanaanPelatihanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "InputEvaluasiPenyelenggaraan",
+    "url": "/SW5wdXRFdmFsdWFzaVBlbnllbGVuZ2dhcmFhbg==",
+    "templateurl": "module/SDM/Pelatihan/InputEvaluasiPenyelenggaraan.html",
+    "controller": "InputEvaluasiPenyelenggaraanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "InputEvaluasiNarasumber",
+    "url": "/SW5wdXRFdmFsdWFzaU5hcmFzdW1iZXI=",
+    "templateurl": "module/SDM/Pelatihan/InputEvaluasiNarasumber.html",
+    "controller": "InputEvaluasiNarasumberCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarEvaluasiPenyelenggara",
+    "url": "/RGFmdGFyRXZhbHVhc2lQZW55ZWxlbmdnYXJh",
+    "templateurl": "module/SDM/Pelatihan/DaftarEvaluasiPenyelenggara.html",
+    "controller": "DaftarEvaluasiPenyelenggaraCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarEvaluasiNarasumber",
+    "url": "/RGFmdGFyRXZhbHVhc2lOYXJhc3VtYmVy",
+    "templateurl": "module/SDM/Pelatihan/DaftarEvaluasiNarasumber.html",
+    "controller": "DaftarEvaluasiNarasumberCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MasterKategoriPendidikan",
+    "url": "/TWFzdGVyS2F0ZWdvcmlQZW5kaWRpa2Fu",
+    "templateurl": "module/SDM/Pendidikan/MasterKategoriPendidikan.html",
+    "controller": "MasterKategoriPendidikanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MasterJurusanPeminatan",
+    "url": "/TWFzdGVySnVydXNhblBlbWluYXRhbg==",
+    "templateurl": "module/SDM/Pendidikan/MasterJurusanPeminatan.html",
+    "controller": "MasterJurusanPeminatanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MasterMappingKategoriPendidikanToProgramPendidikan",
+    "url": "/TWFzdGVyTWFwcGluZ0thdGVnb3JpUGVuZGlkaWthblRvUHJvZ3JhbVBlbmRpZGlrYW4=",
+    "templateurl": "module/SDM/Pendidikan/MasterMappingKategoriPendidikanToProgramPendidikan.html",
+    "controller": "MasterMappingKategoriPendidikanToProgramPendidikanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "TenagaPengajar",
+    "url": "/VGVuYWdhUGVuZ2FqYXI=",
+    "templateurl": "module/SDM/Pendidikan/TenagaPengajar.html",
+    "controller": "TenagaPengajarCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PesertaDidik",
+    "url": "/UGVzZXJ0YURpZGlr",
+    "templateurl": "module/SDM/Pendidikan/PesertaDidik.html",
+    "controller": "PesertaDidikCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MasterNarasumber",
+    "url": "/TWFzdGVyTmFyYXN1bWJlcg==",
+    "templateurl": "module/SDM/Pelatihan/MasterNarasumber.html",
+    "controller": "MasterNarasumberCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PenelitianEksternal",
+    "url": "/UGVuZWxpdGlhbkVrc3Rlcm5hbA==",
+    "templateurl": "module/SDM/Penelitian/PenelitianEksternal.html",
+    "controller": "PenelitianEksternalCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPenelitianEksternal",
+    "url": "/RGFmdGFyUGVuZWxpdGlhbkVrc3Rlcm5hbA==",
+    "templateurl": "module/SDM/Penelitian/DaftarPenelitianEksternal.html",
+    "controller": "DaftarPenelitianEksternalCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PenelitianPegawai",
+    "url": "/UGVuZWxpdGlhblBlZ2F3YWk=",
+    "templateurl": "module/SDM/Penelitian/PenelitianPegawai.html",
+    "controller": "PenelitianPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "DaftarPenelitianPegawai",
+    "url": "/RGFmdGFyUGVuZWxpdGlhblBlZ2F3YWk=",
+    "templateurl": "module/SDM/Penelitian/DaftarPenelitianPegawai.html",
+    "controller": "DaftarPenelitianPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "RekapPegawai",
+    "url": "/UmVrYXBQZWdhd2Fp",
+    "templateurl": "module/SDM/RekapPegawai.html",
+    "controller": "RekapPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "InformasiPosisiStrukturalPegawai",
+    "url": "/SW5mb3JtYXNpUG9zaXNpU3RydWt0dXJhbFBlZ2F3YWk=",
+    "templateurl": "module/SDM/InformasiPosisiStrukturalPegawai.html",
+    "controller": "InformasiPosisiStrukturalPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "PermohonanCuti",
+    "url": "/UGVybW9ob25hbkN1dGk=",
+    "templateurl": "module/SDM/PermohonanCuti.html",
+    "controller": "PermohonanCutiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "AbsensiPegawai",
+    "url": "/QWJzZW5zaVBlZ2F3YWk=",
+    "templateurl": "module/SDM/AbsensiPegawai.html",
+    "controller": "AbsensiPegawaiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "LaporanPendapatanPelayananDiklitbang",
+    "url": "/TGFwb3JhblBlbmRhcGF0YW5QZWxheWFuYW5EaWtsaXRiYW5n=",
+    "templateurl": "module/SDM/Pelatihan/LaporanPendapatanPelayananDiklitbang.html",
+    "controller": "LaporanPendapatanPelayananDiklitbangCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "RekapPendapatanDiklitbang",
+    "url": "/UmVrYXBQZW5kYXBhdGFuRGlrbGl0YmFuZw=",
+    "templateurl": "module/SDM/Pelatihan/RekapPendapatanDiklitbang.html",
+    "controller": "RekapPendapatanDiklitbangCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "AbsensiPegawaiRev",
+    "url": "/QWJzZW5zaVBlZ2F3YWlSZXY=",
+    "templateurl": "module/SDM/AbsensiPegawaiRev.html",
+    "controller": "AbsensiPegawaiRevCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "SuratKeputusan",
+    "url": "/U3VyYXRLZXB1dHVzYW4=",
+    "templateurl": "module/SDM/SuratKeputusan.html",
+    "controller": "SuratKeputusanCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "ShiftKerja",
+    "url": "/U2hpZnRLZXJqYQ==",
+    "templateurl": "module/SDM/ShiftKerja.html",
+    "controller": "ShiftKerjaCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "MapPegawaiToUnitKerja",
+    "url": "/TWFwUGVnYXdhaVRvVW5pdEtlcmph=",
+    "templateurl": "module/SDM/MapPegawaiToUnitKerja.html",
+    "controller": "MapPegawaiToUnitKerjaCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  }
+]

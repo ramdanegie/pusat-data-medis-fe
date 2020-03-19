@@ -1,0 +1,23 @@
+[
+
+  {
+    "name": "RekamMedis",
+    "url": "/RekamMedis/:noRec",
+    "templateurl": "module/EMR/RekamMedis.html",
+    "controller": "RekamMedisCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  }
+]

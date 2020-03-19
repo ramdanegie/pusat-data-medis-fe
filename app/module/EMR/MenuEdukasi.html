@@ -1,0 +1,54 @@
+<c-panel item="item" header="'MenuEdukasi'" disabled>
+    <div class="panel panel-default container_12">
+        <div class="breadcrum detail" style='margin-top: 0px;'>
+            <div class="grid_2">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuEdukasi == 'RekamMedis.AsesmenMedis.MenuEdukasi.PengkajianEdukasi'}"
+                    ng-click="nav('RekamMedis.AsesmenMedis.MenuEdukasi.PengkajianEdukasi')">Tab 1 (Keluarga)
+                </a>
+            </div>
+            <div class="grid_2">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuEdukasi == 'RekamMedis.AsesmenMedis.MenuEdukasi.PengkajianEdukasi2'}"
+                    ng-click="nav('RekamMedis.AsesmenMedis.MenuEdukasi.PengkajianEdukasi2')">Tab 2 (Pasien)
+                </a>
+            </div>
+            <div class="grid_2">
+                <a class="n1 default"
+                    ng-class="{'active': activeMenuEdukasi == 'RekamMedis.AsesmenMedis.MenuEdukasi.PengkajianEdukasi3'}"
+                    ng-click="nav('RekamMedis.AsesmenMedis.MenuEdukasi.PengkajianEdukasi3')">Tab 3 (PJ)
+                </a>
+            </div>
+            
+
+        </div>
+    </div>
+</c-panel>
+<style type="text/css">
+    .active {
+        /* background-color: white !important; */
+        background-color: rgb(255, 64, 129) !important;
+        color: white !important;
+        display: block;
+        padding: 10px 0 20px;
+        font-weight: 600;
+    }
+
+    .breadcrum a.default {
+        background: white;
+    }
+
+    .breadcrum a:hover {
+        background: #41abf2;
+        color: white;
+        border-bottom: solid 5px rgb(255, 64, 129);
+    }
+
+    .breadcrum a {
+        color: rgb(63, 81, 181);
+        border-bottom: solid 5px rgb(255, 64, 129);
+        border-top: solid 1px #cccccc;
+        border-right: solid 1px #cccccc;
+    }
+</style>
+<div ui-view></div>
