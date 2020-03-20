@@ -204,10 +204,11 @@ define(['initialize', 'Configuration'], function (initialize, configuration) {
                 if ($scope.dataSelected != undefined) {
                     noemr2 = $scope.dataSelected.noemr
                 }
-                $state.go("RekamMedis.AsesmenMedisDetail", {
-                    namaEMR: 113,
-                    nomorEMR: noemr2
-                });
+                // $state.go("RekamMedis.AsesmenMedisDetail", {
+                //     namaEMR: 113,
+                //     nomorEMR: noemr2
+                // });
+                $state.go("RekamMedis.VitalSign");
 
                 var arrStr = {
                     0: noemr2,
@@ -310,6 +311,9 @@ define(['initialize', 'Configuration'], function (initialize, configuration) {
             $scope.columnDaftar = {
                 selectable: 'row',
                 pageable: true,
+                dataBound: function() {
+                    this.expandRow(this.tbody.find("tr.k-master-row"));
+                },
                 columns:
                     [
                         {
@@ -391,9 +395,7 @@ define(['initialize', 'Configuration'], function (initialize, configuration) {
 
                             "template": "# for(var i=0; i < details.length;i++){# <span class=\"button-details\" )\" >#= details[i].namaform #  <em class=\"k-button k-button-icon k-primary\""
                                 + " style=\" margin: 3px;padding-left: .4em;padding-right: .4em;\"  ng-click=\"asupKaForm('#=details[i].emrpasienfk#','#=details[i].reportdisplay#',"
-                                + "'#=details[i].emrfk#','#=details[i].norec#')\" > <span class=\"k-sprite k-icon k-i-search\">Details</span></em> <em class=\"k-button k-button-icon  k-primary \""
-                                + " style=\" margin: 3px;padding-left: .4em;padding-right: .4em; margin-left: -3px;\"  ng-click=\"hapusFormHiji('#=details[i].emrpasienfk#','#=details[i].reportdisplay#',"
-                                + "'#=details[i].emrfk#','#=details[i].norec#')\" > <span class=\"k-sprite fa fa-trash\" style=\"float: left;margin-top: 0.3em;padding-bottom: 2px;\"</span></em></span> #}#",
+                                + "'#=details[i].emrfk#','#=details[i].norec#')\" > <span class=\"k-sprite k-icon k-i-search\">Details</span></em> </span> #}#",
 
                             // "template": "# for(var i=0; i < details.length;i++){# <button class=\"k-button custom-button\" style=\"margin:0 0 5px\"  ng-click=\"asupKaForm('#=details[i].emrpasienfk#','#=details[i].reportdisplay#','#=details[i].emrfk#','#=details[i].norec#')\" >#= details[i].namaform #</button> #}#",
                         }
