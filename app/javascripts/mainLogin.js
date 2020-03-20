@@ -43,7 +43,7 @@ require(['LoginService', 'core', "kendo.angular", 'Configuration', 'Helper', 'jQ
                             }
                             var cookieStr = "statusCode=;";
                             document.cookie = cookieStr;
-                            document.cookie = 'authorization=' + data.data['X-AUTH-TOKEN'] + ";";
+                            document.cookie = 'authorizationss=' + data.data['X-AUTH-TOKEN'] + ";";
 
                             var dataUserLogin = {
                                 id: data.data['X-ID'],
