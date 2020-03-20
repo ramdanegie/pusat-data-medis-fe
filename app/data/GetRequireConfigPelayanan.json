@@ -58,7 +58,7 @@
         },
         {
             "nameDep": "DaftarAntrianPasienCtrl",
-            "urlDep": "module/Registrasi/DaftarAntrianPasienCtrl"
+            "urlDep": "module/EMR/DaftarAntrianPasienCtrl"
         },
         {
             "nameDep": "InputTindakanPendaftaranCtrl",

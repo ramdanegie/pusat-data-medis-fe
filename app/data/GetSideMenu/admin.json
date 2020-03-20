@@ -1,5 +1,9 @@
 [
     {
+        "name": "Daftar Pasien",
+        "link": "#/DaftarAntrianPasien"
+    },
+    {
         "name": "Rekam Medis",
         "link": "#/RekamMedis/AsesmenMedis"
     }
