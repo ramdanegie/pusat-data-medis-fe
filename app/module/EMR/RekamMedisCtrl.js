@@ -127,6 +127,12 @@ define(['initialize', 'Configuration'], function (initialize, configuration) {
                 // medifirstService.get("emr/get-emr-transaksi?nocm=" + $scope.item.noMr + "&jenisEmr=asesmen", true).then(function (dat) {
                 medifirstService.get("get-emr-transaksi-detail-form?nik=" + $scope.item.nik, true).then(function (dat) {
                     $scope.isRouteLoading = false
+                    for (var i = dat.data.data.length - 1; i >= 0; i--) {
+                
+                        if (dat.data.data[i].details.length ==0) {
+                            dat.data.data.splice([i], 1)
+                        }
+                    }
                     $scope.dataDaftar = new kendo.data.DataSource({
                         data: dat.data.data,
                         pageSize: 10,
