@@ -341,7 +341,7 @@ define(['initialize', 'Configuration'], function (initialize, configuration) {
             $scope.columnDaftar = {
                 selectable: 'row',
                 pageable: true,
-                dataBound: function() {
+                // dataBound: function() {
                 //     this.expandRow(this.tbody.find("tr.k-master-row"));
                 // },
                 columns:
