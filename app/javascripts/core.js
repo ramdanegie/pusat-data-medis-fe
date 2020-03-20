@@ -2086,7 +2086,7 @@ define(['Configuration', 'jQuery', 'kendo.angular',
                         return null;
                     }
 
-                    if(readCookie('authorizationss') != null){
+                    if(readCookie('tokenauth') != null){
                         window.location = "/app/#/home";
                         scope.showPageLogin = false;
                     }

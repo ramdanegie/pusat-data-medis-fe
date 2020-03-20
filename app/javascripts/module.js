@@ -286,7 +286,7 @@ define(['ApiService', 'Configuration', 'require', 'config', 'Controller', 'Angul
                         var expr = new Date(today.getTime() + (-1 * 24 * 60 * 60 * 1000));
                         document.cookie = name + '=;expires=' + (expr.toGMTString());
                     }
-                    delete_cookie('authorization');
+                    delete_cookie('tokenauth');
                     delete_cookie('statusCode');
                     delete_cookie('io'); 
 
