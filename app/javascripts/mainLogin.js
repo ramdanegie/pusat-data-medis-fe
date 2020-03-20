@@ -54,7 +54,7 @@ require(['LoginService', 'core', "kendo.angular", 'Configuration', 'Helper', 'jQ
                             };
 
                             // debugger
-                            window.localStorage.setItem('datauserlogin', JSON.stringify(dataUserLogin));
+                            window.localStorage.setItem('user.data', JSON.stringify(dataUserLogin));
                             window.localStorage.setItem('pegawai', null);
                             window.localStorage.setItem('loginuser', 'username=' + userName + '&' + 'password=' + password);
 
@@ -112,7 +112,7 @@ require(['LoginService', 'core', "kendo.angular", 'Configuration', 'Helper', 'jQ
                             function (error) {
 
                                 if (error.data != null)
-                                    window.messageContainer.error(error.data)
+                                    window.messageContainer.error('Login Gagal,Username Password Salah')
                                 else
                                     window.messageContainer.error('Login Gagal, Koneksi Internet Tidak Stabil')
                                 $scope.isBusy = false;

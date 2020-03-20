@@ -105,12 +105,29 @@ define(['Service', 'Configuration'], function(Service, conf) {
         $scope.menuOrientation = "horizontal";
 
         // cek login expired        
-        var datauserlogin = JSON.parse(localStorage.getItem('datauserlogin'));
+        var datauserlogin = JSON.parse(localStorage.getItem('user.data'));
         if(datauserlogin){
             if( new Date() > new Date(datauserlogin.endWaktuLogin)){
                 // window.localStorage.clear();
                 $rootScope.doLogout();
             }
+        }else{
+            socket.emit('logout', null);
+
+            window.localStorage.clear();
+
+            var delete_cookie = function(name) {
+                var today = new Date();
+                var expr = new Date(today.getTime() + (-1 * 24 * 60 * 60 * 1000));
+                document.cookie = name + '=;expires=' + (expr.toGMTString());
+            }
+            delete_cookie('authorization');
+            delete_cookie('statusCode');
+            delete_cookie('io'); 
+
+            $rootScope.logoutUlang = 0;
+
+            $window.location.replace('Logout');
         }
         //ambil menu cara lama
         $rootScope.menu = [];
