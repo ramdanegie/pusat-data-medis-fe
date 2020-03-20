@@ -105,7 +105,7 @@ define(['Service', 'Configuration'], function(Service, conf) {
         $scope.menuOrientation = "horizontal";
 
         // cek login expired        
-        var datauserlogin = JSON.parse(localStorage.getItem('user.data'));
+        var datauserlogin = JSON.parse(localStorage.getItem('user.login'));
         if(datauserlogin){
             if( new Date() > new Date(datauserlogin.endWaktuLogin)){
                 // window.localStorage.clear();

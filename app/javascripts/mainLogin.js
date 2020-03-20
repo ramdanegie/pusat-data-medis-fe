@@ -54,7 +54,7 @@ require(['LoginService', 'core', "kendo.angular", 'Configuration', 'Helper', 'jQ
                             };
 
                             // debugger
-                            window.localStorage.setItem('user.data', JSON.stringify(dataUserLogin));
+                            window.localStorage.setItem('user.login', JSON.stringify(dataUserLogin));
                             window.localStorage.setItem('pegawai', null);
                             window.localStorage.setItem('loginuser', 'username=' + userName + '&' + 'password=' + password);
 
