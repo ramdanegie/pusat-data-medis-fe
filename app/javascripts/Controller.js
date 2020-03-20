@@ -121,7 +121,7 @@ define(['Service', 'Configuration'], function(Service, conf) {
                 var expr = new Date(today.getTime() + (-1 * 24 * 60 * 60 * 1000));
                 document.cookie = name + '=;expires=' + (expr.toGMTString());
             }
-            delete_cookie('authorization');
+            delete_cookie('authorizationss');
             delete_cookie('statusCode');
             delete_cookie('io'); 
 

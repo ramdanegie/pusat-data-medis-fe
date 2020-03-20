@@ -342,8 +342,8 @@ define(['initialize', 'Configuration'], function (initialize, configuration) {
                 selectable: 'row',
                 pageable: true,
                 dataBound: function() {
-                    this.expandRow(this.tbody.find("tr.k-master-row"));
-                },
+                //     this.expandRow(this.tbody.find("tr.k-master-row"));
+                // },
                 columns:
                     [
                         {

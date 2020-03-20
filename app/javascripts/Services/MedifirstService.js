@@ -181,7 +181,7 @@ define(['Configuration'], function (config) {
             
                 for (var i = 0; i < arr.length; i++) {
                     var element = arr[i].split('=');
-                    if (element[0].indexOf('authorization') > 0) {
+                    if (element[0].indexOf('authorizationss') > -1) {
                         authorization = element[1];
                     }
                 }
