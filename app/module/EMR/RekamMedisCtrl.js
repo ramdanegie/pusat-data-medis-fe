@@ -12,6 +12,29 @@ define(['initialize', 'Configuration'], function (initialize, configuration) {
             var dataTindakan = []
             var dataObat = []
             var dataEMR = []
+            var NoNik = '';
+            var Status = '';            
+
+            function LoadCache() {                
+                var chacePeriode = cacheHelper.get('CacheRiwayatPasien');
+                if (chacePeriode != undefined) {
+                    NoNik = chacePeriode[0];
+                    Status = chacePeriode[1];
+                    $scope.item.nik = NoNik;                
+                    $scope.loadEMRTRans()
+                    var chacePeriode = {
+                        0: '',
+                        1: '',
+                        2: '',
+                        3: '',
+                        4: '',
+                        5: '',
+                        6: ''
+                    }
+                    cacheHelper.set('CacheRiwayatPasien', undefined);
+                } 
+            }
+
             $scope.isLoadingNav = false
             // cacheHelper.set('cacheRekamMedis', undefined);
             $scope.getRekamMedisCheck = function (checkNoregis) {
@@ -121,6 +144,7 @@ define(['initialize', 'Configuration'], function (initialize, configuration) {
 
                 })
             }
+            LoadCache();
             function init() {
                 $scope.isRouteLoading = true
 

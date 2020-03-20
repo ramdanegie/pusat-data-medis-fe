@@ -294,9 +294,9 @@
     ]
   },
   {
-    "name": "RGFmdGFyQW50cmlhblBhc2llbg==",
-    "url": "/RGFmdGFyQW50cmlhblBhc2llbg==",
-    "templateurl": "module/Registrasi/DaftarAntrianPasien.html",
+    "name": "DaftarAntrianPasien",
+    "url": "/DaftarAntrianPasien",
+    "templateurl": "module/EMR/DaftarAntrianPasien.html",
     "controller": "DaftarAntrianPasienCtrl",
     "deps": [
       {
