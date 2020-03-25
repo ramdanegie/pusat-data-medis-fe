@@ -121,7 +121,7 @@ define(['Service', 'Configuration'], function(Service, conf) {
                 var expr = new Date(today.getTime() + (-1 * 24 * 60 * 60 * 1000));
                 document.cookie = name + '=;expires=' + (expr.toGMTString());
             }
-            delete_cookie('tokenauth');
+            delete_cookie('authorization');
             delete_cookie('statusCode');
             delete_cookie('io'); 
 
@@ -165,7 +165,7 @@ define(['Service', 'Configuration'], function(Service, conf) {
                     }
                     var cookieStr = "statusCode=" + data.data.data.kelompokUser.kelompokUser + ';';
                     document.cookie = cookieStr;
-                    document.cookie = 'tokenauth=' + data.data.messages['X-AUTH-TOKEN'] + ";";
+                    document.cookie = 'authorizationss=' + data.data.messages['X-AUTH-TOKEN'] + ";";
                     window.localStorage.setItem('pegawai', JSON.stringify(data.data.data.pegawai));
                     var dataUrlRoute = [];
                     // var dataUrlRouteAkuntansi = [];

@@ -22,14 +22,14 @@ require(['LoginService', 'core', "kendo.angular", 'Configuration', 'Helper', 'jQ
 
                     var goLogin = function (userName, password) {
                         window.localStorage.clear();
-                        // var delete_cookie = function (name) {
-                        //     var today = new Date();
-                        //     var expr = new Date(today.getTime() + (-1 * 24 * 60 * 60 * 1000));
-                        //     document.cookie = name + '=;expires=' + (expr.toGMTString());
-                        // }
-                        // delete_cookie('tokenauth');
-                        // delete_cookie('statusCode');
-                        // delete_cookie('io');
+                        var delete_cookie = function (name) {
+                            var today = new Date();
+                            var expr = new Date(today.getTime() + (-1 * 24 * 60 * 60 * 1000));
+                            document.cookie = name + '=;expires=' + (expr.toGMTString());
+                        }
+                        delete_cookie('authorization');
+                        delete_cookie('statusCode');
+                        delete_cookie('io');
 
                         loginService.authentication(
                             'username=' + userName + '&' +
@@ -43,7 +43,7 @@ require(['LoginService', 'core', "kendo.angular", 'Configuration', 'Helper', 'jQ
                             }
                             var cookieStr = "statusCode=;";
                             document.cookie = cookieStr;
-                            document.cookie = 'tokenauth=' + data.data['X-AUTH-TOKEN'] + ";";
+                            document.cookie = 'authorizationss=' + data.data['X-AUTH-TOKEN'] + ";";
 
                             var dataUserLogin = {
                                 id: data.data['X-ID'],

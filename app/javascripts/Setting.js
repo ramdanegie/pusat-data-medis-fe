@@ -39,9 +39,9 @@ define([], function () {
             urlRouteManagemen: 'http://localhost:3333/app/data/GetRoutingManagemen',
             urlRouteSDM: 'http://localhost:3333/app/data/GetRoutingSDM',
 
-            baseUrlLogin: "http://localhost:8300/service/transdata/get-signature",
-            baseUrlLogout: "http://localhost:8300/service/transdata/get-signature",
-            baseApiBackend: 'http://localhost:8300/service/transdata/',
+            baseUrlLogin: "http://transmedic.co.id:8300/service/transdata/get-signature",
+            baseUrlLogout: "http://transmedic.co.id:8300/service/transdata/get-signature",
+            baseApiBackend: 'http://transmedic.co.id:8300/service/transdata/',
             baseProfileMenu: 1, 
 
             rabbitMQHost: 'amqp://rsab:rsab@localhost'
