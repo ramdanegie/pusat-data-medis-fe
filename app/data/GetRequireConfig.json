@@ -1,12 +1,13 @@
 {
   "path": [
-    {
-      "nameDep": "WelcomeCtrl",
-      "urlDep": "javascripts/Controllers/WelcomeCtrl"
-    },
+   
     {
       "nameDep": "RekamMedisCtrl",
       "urlDep": "module/EMR/RekamMedisCtrl"
+    },
+    {
+      "nameDep": "WelcomeCtrl",
+      "urlDep": "javascripts/Controllers/WelcomeCtrl"
     },
     {
       "nameDep": "angular",

@@ -165,7 +165,7 @@ define(['Service', 'Configuration'], function(Service, conf) {
                     }
                     var cookieStr = "statusCode=" + data.data.data.kelompokUser.kelompokUser + ';';
                     document.cookie = cookieStr;
-                    document.cookie = 'authorizationss=' + data.data.messages['X-AUTH-TOKEN'] + ";";
+                    document.cookie = 'authorization=' + data.data.messages['X-AUTH-TOKEN'] + ";";
                     window.localStorage.setItem('pegawai', JSON.stringify(data.data.data.pegawai));
                     var dataUrlRoute = [];
                     // var dataUrlRouteAkuntansi = [];

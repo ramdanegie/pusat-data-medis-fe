@@ -27,7 +27,7 @@ require(['LoginService', 'core', "kendo.angular", 'Configuration', 'Helper', 'jQ
                             var expr = new Date(today.getTime() + (-1 * 24 * 60 * 60 * 1000));
                             document.cookie = name + '=;expires=' + (expr.toGMTString());
                         }
-                        delete_cookie('tokenauth');
+                        delete_cookie('authorization');
                         delete_cookie('statusCode');
                         delete_cookie('io');
 
@@ -43,7 +43,7 @@ require(['LoginService', 'core', "kendo.angular", 'Configuration', 'Helper', 'jQ
                             }
                             var cookieStr = "statusCode=;";
                             document.cookie = cookieStr;
-                            document.cookie = 'tokenauth=' + data.data['X-AUTH-TOKEN'] + ";";
+                            document.cookie = 'authorization=' + data.data['X-AUTH-TOKEN'] + ";";
 
                             var dataUserLogin = {
                                 id: data.data['X-ID'],
