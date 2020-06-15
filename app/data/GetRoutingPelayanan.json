@@ -8295,6 +8295,2848 @@
         "define": "MedifirstService"
       }
     ]
+  },
+  {
+    "name": "BPJSTools.MenuAplicare",
+    "url": "/MenuAplicare",
+    "templateurl": "module/Registrasi/MenuAplicare.html",
+    "controller": "MenuAplicareCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "BPJSToolsCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuEWSAnak.SkorEWSAnak6",
+    "url": "/SkorEWSAnak6",
+    "templateurl": "module/EMR/SkorEWSAnak6.html",
+    "controller": "SkorEWSAnak6Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuEWSAnak.SkorEWSAnak7",
+    "url": "/SkorEWSAnak7",
+    "templateurl": "module/EMR/SkorEWSAnak7.html",
+    "controller": "SkorEWSAnak7Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuHasilRad.HasilRadiologiAss",
+    "url": "/HasilRadiologiAss",
+    "templateurl": "module/EMR/HasilRadiologiAss.html",
+    "controller": "HasilRadiologiAssCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuEWSDewasa.SkorEWSDewasa11",
+    "url": "/SkorEWSDewasa11",
+    "templateurl": "module/EMR/SkorEWSDewasa11.html",
+    "controller": "SkorEWSDewasa11Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuEWSDewasa.SkorEWSDewasa12",
+    "url": "/SkorEWSDewasa12",
+    "templateurl": "module/EMR/SkorEWSDewasa12.html",
+    "controller": "SkorEWSDewasa12Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuEWSDewasa.SkorEWSDewasa13",
+    "url": "/SkorEWSDewasa13",
+    "templateurl": "module/EMR/SkorEWSDewasa13.html",
+    "controller": "SkorEWSDewasa13Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuEWSDewasa.SkorEWSDewasa14",
+    "url": "/SkorEWSDewasa14",
+    "templateurl": "module/EMR/SkorEWSDewasa14.html",
+    "controller": "SkorEWSDewasa14Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuEWSDewasa.SkorEWSDewasa15",
+    "url": "/SkorEWSDewasa15",
+    "templateurl": "module/EMR/SkorEWSDewasa15.html",
+    "controller": "SkorEWSDewasa15Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuEWSDewasa.SkorEWSDewasa16",
+    "url": "/SkorEWSDewasa16",
+    "templateurl": "module/EMR/SkorEWSDewasa16.html",
+    "controller": "SkorEWSDewasa16Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTMS",
+    "url": "/MenuTMS",
+    "templateurl": "module/EMR/MenuTMS.html",
+    "controller": "MenuTMSCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTMS.TindakanTMS2",
+    "url": "/TindakanTMS2",
+    "templateurl": "module/EMR/TindakanTMS2.html",
+    "controller": "TindakanTMS2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTMS.TindakanTMS3",
+    "url": "/TindakanTMS3",
+    "templateurl": "module/EMR/TindakanTMS3.html",
+    "controller": "TindakanTMS3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTMS.TindakanTMS4",
+    "url": "/TindakanTMS4",
+    "templateurl": "module/EMR/TindakanTMS4.html",
+    "controller": "TindakanTMS4Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTMS.TindakanTMS5",
+    "url": "/TindakanTMS5",
+    "templateurl": "module/EMR/TindakanTMS5.html",
+    "controller": "TindakanTMS5Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuECTkonsvesional.ECTkonsvesional",
+    "url": "/ECTkonsvesional",
+    "templateurl": "module/EMR/ECTkonsvesional.html",
+    "controller": "ECTkonsvesionalCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuECTkonsvesional",
+    "url": "/MenuECTkonsvesional",
+    "templateurl": "module/EMR/MenuECTkonsvesional.html",
+    "controller": "MenuECTkonsvesionalCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuECTkonsvesional.ECTkonsvesional2",
+    "url": "/ECTkonsvesional2",
+    "templateurl": "module/EMR/ECTkonsvesional2.html",
+    "controller": "ECTkonsvesional2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuECTkonsvesional.ECTkonsvesional3",
+    "url": "/ECTkonsvesional3",
+    "templateurl": "module/EMR/ECTkonsvesional3.html",
+    "controller": "ECTkonsvesional3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuRestrain.LembarObservasiPxDenganRestrain19",
+    "url": "/LembarObservasiPxDenganRestrain19",
+    "templateurl": "module/EMR/LembarObservasiPxDenganRestrain19.html",
+    "controller": "LembarObservasiPxDenganRestrain19Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuRestrain.LembarObservasiPxDenganRestrain20",
+    "url": "/LembarObservasiPxDenganRestrain20",
+    "templateurl": "module/EMR/LembarObservasiPxDenganRestrain20.html",
+    "controller": "LembarObservasiPxDenganRestrain20Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuRestrain.LembarObservasiPxDenganRestrain21",
+    "url": "/LembarObservasiPxDenganRestrain21",
+    "templateurl": "module/EMR/LembarObservasiPxDenganRestrain21.html",
+    "controller": "LembarObservasiPxDenganRestrain21Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuRestrain.LembarObservasiPxDenganRestrain22",
+    "url": "/LembarObservasiPxDenganRestrain22",
+    "templateurl": "module/EMR/LembarObservasiPxDenganRestrain22.html",
+    "controller": "LembarObservasiPxDenganRestrain22Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuRestrain.LembarObservasiPxDenganRestrain23",
+    "url": "/LembarObservasiPxDenganRestrain23",
+    "templateurl": "module/EMR/LembarObservasiPxDenganRestrain23.html",
+    "controller": "LembarObservasiPxDenganRestrain23Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuRestrain.LembarObservasiPxDenganRestrain24",
+    "url": "/LembarObservasiPxDenganRestrain24",
+    "templateurl": "module/EMR/LembarObservasiPxDenganRestrain24.html",
+    "controller": "LembarObservasiPxDenganRestrain24Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "LaporanPasienDaftar2",
+    "url": "/LaporanPasienDaftar2",
+    "templateurl": "module/Registrasi/Laporan/LaporanPasienDaftar2.html",
+    "controller": "LaporanPasienDaftar2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTandavital.CatatanGrafikTandaVital8",
+    "url": "/CatatanGrafikTandaVital8",
+    "templateurl": "module/EMR/CatatanGrafikTandaVital8.html",
+    "controller": "CatatanGrafikTandaVital8Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer2",
+    "url": "/MenuTransfer2",
+    "templateurl": "module/EMR/MenuTransfer2.html",
+    "controller": "MenuTransfer2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer2.FormulirTransfer19",
+    "url": "/FormulirTransfer19",
+    "templateurl": "module/EMR/FormulirTransfer19.html",
+    "controller": "FormulirTransfer19Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer2.FormulirTransfer20",
+    "url": "/FormulirTransfer20",
+    "templateurl": "module/EMR/FormulirTransfer20.html",
+    "controller": "FormulirTransfer20Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer2.FormulirTransfer21",
+    "url": "/FormulirTransfer21",
+    "templateurl": "module/EMR/FormulirTransfer21.html",
+    "controller": "FormulirTransfer21Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer2.FormulirTransfer22",
+    "url": "/FormulirTransfer22",
+    "templateurl": "module/EMR/FormulirTransfer22.html",
+    "controller": "FormulirTransfer22Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer2.FormulirTransfer22",
+    "url": "/FormulirTransfer22",
+    "templateurl": "module/EMR/FormulirTransfer22.html",
+    "controller": "FormulirTransfer22Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer2.FormulirTransfer23",
+    "url": "/FormulirTransfer23",
+    "templateurl": "module/EMR/FormulirTransfer23.html",
+    "controller": "FormulirTransfer23Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer2.FormulirTransfer24",
+    "url": "/FormulirTransfer24",
+    "templateurl": "module/EMR/FormulirTransfer24.html",
+    "controller": "FormulirTransfer24Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuDaftarIsianMecta.DaftarIsianMecta",
+    "url": "/DaftarIsianMecta",
+    "templateurl": "module/EMR/DaftarIsianMecta.html",
+    "controller": "DaftarIsianMectaCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuDaftarIsianMecta",
+    "url": "/MenuDaftarIsianMecta",
+    "templateurl": "module/EMR/MenuDaftarIsianMecta.html",
+    "controller": "MenuDaftarIsianMectaCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuDaftarIsianMecta.DaftarIsianMecta2",
+    "url": "/DaftarIsianMecta2",
+    "templateurl": "module/EMR/DaftarIsianMecta2.html",
+    "controller": "DaftarIsianMecta2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuDaftarIsianMecta.DaftarIsianMecta3",
+    "url": "/DaftarIsianMecta3",
+    "templateurl": "module/EMR/DaftarIsianMecta3.html",
+    "controller": "DaftarIsianMecta3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer3",
+    "url": "/MenuTransfer3",
+    "templateurl": "module/EMR/MenuTransfer3.html",
+    "controller": "MenuTransfer3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer3.FormulirTransfer25",
+    "url": "/FormulirTransfer25",
+    "templateurl": "module/EMR/FormulirTransfer25.html",
+    "controller": "FormulirTransfer25Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer3.FormulirTransfer26",
+    "url": "/FormulirTransfer26",
+    "templateurl": "module/EMR/FormulirTransfer26.html",
+    "controller": "FormulirTransfer26Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer3.FormulirTransfer27",
+    "url": "/FormulirTransfer27",
+    "templateurl": "module/EMR/FormulirTransfer27.html",
+    "controller": "FormulirTransfer27Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer3.FormulirTransfer28",
+    "url": "/FormulirTransfer28",
+    "templateurl": "module/EMR/FormulirTransfer28.html",
+    "controller": "FormulirTransfer28Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer3.FormulirTransfer29",
+    "url": "/FormulirTransfer29",
+    "templateurl": "module/EMR/FormulirTransfer29.html",
+    "controller": "FormulirTransfer29Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer3.FormulirTransfer30",
+    "url": "/FormulirTransfer30",
+    "templateurl": "module/EMR/FormulirTransfer30.html",
+    "controller": "FormulirTransfer30Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer4",
+    "url": "/MenuTransfer4",
+    "templateurl": "module/EMR/MenuTransfer4.html",
+    "controller": "MenuTransfer4Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer4.FormulirTransfer31",
+    "url": "/FormulirTransfer31",
+    "templateurl": "module/EMR/FormulirTransfer31.html",
+    "controller": "FormulirTransfer31Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuTransfer4.FormulirTransfer32",
+    "url": "/FormulirTransfer32",
+    "templateurl": "module/EMR/FormulirTransfer32.html",
+    "controller": "FormulirTransfer32Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuKonseling.RingkasanKonseling3",
+    "url": "/RingkasanKonseling3",
+    "templateurl": "module/EMR/RingkasanKonseling3.html",
+    "controller": "RingkasanKonseling3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuKonseling.RingkasanKonseling4",
+    "url": "/RingkasanKonseling4",
+    "templateurl": "module/EMR/RingkasanKonseling4.html",
+    "controller": "RingkasanKonseling4Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuKonseling.RingkasanKonseling5",
+    "url": "/RingkasanKonseling5",
+    "templateurl": "module/EMR/RingkasanKonseling5.html",
+    "controller": "RingkasanKonseling5Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuKonseling.RingkasanKonseling6",
+    "url": "/RingkasanKonseling6",
+    "templateurl": "module/EMR/RingkasanKonseling6.html",
+    "controller": "RingkasanKonseling6Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuHasilRad",
+    "url": "/MenuHasilRad",
+    "templateurl": "module/EMR/MenuHasilRad.html",
+    "controller": "MenuHasilRadCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuHasilRad.HasilRadiologiAss2",
+    "url": "/HasilRadiologiAss2",
+    "templateurl": "module/EMR/HasilRadiologiAss2.html",
+    "controller": "HasilRadiologiAss2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuHasilRad.HasilRadiologiAss3",
+    "url": "/HasilRadiologiAss3",
+    "templateurl": "module/EMR/HasilRadiologiAss3.html",
+    "controller": "HasilRadiologiAss3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuHasilRad.HasilRadiologiAss4",
+    "url": "/HasilRadiologiAss4",
+    "templateurl": "module/EMR/HasilRadiologiAss4.html",
+    "controller": "HasilRadiologiAss4Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuHasilRad.HasilRadiologiAss5",
+    "url": "/HasilRadiologiAss5",
+    "templateurl": "module/EMR/HasilRadiologiAss5.html",
+    "controller": "HasilRadiologiAss5Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuHasilRad.HasilRadiologiAss6",
+    "url": "/HasilRadiologiAss6",
+    "templateurl": "module/EMR/HasilRadiologiAss6.html",
+    "controller": "HasilRadiologiAss6Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+   {
+    "name": "DaftarTransdataBatching",
+    "url": "/RGFmdGFyVHJhbnNkYXRhQmF0Y2hpbmc=",
+    "templateurl": "module/TataRekening/DaftarTransdataBatching.html",
+    "controller": "DaftarTransdataBatchingCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuEKG",
+    "url": "/MenuEKG",
+    "templateurl": "module/EMR/MenuEKG.html",
+    "controller": "MenuEKGCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuEKG.EKG2",
+    "url": "/EKG2",
+    "templateurl": "module/EMR/EKG2.html",
+    "controller": "EKG2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuIntruksiPasca",
+    "url": "/MenuIntruksiPasca",
+    "templateurl": "module/EMR/MenuIntruksiPasca.html",
+    "controller": "MenuIntruksiPascaCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuIntruksiPasca.IntruksiPascaAnastesi2",
+    "url": "/IntruksiPascaAnastesi2",
+    "templateurl": "module/EMR/IntruksiPascaAnastesi2.html",
+    "controller": "IntruksiPascaAnastesi2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuIntruksiPasca.IntruksiPascaAnastesi3",
+    "url": "/IntruksiPascaAnastesi3",
+    "templateurl": "module/EMR/IntruksiPascaAnastesi3.html",
+    "controller": "IntruksiPascaAnastesi3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuAnestesi",
+    "url": "/MenuAnestesi",
+    "templateurl": "module/EMR/MenuAnestesi.html",
+    "controller": "MenuAnestesiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuSkriningManajer.SkriningMedis",
+    "url": "/SkriningMedis",
+    "templateurl": "module/EMR/SkriningMedis.html",
+    "controller": "SkriningMedisCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuAnestesi.LaporanAnestesi2",
+    "url": "/LaporanAnestesi2",
+    "templateurl": "module/EMR/LaporanAnestesi2.html",
+    "controller": "LaporanAnestesi2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuAnestesi.LaporanAnestesi3",
+    "url": "/LaporanAnestesi3",
+    "templateurl": "module/EMR/LaporanAnestesi3.html",
+    "controller": "LaporanAnestesi3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuLembarHasil",
+    "url": "/MenuLembarHasil",
+    "templateurl": "module/EMR/MenuLembarHasil.html",
+    "controller": "MenuLembarHasilCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuLembarHasil.LembarHasilMecta",
+    "url": "/LembarHasilMecta",
+    "templateurl": "module/EMR/LembarHasilMecta.html",
+    "controller": "LembarHasilMectaCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuLembarHasil.LembarHasilMecta2",
+    "url": "/LembarHasilMecta2",
+    "templateurl": "module/EMR/LembarHasilMecta2.html",
+    "controller": "LembarHasilMecta2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuLembarHasil.LembarHasilMecta3",
+    "url": "/LembarHasilMecta3",
+    "templateurl": "module/EMR/LembarHasilMecta3.html",
+    "controller": "LembarHasilMecta3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.HPPWAIST",
+    "url": "/HPPWAIST",
+    "templateurl": "module/EMR/HPPWAIST.html",
+    "controller": "HPPWAISTCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuSkriningManajer",
+    "url": "/MenuSkriningManajer",
+    "templateurl": "module/EMR/MenuSkriningManajer.html",
+    "controller": "MenuSkriningManajerCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuSkriningManajer.SkriningMedis2",
+    "url": "/SkriningMedis2",
+    "templateurl": "module/EMR/SkriningMedis2.html",
+    "controller": "SkriningMedis2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuPraInduksi",
+    "url": "/MenuPraInduksi",
+    "templateurl": "module/EMR/MenuPraInduksi.html",
+    "controller": "MenuPraInduksiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuPraInduksi.PraInduksi",
+    "url": "/PraInduksi",
+    "templateurl": "module/EMR/PraInduksi.html",
+    "controller": "PraInduksiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuPraInduksi.PraInduksi2",
+    "url": "/PraInduksi2",
+    "templateurl": "module/EMR/PraInduksi2.html",
+    "controller": "PraInduksi2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuPraInduksi.PraInduksi3",
+    "url": "/PraInduksi3",
+    "templateurl": "module/EMR/PraInduksi3.html",
+    "controller": "PraInduksi3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuSbar",
+    "url": "/MenuSbar",
+    "templateurl": "module/EMR/MenuSbar.html",
+    "controller": "MenuSbarCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuSbar.FormulirSbar",
+    "url": "/FormulirSbar",
+    "templateurl": "module/EMR/FormulirSbar.html",
+    "controller": "FormulirSbarCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuSbar.FormulirSbar2",
+    "url": "/FormulirSbar2",
+    "templateurl": "module/EMR/FormulirSbar2.html",
+    "controller": "FormulirSbar2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuSbar.FormulirSbar3",
+    "url": "/FormulirSbar3",
+    "templateurl": "module/EMR/FormulirSbar3.html",
+    "controller": "FormulirSbar3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuSbar.FormulirSbar4",
+    "url": "/FormulirSbar4",
+    "templateurl": "module/EMR/FormulirSbar4.html",
+    "controller": "FormulirSbar4Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum",
+    "url": "/AsesmenUmum",
+    "templateurl": "module/EMR/AsesmenUmum.html",
+    "controller": "AsesmenUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  { 
+    "name": "RekamMedis.AsesmenUmum.AsesmenUmumDetail",
+    "url": "/AsesmenUmumDetail/:namaEMR/:nomorEMR",
+    "templateurl": "module/EMR/AsesmenUmumDetail.html",
+    "controller": "AsesmenUmumDetailCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.AsesmenPerawatJiwaRemajaUmum",
+    "url": "/AsesmenPerawatJiwaRemajaUmum",
+    "templateurl": "module/EMR/AsesmenPerawatJiwaRemajaUmum.html",
+    "controller": "AsesmenPerawatJiwaRemajaUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.AsesmenPerawatJiwaDewasa",
+    "url": "/AsesmenPerawatJiwaDewasa",
+    "templateurl": "module/EMR/AsesmenPerawatJiwaDewasa.html",
+    "controller": "AsesmenPerawatJiwaDewasaCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuCPPTRawatInap.CpptNew",
+    "url": "/CpptNew",
+    "templateurl": "module/EMR/CpptNew.html",
+    "controller": "CpptNewCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuCPPTRawatInap",
+    "url": "/MenuCPPTRawatInap",
+    "templateurl": "module/EMR/MenuCPPTRawatInap.html",
+    "controller": "MenuCPPTRawatInapCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuCPPTRawatInap.CpptNew2",
+    "url": "/CpptNew2",
+    "templateurl": "module/EMR/CpptNew2.html",
+    "controller": "CpptNew2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuCPPTRawatInap.CpptNew3",
+    "url": "/CpptNew3",
+    "templateurl": "module/EMR/CpptNew3.html",
+    "controller": "CpptNew3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuCPPTRawatInap.CpptNew4",
+    "url": "/CpptNew4",
+    "templateurl": "module/EMR/CpptNew4.html",
+    "controller": "CpptNew4Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuCPPTRawatInap.CpptNew5",
+    "url": "/CpptNew5",
+    "templateurl": "module/EMR/CpptNew5.html",
+    "controller": "CpptNew5Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuCPPTRawatInap.CpptNew6",
+    "url": "/CpptNew6",
+    "templateurl": "module/EMR/CpptNew6.html",
+    "controller": "CpptNew5Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.TriasePrimerUmum",
+    "url": "/TriasePrimerUmum",
+    "templateurl": "module/EMR/TriasePrimerUmum.html",
+    "controller": "TriasePrimerUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.SkriningTBUmum",
+    "url": "/SkriningTBUmum",
+    "templateurl": "module/EMR/SkriningTBUmum.html",
+    "controller": "SkriningTBUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+             
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.SuratRawatUmum",
+    "url": "/SuratRawatUmum",
+    "templateurl": "module/EMR/SuratRawatUmum.html",
+    "controller": "SuratRawatUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.Covid19EWS",
+    "url": "/Covid19EWS",
+    "templateurl": "module/EMR/Covid19EWS.html",
+    "controller": "Covid19EWSCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.AsesmenPerawatIGDUmum",
+    "url": "/AsesmenPerawatIGDUmum",
+    "templateurl": "module/EMR/AsesmenPerawatIGDUmum.html",
+    "controller": "AsesmenPerawatIGDUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.MenuSkriningManajerUmum",
+    "url": "/MenuSkriningManajerUmum",
+    "templateurl": "module/EMR/MenuSkriningManajerUmum.html",
+    "controller": "MenuSkriningManajerUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.MenuSkriningManajerUmum.SkriningManajerUmum",
+    "url": "/SkriningManajerUmum",
+    "templateurl": "module/EMR/SkriningManajerUmum.html",
+    "controller": "SkriningManajerUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.MenuSkriningManajerUmum.SkriningManajerUmum2",
+    "url": "/SkriningManajerUmum2",
+    "templateurl": "module/EMR/SkriningManajerUmum2.html",
+    "controller": "SkriningManajerUmum2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.MenuTransferUmum",
+    "url": "/MenuTransferUmum",
+    "templateurl": "module/EMR/MenuTransferUmum.html",
+    "controller": "MenuTransferUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.MenuTransferUmum.FormulirTransferUmum",
+    "url": "/FormulirTransferUmum",
+    "templateurl": "module/EMR/FormulirTransferUmum.html",
+    "controller": "FormulirTransferUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.MenuTransferUmum.FormulirTransferUmum2",
+    "url": "/FormulirTransferUmum2",
+    "templateurl": "module/EMR/FormulirTransferUmum2.html",
+    "controller": "FormulirTransferUmum2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.MenuEdukasiUmum",
+    "url": "/MenuEdukasiUmum",
+    "templateurl": "module/EMR/MenuEdukasiUmum.html",
+    "controller": "MenuEdukasiUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.MenuEdukasiUmum.PengkajianEdukasiUmum",
+    "url": "/PengkajianEdukasiUmum",
+    "templateurl": "module/EMR/PengkajianEdukasiUmum.html",
+    "controller": "PengkajianEdukasiUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.MenuEdukasiUmum.PengkajianEdukasiUmum2",
+    "url": "/PengkajianEdukasiUmum2",
+    "templateurl": "module/EMR/PengkajianEdukasiUmum2.html",
+    "controller": "PengkajianEdukasiUmum2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.AsesmenUlangRiNyeriUmum",
+    "url": "/AsesmenUlangRiNyeriUmum",
+    "templateurl": "module/EMR/AsesmenUlangRiNyeriUmum.html",
+    "controller": "AsesmenUlangRiNyeriUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.AsesmenPerawatInapUmum",
+    "url": "/AsesmenPerawatInapUmum",
+    "templateurl": "module/EMR/AsesmenPerawatInapUmum.html",
+    "controller": "AsesmenPerawatInapUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.HasilAsesmen",
+    "url": "/HasilAsesmen",
+    "templateurl": "module/EMR/HasilAsesmen.html",
+    "controller": "HasilAsesmenCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.OrderElektromedik",
+    "url": "/OrderElektromedik",
+    "templateurl": "module/EMR/OrderElektromedik.html",
+    "controller": "OrderElektromedikCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.AsesmenMedisGawatUmum",
+    "url": "/AsesmenMedisGawatUmum",
+    "templateurl": "module/EMR/AsesmenMedisGawatUmum.html",
+    "controller": "AsesmenMedisGawatUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuAsesmenPraAnestesi",
+    "url": "/MenuAsesmenPraAnestesi",
+    "templateurl": "module/EMR/MenuAsesmenPraAnestesi.html",
+    "controller": "MenuAsesmenPraAnestesiCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.MenuAsesmenPraAnestesi.AsesmenPraAnestesi2",
+    "url": "/AsesmenPraAnestesi2",
+    "templateurl": "module/EMR/AsesmenPraAnestesi2.html",
+    "controller": "AsesmenPraAnestesi2Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ] 
+  },
+  {
+    "name": "RekamMedis.MenuAsesmenPraAnestesi.AsesmenPraAnestesi3",
+    "url": "/AsesmenPraAnestesi3",
+    "templateurl": "module/EMR/AsesmenPraAnestesi3.html",
+    "controller": "AsesmenPraAnestesi3Ctrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ] 
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.AsesmenMedisInapUmum",
+    "url": "/AsesmenMedisInapUmum",
+    "templateurl": "module/EMR/AsesmenMedisInapUmum.html",
+    "controller": "AsesmenMedisInapUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.MenuCPPTRawatInapUmum",
+    "url": "/MenuCPPTRawatInapUmum",
+    "templateurl": "module/EMR/MenuCPPTRawatInapUmum.html",
+    "controller": "MenuCPPTRawatInapUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.MenuCPPTRawatInapUmum.CpptNewUmum",
+    "url": "/CpptNewUmum",
+    "templateurl": "module/EMR/CpptNewUmum.html",
+    "controller": "CpptNewUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+      
+    ]
+  },
+  {
+    "name": "RekamMedis.LembarHasilTindakanUjiFungsiProsedurKFR",
+    "url": "/LembarHasilTindakanUjiFungsiProsedurKFR",
+    "templateurl": "module/EMR/LembarHasilTindakanUjiFungsiProsedurKFR.html",
+    "controller": "LembarHasilTindakanUjiFungsiProsedurKFRCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
+  },
+  {
+    "name": "RekamMedis.AsesmenUmum.LembarHasilTindakanUjiFungsiProsedurKFRUmum",
+    "url": "/LembarHasilTindakanUjiFungsiProsedurKFRUmum",
+    "templateurl": "module/EMR/LembarHasilTindakanUjiFungsiProsedurKFRUmum.html",
+    "controller": "LembarHasilTindakanUjiFungsiProsedurKFRUmumCtrl",
+    "deps": [
+      {
+        "module": "Services",
+        "define": "Service"
+      },
+      {
+        "module": "LoginServices",
+        "define": "LoginService"
+      },
+      {
+        "module": "MedifirstService",
+        "define": "MedifirstService"
+      },
+      {
+        "define": "RekamMedisCtrl"
+      }
+    ]
   }
 
 ]

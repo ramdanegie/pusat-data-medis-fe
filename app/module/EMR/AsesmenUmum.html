@@ -1,0 +1,177 @@
+<style type="text/css">
+  .style-center {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+  }
+
+  .style-right {
+      display: inline-block;
+      text-align: right;
+      width: 100%;
+  }
+
+  .style-left {
+      display: inline-block;
+      text-align: left;
+      width: 100%;
+  }
+
+  .k-treeview .k-item {
+      background-color: #f9f9f9 !important;
+  }
+
+  .k-checkbox-label:before {
+      margin: 1px 0px 0px 6px;
+  }
+  .tandaan {
+      background-color: #4c5356;
+      color: #ffffff;
+  }
+  .diplay_none{
+      display: none
+  }
+  .custom-button {
+  margin: 0 0 10px;
+  background: none;
+  color: black;
+  border-radius: 0.8em;
+  border: 1px solid;
+  background-color: white;
+  /* cursor: none; */
+}
+.button-details {
+  background: none;
+  color: black;
+  border-radius: 15px;
+  border: 1px solid;
+  padding: 2px 7px 2px;
+  font-family: inherit;
+  line-height: 1.72em;
+  text-align: center;
+  /* cursor: pointer; */
+  text-decoration: none;
+  background-color: white;
+  display: inline-block;
+  min-width: 78px;
+  vertical-align: middle;
+  margin-top: 5px;
+}
+.button-details:hover {
+  color: white;
+  border-color:#ff2359 !important;
+  background-color: #ff2359 !important;
+
+}
+</style>
+
+<div ng-show="dataVOloaded && item.noMr">
+  <div class="panel panel-default container_12">
+      <div class="panel-heading"><span c-translate>Asesmen Umum</span>
+          <span class="icon fa fa-chevron-circle-left" ng-show="isShowNavAses" style="right:10px"
+          ng-click="showNav()"></span>
+          <span class="icon fa fa-chevron-circle-right" ng-show="!isShowNavAses" style="right:10px"
+              ng-click="showNav()"></span>
+      </div>
+      <div class="panel-body">
+          <div class="grid_12">    
+              <div ng-cloak>
+                  <md-content>
+                      <md-tabs md-dynamic-height md-border-bottom md-selected="myVar">
+                  
+                          <md-tab label="Riwayat Pengkajian" ng-if="showRiwayatEMR === false" >
+                              <md-content class="md-padding">
+                                  
+                                  <div class="grid_12">
+                                      <!--  <div class="grid_12">
+                                  <div kendo-grid k-data-source="sourcePAP" k-selectable="'row'" options="mainGridOptions" k-ng-model="current"
+                                      ng-click="kl(current)"></div>
+                              </div> -->
+                                      <div class="grid_12 borderBox">
+                                          <kendo-grid id="kGrid" data-source="dataDaftar" options="columnDaftar"
+                                              k-selectable="'row'" k-sortable="'true'" k-resizable="'true'"
+                                              k-ng-model="dataSelected" ng-click="klikGrid(dataSelected)">
+                                              <div k-detail-template>
+                                                  <kendo-tabstrip>
+                                                      <div>
+                                                          <div id="kGridDetail" kendo-grid k-options="data2(dataItem)" k-sortable="'true'"
+                                                             >
+                                                          </div>
+                                                      </div>
+                                                  </kendo-tabstrip>
+                                              </div>
+                                          </kendo-grid>
+
+                                      </div>
+                                      <div class="grid_12">
+                                          <div class="grid_2">
+                                              <button class="btnTemplate1" style="margin-left: 0;"
+                                                  ng-click="DaftarRawatInap()"><i class="fa fa-search"></i>Daftar Rawat Inap</button>
+                                          </div>
+                                          <div class="grid_2"></div>
+                                          <div class="grid_2">
+                                              <button class="btnTemplate1" style="margin-left: 0;"
+                                                  ng-click="Lihat()"><i class="fa fa-search"></i>Lihat</button>
+                                              <!-- <button class="c-button" ng-click="Lihat()" style="font-size:20px">Lihat</button> -->
+                                          </div>
+                                          <div class="grid_2">
+                                              <button class="btnTemplate1" style="margin-left: 0;"
+                                                  ng-click="create()"><i class="fa fa-plus-circle"></i>Buat
+                                                  Baru</button>
+                                              <!-- <button class="c-button" ng-click="create()" style="font-size:20px">Buat Baru</button> -->
+                                          </div>
+                                          <div class="grid_2">
+                                              <button class="btnTemplate1" style="margin-left: 0;"
+                                                  ng-click="refresh()"><i class="fa fa-refresh"></i>Refresh
+                                                  </button>
+                                              <!-- <button class="c-button" ng-click="create()" style="font-size:20px">Buat Baru</button> -->
+                                          </div>
+                                          <div class="grid_2">
+                                              <button class="btnTemplate1 error" style="margin-left: 0;"
+                                                  ng-click="hapus()"><i class="fa fa-trash"></i>Hapus
+                                                  </button>
+                                              <!-- <button class="c-button" ng-click="create()" style="font-size:20px">Buat Baru</button> -->
+                                          </div>
+                                          <!-- <div class="grid_2">
+                                                  <button class="btnTemplate1" style="margin-left: 0;"
+                                                      ng-click="init  ()"><i class="fa fa-refresh"></i>Refresh
+                                                      </button>
+                                                 
+                                              </div> -->
+                                      </div>
+                                  </div>
+                              </md-content>
+                          </md-tab>
+                          <md-tab label="Pengkajian Detail" ng-if="showRiwayatEMR === true">
+                              <md-content class="md-padding">
+                                  <div class="grid_12">
+
+                                      <div class="grid_3"  ng-class="{'diplay_none': isShowNavAses == false, 'animated slideInLeft' : isShowNavAses == true && asesmen == 1}">
+                                          <div class="grid_12">
+                                              <div class="grid_12">
+                                                  <div id="treeview" kendo-tree-view="tree"
+                                                      k-data-source="treeSourceBedah"
+                                                      options="mainTreeViewBedahOption" ng-model="treeView"
+                                                      ng-click="klikBedah(tree)">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="grid_9 "  ng-class="{'grid_12 animated slideInRight': isShowNavAses == false}">
+                                          <div ui-view></div>
+                                      </div>
+                                      
+                                      
+                                  </div>
+                              </md-content>
+                          </md-tab>
+                      </md-tabs>
+                  </md-content>
+              </div>
+          </div>
+
+
+
+      </div>
+      <div ng-include='"../app/template/Shared/TemplateLoading"'></div>
