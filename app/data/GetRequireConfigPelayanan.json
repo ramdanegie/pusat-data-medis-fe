@@ -1514,6 +1514,490 @@
         {
             "nameDep": "DaftarRujukanTransdataCtrl",
             "urlDep": "module/Registrasi/DaftarRujukanTransdataCtrl"
+        },
+        {
+            "nameDep": "SkorEWSAnak7Ctrl",
+            "urlDep": "module/EMR/SkorEWSAnak7Ctrl"
+        },
+        {
+            "nameDep": "HasilRadiologiAssCtrl",
+            "urlDep": "module/EMR/HasilRadiologiAssCtrl"
+        },
+        {
+            "nameDep": "SkorEWSDewasa11Ctrl",
+            "urlDep": "module/EMR/SkorEWSDewasa11Ctrl"
+        },
+        {
+            "nameDep": "SkorEWSDewasa12Ctrl",
+            "urlDep": "module/EMR/SkorEWSDewasa12Ctrl"
+        },
+        {
+            "nameDep": "SkorEWSDewasa13Ctrl",
+            "urlDep": "module/EMR/SkorEWSDewasa13Ctrl"
+        },
+        {
+            "nameDep": "SkorEWSDewasa14Ctrl",
+            "urlDep": "module/EMR/SkorEWSDewasa14Ctrl"
+        },
+        {
+            "nameDep": "SkorEWSDewasa15Ctrl",
+            "urlDep": "module/EMR/SkorEWSDewasa15Ctrl"
+        },
+        {
+            "nameDep": "SkorEWSDewasa16Ctrl",
+            "urlDep": "module/EMR/SkorEWSDewasa16Ctrl"
+        },
+        {
+            "nameDep": "MenuTMSCtrl",
+            "urlDep": "module/EMR/MenuTMSCtrl"
+        },
+        {
+            "nameDep": "TindakanTMS2Ctrl",
+            "urlDep": "module/EMR/TindakanTMS2Ctrl"
+        },
+        {
+            "nameDep": "TindakanTMS3Ctrl",
+            "urlDep": "module/EMR/TindakanTMS3Ctrl"
+        },
+        {
+            "nameDep": "TindakanTMS4Ctrl",
+            "urlDep": "module/EMR/TindakanTMS4Ctrl"
+        },
+        {
+            "nameDep": "TindakanTMS5Ctrl",
+            "urlDep": "module/EMR/TindakanTMS5Ctrl"
+        },
+        {
+            "nameDep": "ECTkonsvesionalCtrl",
+            "urlDep": "module/EMR/ECTkonsvesionalCtrl"
+        },
+        {
+            "nameDep": "MenuECTkonsvesionalCtrl",
+            "urlDep": "module/EMR/MenuECTkonsvesionalCtrl"
+        },
+        {
+            "nameDep": "ECTkonsvesional2Ctrl",
+            "urlDep": "module/EMR/ECTkonsvesional2Ctrl"
+        },
+        {
+            "nameDep": "ECTkonsvesional3Ctrl",
+            "urlDep": "module/EMR/ECTkonsvesional3Ctrl"
+        },
+        {
+            "nameDep": "LembarObservasiPxDenganRestrain19Ctrl",
+            "urlDep": "module/EMR/LembarObservasiPxDenganRestrain19Ctrl"
+        },
+        {
+            "nameDep": "LembarObservasiPxDenganRestrain20Ctrl",
+            "urlDep": "module/EMR/LembarObservasiPxDenganRestrain20Ctrl"
+        },
+        {
+            "nameDep": "LembarObservasiPxDenganRestrain21Ctrl",
+            "urlDep": "module/EMR/LembarObservasiPxDenganRestrain21Ctrl"
+        },
+        {
+            "nameDep": "LembarObservasiPxDenganRestrain22Ctrl",
+            "urlDep": "module/EMR/LembarObservasiPxDenganRestrain22Ctrl"
+        },
+        {
+            "nameDep": "LembarObservasiPxDenganRestrain23Ctrl",
+            "urlDep": "module/EMR/LembarObservasiPxDenganRestrain23Ctrl"
+        },
+        {
+            "nameDep": "LembarObservasiPxDenganRestrain24Ctrl",
+            "urlDep": "module/EMR/LembarObservasiPxDenganRestrain24Ctrl"
+        },
+        {
+            "nameDep": "LaporanPasienDaftar2Ctrl",
+            "urlDep": "module/Registrasi/Laporan/LaporanPasienDaftar2Ctrl"
+        },
+        {
+            "nameDep": "CatatanGrafikTandaVital8Ctrl",
+            "urlDep": "module/EMR/CatatanGrafikTandaVital8Ctrl"
+        },
+        {
+            "nameDep": "MenuTransfer2Ctrl",
+            "urlDep": "module/EMR/MenuTransfer2Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer19Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer19Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer20Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer20Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer21Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer21Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer22Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer22Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer23Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer23Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer24Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer24Ctrl"
+        },
+        {
+            "nameDep": "DaftarIsianMectaCtrl",
+            "urlDep": "module/EMR/DaftarIsianMectaCtrl"
+        },
+        {
+            "nameDep": "MenuDaftarIsianMectaCtrl",
+            "urlDep": "module/EMR/MenuDaftarIsianMectaCtrl"
+        },
+        {
+            "nameDep": "DaftarIsianMecta2Ctrl",
+            "urlDep": "module/EMR/DaftarIsianMecta2Ctrl"
+        },
+        {
+            "nameDep": "DaftarIsianMecta3Ctrl",
+            "urlDep": "module/EMR/DaftarIsianMecta3Ctrl"
+        },
+        {
+            "nameDep": "MenuTransfer3Ctrl",
+            "urlDep": "module/EMR/MenuTransfer3Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer25Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer25Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer26Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer26Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer27Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer27Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer28Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer28Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer29Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer29Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer30Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer30Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer31Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer31Ctrl"
+        },
+        {
+            "nameDep": "FormulirTransfer32Ctrl",
+            "urlDep": "module/EMR/FormulirTransfer32Ctrl"
+        },
+        {
+            "nameDep": "MenuTransfer4Ctrl",
+            "urlDep": "module/EMR/MenuTransfer4Ctrl"
+        },
+        {
+            "nameDep": "MenuTransfer4Ctrl",
+            "urlDep": "module/EMR/MenuTransfer4Ctrl"
+        },
+        {
+            "nameDep": "RingkasanKonseling3Ctrl",
+            "urlDep": "module/EMR/RingkasanKonseling3Ctrl"
+        },
+        {
+            "nameDep": "RingkasanKonseling4Ctrl",
+            "urlDep": "module/EMR/RingkasanKonseling4Ctrl"
+        },
+        {
+            "nameDep": "RingkasanKonseling5Ctrl",
+            "urlDep": "module/EMR/RingkasanKonseling5Ctrl"
+        },
+        {
+            "nameDep": "RingkasanKonseling6Ctrl",
+            "urlDep": "module/EMR/RingkasanKonseling6Ctrl"
+        },
+        {
+            "nameDep": "MenuHasilRadCtrl",
+            "urlDep": "module/EMR/MenuHasilRadCtrl"
+        },
+        {
+            "nameDep": "HasilRadiologiAss2Ctrl",
+            "urlDep": "module/EMR/HasilRadiologiAss2Ctrl"
+        },
+        {
+            "nameDep": "HasilRadiologiAss3Ctrl",
+            "urlDep": "module/EMR/HasilRadiologiAss3Ctrl"
+        },
+        {
+            "nameDep": "HasilRadiologiAss4Ctrl",
+            "urlDep": "module/EMR/HasilRadiologiAss4Ctrl"
+        },
+        {
+            "nameDep": "HasilRadiologiAss5Ctrl",
+            "urlDep": "module/EMR/HasilRadiologiAss5Ctrl"
+        },
+        {
+            "nameDep": "HasilRadiologiAss6Ctrl",
+            "urlDep": "module/EMR/HasilRadiologiAss6Ctrl"
+        },
+        {
+            "nameDep": "DaftarTransdataBatchingCtrl",
+            "urlDep": "module/TataRekening/DaftarTransdataBatchingCtrl"
+        },
+        {
+            "nameDep": "MenuEKGCtrl",
+            "urlDep": "module/EMR/MenuEKGCtrl"
+        },
+        {
+            "nameDep": "EKG2Ctrl",
+            "urlDep": "module/EMR/EKG2Ctrl"
+        },
+        {
+            "nameDep": "MenuIntruksiPascaCtrl",
+            "urlDep": "module/EMR/MenuIntruksiPascaCtrl"
+        },
+        {
+            "nameDep": "IntruksiPascaAnastesi2Ctrl",
+            "urlDep": "module/EMR/IntruksiPascaAnastesi2Ctrl"
+        },
+        {
+            "nameDep": "IntruksiPascaAnastesi3Ctrl",
+            "urlDep": "module/EMR/IntruksiPascaAnastesi3Ctrl"
+        },
+        {
+            "nameDep": "MenuAnestesiCtrl",
+            "urlDep": "module/EMR/MenuAnestesiCtrl"
+        },
+        {
+            "nameDep": "SkriningMedisCtrl",
+            "urlDep": "module/EMR/SkriningMedisCtrl"
+        },
+        {
+            "nameDep": "LaporanAnestesi2Ctrl",
+            "urlDep": "module/EMR/LaporanAnestesi2Ctrl"
+        },
+        {
+            "nameDep": "LaporanAnestesi3Ctrl",
+            "urlDep": "module/EMR/LaporanAnestesi3Ctrl"
+        },
+        {
+            "nameDep": "MenuLembarHasilCtrl",
+            "urlDep": "module/EMR/MenuLembarHasilCtrl"
+        },
+        {
+            "nameDep": "LembarHasilMectaCtrl",
+            "urlDep": "module/EMR/LembarHasilMectaCtrl"
+        },
+        {
+            "nameDep": "LembarHasilMecta2Ctrl",
+            "urlDep": "module/EMR/LembarHasilMecta2Ctrl"
+        },
+        {
+            "nameDep": "LembarHasilMecta3Ctrl",
+            "urlDep": "module/EMR/LembarHasilMecta3Ctrl"
+        },
+        {
+            "nameDep": "HPPWAISTCtrl",
+            "urlDep": "module/EMR/HPPWAISTCtrl"
+        },
+        {
+            "nameDep": "MenuSkriningManajerCtrl",
+            "urlDep": "module/EMR/MenuSkriningManajerCtrl"
+        },
+        {
+            "nameDep": "SkriningMedis2Ctrl",
+            "urlDep": "module/EMR/SkriningMedis2Ctrl"
+        },
+        {
+            "nameDep": "MenuPraInduksiCtrl",
+            "urlDep": "module/EMR/MenuPraInduksiCtrl"
+        },
+        {
+            "nameDep": "PraInduksiCtrl",
+            "urlDep": "module/EMR/PraInduksiCtrl"
+        },
+        {
+            "nameDep": "PraInduksi2Ctrl",
+            "urlDep": "module/EMR/PraInduksi2Ctrl"
+        },
+        {
+            "nameDep": "MenuSbarCtrl",
+            "urlDep": "module/EMR/MenuSbarCtrl"
+        },
+        {
+            "nameDep": "FormulirSbarCtrl",
+            "urlDep": "module/EMR/FormulirSbarCtrl"
+        },
+        {
+            "nameDep": "FormulirSbar2Ctrl",
+            "urlDep": "module/EMR/FormulirSbar2Ctrl"
+        },
+        {
+            "nameDep": "FormulirSbar3Ctrl",
+            "urlDep": "module/EMR/FormulirSbar3Ctrl"
+        },
+        {
+            "nameDep": "FormulirSbar4Ctrl",
+            "urlDep": "module/EMR/FormulirSbar4Ctrl"
+        },
+        {
+            "nameDep": "AsesmenUmumDetailCtrl",
+            "urlDep": "module/EMR/AsesmenUmumDetailCtrl"
+        },
+        {
+            "nameDep": "AsesmenUmumCtrl",
+            "urlDep": "module/EMR/AsesmenUmumCtrl"
+        },
+        {
+            "nameDep": "AsesmenPerawatJiwaRemajaUmumCtrl",
+            "urlDep": "module/EMR/AsesmenPerawatJiwaRemajaUmumCtrl"
+        },
+        {
+            "nameDep": "AsesmenPerawatJiwaDewasaCtrl",
+            "urlDep": "module/EMR/AsesmenPerawatJiwaDewasaCtrl"
+        },
+        {
+            "nameDep": "CpptNewCtrl",
+            "urlDep": "module/EMR/CpptNewCtrl"
+        },
+        {
+            "nameDep": "MenuCPPTRawatInapCtrl",
+            "urlDep": "module/EMR/MenuCPPTRawatInapCtrl"
+        },
+        {
+            "nameDep": "CpptNew2Ctrl",
+            "urlDep": "module/EMR/CpptNew2Ctrl"
+        },
+        {
+            "nameDep": "CpptNew3Ctrl",
+            "urlDep": "module/EMR/CpptNew3Ctrl"
+        },
+        {
+            "nameDep": "CpptNew4Ctrl",
+            "urlDep": "module/EMR/CpptNew4Ctrl"
+        },
+        {
+            "nameDep": "CpptNew5Ctrl",
+            "urlDep": "module/EMR/CpptNew5Ctrl"
+        },
+        {
+            "nameDep": "CpptNew6Ctrl",
+            "urlDep": "module/EMR/CpptNew6Ctrl"
+        },
+        {
+            "nameDep": "TriasePrimerUmumCtrl",
+            "urlDep": "module/EMR/TriasePrimerUmumCtrl"
+        },
+        {
+            "nameDep": "SkriningTBUmumCtrl",
+            "urlDep": "module/EMR/SkriningTBUmumCtrl"
+        },
+        {
+            "nameDep": "SuratRawatUmumCtrl",
+            "urlDep": "module/EMR/SuratRawatUmumCtrl"
+        },
+        {
+            "nameDep": "Covid19EWSCtrl",
+            "urlDep": "module/EMR/Covid19EWSCtrl"
+        },
+        {
+            "nameDep": "AsesmenPerawatIGDUmumCtrl",
+            "urlDep": "module/EMR/AsesmenPerawatIGDUmumCtrl"
+        },
+        {
+            "nameDep": "MenuSkriningManajerUmumCtrl",
+            "urlDep": "module/EMR/MenuSkriningManajerUmumCtrl"
+        },
+        {
+            "nameDep": "SkriningManajerUmumCtrl",
+            "urlDep": "module/EMR/SkriningManajerUmumCtrl"
+        },
+        {
+            "nameDep": "SkriningManajerUmum2Ctrl",
+            "urlDep": "module/EMR/SkriningManajerUmum2Ctrl"
+        },
+        {
+            "nameDep": "MenuTransferUmumCtrl",
+            "urlDep": "module/EMR/MenuTransferUmumCtrl"
+        },
+        {
+            "nameDep": "FormulirTransferUmumCtrl",
+            "urlDep": "module/EMR/FormulirTransferUmumCtrl"
+        },
+        {
+            "nameDep": "FormulirTransferUmum2Ctrl",
+            "urlDep": "module/EMR/FormulirTransferUmum2Ctrl"
+        },
+        {
+            "nameDep": "MenuEdukasiUmumCtrl",
+            "urlDep": "module/EMR/MenuEdukasiUmumCtrl"
+        },
+        {
+            "nameDep": "PengkajianEdukasiUmumCtrl",
+            "urlDep": "module/EMR/PengkajianEdukasiUmumCtrl"
+        },
+        {
+            "nameDep": "PengkajianEdukasiUmum2Ctrl",
+            "urlDep": "module/EMR/PengkajianEdukasiUmum2Ctrl"
+        },
+        {
+            "nameDep": "AsesmenUlangRiNyeriUmumCtrl",
+            "urlDep": "module/EMR/AsesmenUlangRiNyeriUmumCtrl"
+        },
+        {
+            "nameDep": "AsesmenPerawatInapUmumCtrl",
+            "urlDep": "module/EMR/AsesmenPerawatInapUmumCtrl"
+        },
+        {
+            "nameDep": "HasilAsesmenCtrl",
+            "urlDep": "module/EMR/HasilAsesmenCtrl"
+        },
+        {
+            "nameDep": "OrderElektromedikCtrl",
+            "urlDep": "module/EMR/OrderElektromedikCtrl"
+        },
+        {
+            "nameDep": "AsesmenMedisGawatUmumCtrl",
+            "urlDep": "module/EMR/AsesmenMedisGawatUmumCtrl"
+        },
+        {
+            "nameDep": "MenuAsesmenPraAnestesiCtrl",
+            "urlDep": "module/EMR/MenuAsesmenPraAnestesiCtrl"
+        },
+        {
+            "nameDep": "AsesmenPraAnestesi2Ctrl",
+            "urlDep": "module/EMR/AsesmenPraAnestesi2Ctrl"
+        },
+        {
+            "nameDep": "AsesmenPraAnestesi3Ctrl",
+            "urlDep": "module/EMR/AsesmenPraAnestesi3Ctrl"
+        },
+        {
+            "nameDep": "PraInduksi3Ctrl",
+            "urlDep": "module/EMR/PraInduksi3Ctrl"
+        },
+        {
+            "nameDep": "AsesmenMedisInapUmumCtrl",
+            "urlDep": "module/EMR/AsesmenMedisInapUmumCtrl"
+        },
+        {
+            "nameDep": "MenuCPPTRawatInapUmumCtrl",
+            "urlDep": "module/EMR/MenuCPPTRawatInapUmumCtrl"
+        },
+        {
+            "nameDep": "CpptNewUmumCtrl",
+            "urlDep": "module/EMR/CpptNewUmumCtrl"
+        },
+        {
+            "nameDep": "LembarHasilTindakanUjiFungsiProsedurKFRCtrl",
+            "urlDep": "module/EMR/LembarHasilTindakanUjiFungsiProsedurKFRCtrl"
+        },
+        {
+            "nameDep": "LembarHasilTindakanUjiFungsiProsedurKFRUmumCtrl",
+            "urlDep": "module/EMR/LembarHasilTindakanUjiFungsiProsedurKFRUmumCtrl"
         }                                              
     ]
 }

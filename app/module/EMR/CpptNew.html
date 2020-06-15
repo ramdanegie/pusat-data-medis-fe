@@ -1,0 +1,1048 @@
+<style type="text/css">
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid #228be6;
+    }
+
+    .k-slider-horizontal {
+        display: inline-block;
+        float: left;
+        width: 450px;
+
+        height: 26px;
+
+ 
+
+    }
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    .k-slider {
+
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+        display: inline-block;
+    }
+
+    .activeBtn {
+        background-color: #10c4b2;
+        color: #ffffff;
+    }
+</style>
+<div class="grid_12" disable-contents="allDisabled" id="form">
+<div class="grid_12">
+    <div class="panel panel-default container_12">
+            <div class="panel-heading" c-translate>Catatan Perkembangan Pasien Terintegrasi</div>
+    </div>
+    <div class="grid_12" style="margin-top: 20px">
+    <fieldset>
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Tanggal dan Jam Datang"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%" k-ng-model="item.obj[111468]" kendo-datetimepicker
+                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                </div>
+            </div>
+
+
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Dpjp"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111469]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai " />
+                </div>
+            </div> 
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Bangsal"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111470]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listRuang" />
+                </div>
+            </div> 
+            <div class="grid_3">
+                <div class="grid_12">
+                    <label c-label item="item" c-label-text="Kelas"></label>
+                </div>
+                <div class="grid_12">
+                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111471]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listKelas " />
+                </div>
+            </div> 
+
+    </fieldset>
+    </div>
+    <div class="grid_12">
+                <fieldset style="margin-top: 10px; ">
+                    
+                    <div class="grid_12" style="margin-top: 20px">
+                        <div><i><b>Kolom Riview dan verifikasi dpjp hanya di isi oleh dokter verifikator</b></i></div>
+                        <div><i><b>Kolom Notis Hanya di isi ketika DPJP/Perawat menotis hasil Asesmen PPA lain</b></i></div>
+                        <table style="width:100%;color: #4c5356;">
+    
+                            <tr>
+                                <th style="text-align: center;width: 200px" rowspan="2">Tanggal/Jam</th>
+                                <th style="text-align: center;width: 120px" rowspan="2">Profesional Pemberi Asuhan</th>
+                                <th style="text-align: center;width: 400px"  colspan="2" >Hasil Asesmen Pasien Dan Pemberian Pelayanan</th>
+                                <th style="text-align: center;width: 150px" rowspan="2">Intruksi PPA</th>
+                                <th style="text-align: center;width: 200px" rowspan="2">Riview & Verifikasi DPJP</th>
+                                
+
+                                                                
+                               
+                            </tr>
+                            <tr>
+                                <th style="text-align: center;width: 200px">SOAP</th>
+                                <th style="text-align: center;width: 200px">NOTIS</th>
+                            </tr>
+                            <!-- 1 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111348]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111349]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111350]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111351]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114818}}"
+                                        ng-model="item.obj[114818]">
+                                    <label class="k-checkbox-label" for="item.obj{{114818}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111352]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111353]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111354]" />
+                                </td>
+                                <td rowspan="4">
+                                     <textarea style="width: 95%;height: 600px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111355]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111356]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111357]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" disabled /> 
+                            
+                                </td>
+
+                            </tr>
+                            <!-- 1 -->
+                            <!-- 2 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111358]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111359]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111360]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111361]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114819}}"
+                                        ng-model="item.obj[114819]">
+                                    <label class="k-checkbox-label" for="item.obj{{114819}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111362]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111363]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111364]" />
+                                </td>
+                               <!--  <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111365]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111366]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111367]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 2 -->
+                            <!-- 3 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111368]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111369]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111370]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111371]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114820}}"
+                                        ng-model="item.obj[114820]">
+                                    <label class="k-checkbox-label" for="item.obj{{114820}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111372]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111373]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111374]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111375]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111376]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111377]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 3 -->
+                            <!-- 4 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111378]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111379]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111380]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111381]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114821}}"
+                                        ng-model="item.obj[114821]">
+                                    <label class="k-checkbox-label" for="item.obj{{114821}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111382]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111383]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111384]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111385]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111386]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111387]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 4 -->
+                            <!-- 5 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111388]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111389]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111390]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111391]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114822}}"
+                                        ng-model="item.obj[114822]">
+                                    <label class="k-checkbox-label" for="item.obj{{114822}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111392]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111393]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111394]" />
+                                </td>
+                                <td rowspan="4">
+                                     <textarea style="width: 95%;height: 600px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111395]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111396]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111397]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+
+                            </tr>
+                            <!-- 5 -->
+                            <!-- 6 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111398]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111399]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111400]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111401]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114823}}"
+                                        ng-model="item.obj[114823]">
+                                    <label class="k-checkbox-label" for="item.obj{{114823}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111402]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111403]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111404]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111405]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111406]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111407]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 6 -->
+                            <!-- 7 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111408]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111409]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111410]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111411]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114824}}"
+                                        ng-model="item.obj[114824]">
+                                    <label class="k-checkbox-label" for="item.obj{{114824}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111412]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111413]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111414]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111415]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111416]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111417]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 7 -->
+                            <!-- 8 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111418]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111419]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111420]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111421]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114825}}"
+                                        ng-model="item.obj[114825]">
+                                    <label class="k-checkbox-label" for="item.obj{{114825}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111422]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111423]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111424]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111425]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111426]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111427]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 8 -->
+                            <!-- 9 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111428]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111429]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111430]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111431]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                     <input type="checkbox" class="k-checkbox" id="item.obj{{114826}}"
+                                        ng-model="item.obj[114826]">
+                                    <label class="k-checkbox-label" for="item.obj{{114826}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111432]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111433]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111434]" />
+                                </td>
+                                <td rowspan="4">
+                                     <textarea style="width: 95%;height: 600px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111435]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111436]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111437]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+
+                            </tr>
+                            <!-- 9 -->
+                            <!-- 10 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111438]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111439]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111440]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111441]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                     <input type="checkbox" class="k-checkbox" id="item.obj{{114827}}"
+                                        ng-model="item.obj[114827]">
+                                    <label class="k-checkbox-label" for="item.obj{{114827}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111442]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111443]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111444]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111445]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111446]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111447]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 10 -->
+                            <!-- 11 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111448]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111449]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111450]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111451]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                     <input type="checkbox" class="k-checkbox" id="item.obj{{114828}}"
+                                        ng-model="item.obj[114828]">
+                                    <label class="k-checkbox-label" for="item.obj{{114828}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111452]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111453]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111454]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111455]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111456]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111457]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 11 -->
+                            <!-- 12 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111458]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111459]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111460]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111461]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114829}}"
+                                        ng-model="item.obj[114829]">
+                                    <label class="k-checkbox-label" for="item.obj{{114829}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111462]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111463]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111464]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111465]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111466]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111467]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 12 -->
+                            <!-- 13 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111473]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111474]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111475]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111476]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114830}}"
+                                        ng-model="item.obj[114830]">
+                                    <label class="k-checkbox-label" for="item.obj{{114830}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111477]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111478]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111479]" />
+                                </td>
+                                <td rowspan="4">
+                                     <textarea style="width: 95%;height: 600px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111480]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111481]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111482]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+
+                            </tr>
+                            <!-- 13 -->
+                            <!-- 14 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111483]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111484]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111485]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111486]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114831}}"
+                                        ng-model="item.obj[114831]">
+                                    <label class="k-checkbox-label" for="item.obj{{114831}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111487]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111488]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111489]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111490]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111491]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111492]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 14 -->
+                            <!-- 15 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111493]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111494]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111495]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111496]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114832}}"
+                                        ng-model="item.obj[114832]">
+                                    <label class="k-checkbox-label" for="item.obj{{114832}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111497]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111498]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111499]" />
+                                </td>
+                               <!--  <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111500]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111501]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111502]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 15 -->
+                            <!-- 16 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111503]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111504]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111505]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111506]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114833}}"
+                                        ng-model="item.obj[114833]">
+                                    <label class="k-checkbox-label" for="item.obj{{114833}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111507]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111508]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111509]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111510]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111511]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111512]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 16 -->
+                            <!-- 17 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111513]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111514]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111515]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111516]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114834}}"
+                                        ng-model="item.obj[114834]">
+                                    <label class="k-checkbox-label" for="item.obj{{114834}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111517]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111518]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111519]" />
+                                </td>
+                                <td rowspan="4">
+                                     <textarea style="width: 95%;height: 600px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111520]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111521]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111522]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+
+                            </tr>
+                            <!-- 17 -->
+                            <!-- 18 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111523]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111524]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111525]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111526]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114835}}"
+                                        ng-model="item.obj[114835]">
+                                    <label class="k-checkbox-label" for="item.obj{{114835}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111527]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111528]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111529]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111530]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111531]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111532]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 18 -->
+                            <!-- 19 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111533]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111534]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111535]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111536]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114836}}"
+                                        ng-model="item.obj[114836]">
+                                    <label class="k-checkbox-label" for="item.obj{{114836}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111537]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111538]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111539]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111540]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111541]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111542]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 19 -->
+                            <!-- 20 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111543]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111544]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111545]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111546]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114837}}"
+                                        ng-model="item.obj[114837]">
+                                    <label class="k-checkbox-label" for="item.obj{{114837}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111547]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111548]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111549]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111550]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111551]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111552]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 20 -->
+                            <!-- 21 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111553]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111554]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111555]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111556]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114838}}"
+                                        ng-model="item.obj[114838]">
+                                    <label class="k-checkbox-label" for="item.obj{{114838}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111557]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111558]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111559]" />
+                                </td>
+                                <td rowspan="4">
+                                     <textarea style="width: 95%;height: 600px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111560]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111561]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111562]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+
+                            </tr>
+                            <!-- 21 -->
+                            <!-- 22 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111563]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111564]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111565]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111566]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114839}}"
+                                        ng-model="item.obj[114839]">
+                                    <label class="k-checkbox-label" for="item.obj{{114839}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111567]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111568]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111569]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111570]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111571]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111572]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 22 -->
+                            <!-- 23 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111573]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111574]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111575]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111576]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114840}}"
+                                        ng-model="item.obj[114840]">
+                                    <label class="k-checkbox-label" for="item.obj{{114840}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111577]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111578]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111579]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111580]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111581]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111582]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td> -->
+
+                            </tr>
+                            <!-- 23 -->
+                            <!-- 24 -->
+                            <tr>
+                                <td>
+                                    <input style="width: 100%" k-ng-model="item.obj[111583]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+
+                                </td>
+                                <td>
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111584]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listJenisPegawai" />
+                                    
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111585]" />
+                                     <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111586]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" />  
+                                    
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="k-checkbox" id="item.obj{{114841}}"
+                                        ng-model="item.obj[114841]">
+                                    <label class="k-checkbox-label" for="item.obj{{114841}}">
+                                        &nbsp;Checklist untuk notice</label>
+                                    <input style="width: 100%" k-ng-model="item.obj[111587]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111588]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+                                <td>
+                                    <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111589]" />
+                                </td>
+                                <!-- <td>
+                                     <textarea style="width: 95%;height: 200px" cols="6" rows="5" c-text-area type="input" filter="'string'" class="k-textbox" style="{{data.style}}"
+                                                    ng-model="item.obj[111590]" />
+                                    <input style="width: 100%" k-ng-model="item.obj[111591]" kendo-datetimepicker placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'" parsedate="yyyy-MM-dd HH:mm" />
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[111592]" k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'" k-auto-bind="false" k-data-source="listPegawai" /> 
+                                </td>
+ -->
+                            </tr>
+                            <!-- 24 -->
+
+
+
+                        </table>
+
+                    </div>
+                </fieldset>
+            </div>
+</div>
+<!-- <div class="grid_12">
+                <div class="grid_8"></div>
+                <div class="grid_4">
+                    <fieldset style="margin-top:10px;border-radius: 10px;height: 150px;">
+                        <div style="padding: 20px;">
+                            <div class="grid_12">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Tanggal dan Jam"></label>
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%" k-ng-model="item.obj[13307]" kendo-datetimepicker
+                                        placeholer="yyyy-MM-dd HH:mm" k-format="'yyyy-MM-dd HH:mm'"
+                                        parsedate="yyyy-MM-dd HH:mm" />
+
+                                </div>
+                            </div>
+                            <div class="grid_12" style="margin-top:10px">
+                                <div class="grid_12">
+                                    <label c-label item="item" c-label-text="Perawat"></label>
+                                </div>
+                                <div class="grid_12">
+                                    <input style="width: 100%;" kendo-combo-box k-ng-model="item.obj[13308]"
+                                        k-data-text-field="'text'" k-data-value-field="'value'" k-filter="'contains'"
+                                        k-auto-bind="false" k-data-source="listPegawai" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div>
+ -->
+        <div class="grid_12">
+            <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,142 @@
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #aabcfe;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #669;
+        background-color: #e8edff;
+    }
+
+    .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #aabcfe;
+        color: #039;
+        background-color: #b9c9fe;
+    }
+
+    .tg .tg-yw4l {
+        vertical-align: top
+    }
+
+
+    .rowstyle {
+        border-bottom: 1px dashed lightblue
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 120%;
+        font-weight: 700;
+        margin-bottom: 20px
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #929191;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    /* table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 40px;
+
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    } */
+</style>
+<div class="grid_12">
+    <div class="grid_12">
+        <div style="margin-bottom: 30px" class="panel panel-default container_12">
+            <div class="panel-heading" c-translate> Hasil Asesmen</div>
+        </div>
+                    <fieldset style="margin-top: 10px; ">
+                         
+                                        <div class="grid_10" style="margin-left: 5px;margin-top: 15px;margin-bottom: 5px">
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[3153]"
+                                                ng-model="item.obj[3153]">
+                                            <label class="k-checkbox-label"
+                                                for="item.obj[3153]">Risiko Bunuh Diri</label>
+                                        </div>
+                                        <div class="grid_10" style="margin-left: 5px;margin-top: 15px;margin-bottom: 5px">
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[3154]"
+                                                ng-model="item.obj[3154]">
+                                            <label class="k-checkbox-label"
+                                                for="item.obj[3154]">Risiko Perilaku Kekerasan</label>
+                                        </div>
+                                        <div class="grid_10" style="margin-left: 5px;margin-top: 15px;margin-bottom: 5px">
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[3155]"
+                                                ng-model="item.obj[3155]">
+                                            <label class="k-checkbox-label"
+                                                for="item.obj[3155]">Risiko Melarikan Diri</label>
+                                        </div>
+                                         <div class="grid_10" style="margin-left: 5px;margin-top: 15px;margin-bottom: 5px">
+                                            <input type="checkbox" class="k-checkbox" id="item.obj[25237]"
+                                                ng-model="item.obj[25237]">
+                                            <label class="k-checkbox-label"
+                                                for="item.obj[25237]">Tidak Berisiko</label>
+                                        </div>
+                                        <div class="grid_12">
+                                            <label style="margin-top: 5px;margin-right: 30px;width: 30%">Tanggal Assemen</label>
+                                            <input style="width: 30%" k-ng-model="item.obj[3156]" kendo-datepicker
+                                                placeholer="yyyy-MM-dd" k-format="'yyyy-MM-dd'" parsedate="yyyy-MM-dd" />
+                                        </div>
+                                        <div class="grid_12">
+                                            <label style="margin-top: 5px;margin-right: 30px;width: 30%">Jam</label>
+                                            <input style="width: 30%" k-ng-model="item.obj[3157]" kendo-timepicker
+                                                placeholer="yyyy-MM-dd HH:mm" k-format="'HH:mm'" parsedate="HH:mm" />
+                                        </div>
+                                        
+                                        <div class="grid_12 ">
+                                            <label style="margin-top: 5px;margin-right: 30px">Nama Perawat</label>
+                                            <input style="width: 30%" c-text-box type="text" filter="" class="k-textbox"
+                                                ng-model="item.obj[3158]" />
+                                        </div>
+                                        <div class="grid_12 ">
+                                            <label style="margin-top: 5px;margin-right: 30px">Paraf Perawat</label>
+                                            <input style="width: 30%" c-text-box type="text" filter="" class="k-textbox"
+                                                ng-model="item.obj[3159]" />
+                                        </div>
+                        </div>       
+                               
+                    </fieldset>
+              </div>
+<div class="grid_12">
+    <div ng-include='"../app/module/EMR/TemplateButtonDinamis" '></div>
+
+</div>
