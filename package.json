@@ -46,7 +46,7 @@
     "natives": "^1.1.6",
     "node-storage": "0.0.7",
     "rabbit.js": "^0.4.4",
-    "socket.io": "^1.7.3",
+    "socket.io": "^2.4.0",
     "socket.io-client": "^1.7.3",
     "static-favicon": "~1.0.0",
     "underscore": "^1.8.3",
